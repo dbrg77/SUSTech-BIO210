@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Welcome To BIO210</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 10 Feb 2022 16:01:31 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week 1</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-01/</link>
+      <pubDate>Sun, 13 Feb 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-01/</guid>
+      <description>Friday, 2022-Feb-18 In this week, we will have a brief overview of the course structure and content and introduce some basic concepts of statistics. Lecture 1 provides a summary about what is and is not included in the course, what to expect from the course and the diference between BIO210 and MA212. Lecture 2 starts to introduce some basic techniques in descriptive statistics. You can think of the lectures as a recap of what you have already known in the past.</description>
+    </item>
+    
     <item>
       <title>Welcome to BIO210</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/welcome/</link>
