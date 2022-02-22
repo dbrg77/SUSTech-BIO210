@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Welcome To BIO210</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lesson 03</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-03/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-03/</guid>
+      <description>Friday, 2022-Feb-25 On Friday this week, we will introduce the concept of conditional probability and see how we could use it to learn from the real world. We will learn three important rules to help us for the calculation: the multiplication rule, the total probability rule and the Bayes&#39; rule. They allow us to systematically update our beliefs about certain events based on new information we just learnt. Conditional probability is both easy and difficult.</description>
+    </item>
+    
     <item>
       <title>Week 2, Tuesday</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-02/</link>
