@@ -1,61 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Welcome To BIO210</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/posts/</link>
-    <description>Recent content in Posts on Welcome To BIO210</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Wed, 02 Mar 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Week 3, Friday</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-04/</link>
-      <pubDate>Wed, 02 Mar 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-04/</guid>
-      <description>Friday, 2022-Mar-04 On Friday this week, we will talk more about the Bayes&#39; Theorem. We will use some more examples and practice to show you how to apply the theorem to solve real life problems. A different notation of the Bayes&#39; formula will be introduced. In this case, we talk about hypothesis and evidence, instead of the arbitrary events A and B. Hopefully, this will help you not only remember the formula but also get an intuition about the theorem.</description>
-    </item>
-    
-    <item>
-      <title>Week 2, Friday</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-03/</link>
-      <pubDate>Wed, 23 Feb 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-03/</guid>
-      <description>Friday, 2022-Feb-25 On Friday this week, we will introduce the concept of conditional probability and see how we could use it to learn from the real world. We will learn three important rules to help us for the calculation: the multiplication rule, the total probability rule and the Bayes&#39; rule. They allow us to systematically update our beliefs about certain events based on new information we just learnt. Conditional probability is both easy and difficult.</description>
-    </item>
-    
-    <item>
-      <title>Week 2, Tuesday</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-02/</link>
-      <pubDate>Sat, 19 Feb 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-02/</guid>
-      <description>Tuesday, 2022-Feb-22 On Tuesday this week, we will continue our lesson in descriptive statistics. We will introduce some numerical measurements that summarise the data. We introduce two most frequently used measurements which you will see repeatedly in this course and your real life: the mean and the variance. Some practcal skills and data visualisaiton tricks will be introduced as well.
-Then we move on to the section of probability, which is really good at dealing with randomness.</description>
-    </item>
-    
-    <item>
-      <title>Week 1</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-01/</link>
-      <pubDate>Sun, 13 Feb 2022 00:00:00 +0800</pubDate>
-      
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-01/</guid>
-      <description>Friday, 2022-Feb-18 In this week, we will have a brief overview of the course structure and content and introduce some basic concepts of statistics. Lecture 1 provides a summary about what is and is not included in the course, what to expect from the course and the diference between BIO210 and MA212. Lecture 2 starts to introduce some basic techniques in descriptive statistics. You can think of the lectures as a recap of what you have already known in the past.</description>
-    </item>
-    
-    <item>
-      <title>Welcome to BIO210</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/welcome/</link>
-      <pubDate>Thu, 10 Feb 2022 16:01:31 +0800</pubDate>
-      
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/welcome/</guid>
-      <description>Hello all,
-Welcome to BIO210, the entry level biostatistics course for undergraduates at SUSTech. The site is still under construction. Course material including lecture slides, extra reading material and homework assignments will be posted here, typical one day before the atual class.
-If you have any quesitons, you can ask in the QQ group.
-Regards,
-Xi</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - SUSTech BIO210 Biostatistics</title>
+        <link>https://dbrg77.github.io/SUSTech-BIO210/posts/</link>
+        <description>All Posts | SUSTech BIO210 Biostatistics</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>chenx9@sustech.edu.cn (Xi Chen)</managingEditor>
+            <webMaster>chenx9@sustech.edu.cn (Xi Chen)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 02 Mar 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/" rel="self" type="application/rss+xml" /></channel>
 </rss>
