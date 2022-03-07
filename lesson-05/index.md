@@ -27,5 +27,6 @@ After the recap, we will introduce the first new concept in the course: __random
 #### Interesting links
 - [The Birthday Problem](https://en.wikipedia.org/wiki/Birthday_problem)
 - [Random Variable](https://en.wikipedia.org/wiki/Random_variable)
+- [The Multinomial Theorem](https://en.wikipedia.org/wiki/Multinomial_theorem)
 - [LOTUS](https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician)
 
