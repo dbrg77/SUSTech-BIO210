@@ -23,6 +23,9 @@ Going further, we let the number of trails $n$ becomes really really large ($n \
 #### Interesting links
 - [The Waiting Time Paradox, or, Why Is My Bus Always Late?](http://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/)
 - [Normal distribution](https://en.wikipedia.org/wiki/Normal_distribution)
+- [Derivation of The Normal PDF From The Binomial PMF](http://www.m-hikari.com/imf/imf-2017/9-12-2017/7118.html)
+- [De Moivre's “Miscellanea Analytica”, and the Origin of the Normal Curve](https://www.nature.com/articles/132713a0)
 - More on the history related to the normal distribution (in Chinese):
   - [Part 1](https://cosx.org/2013/01/story-of-normal-distribution-1)
   - [Part 2](https://cosx.org/2013/01/story-of-normal-distribution-2)
+
