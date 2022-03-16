@@ -65,7 +65,7 @@
 {{< admonition type=abstract title="Lesson 7 (2022-Mar-18)" open=true >}}
 - Lecture slides
   - [Lecture 13 Normal Distribution](/lecture_slides/Lecture_13_Normal_Distribution_handout.pdf)
-  - [Lecture_14 Population And Sample](/lecture_slides/Lecture_14_Population_sample_handout.pdf)
+  - [Lecture 14 Population And Sample](/lecture_slides/Lecture_14_Population_sample_handout.pdf)
 - Homework assignment
   - [Assignment 4](/assignments/Assignment_4.pdf)
 - Extra reading material

@@ -17,7 +17,7 @@ You will see what those two points mean when we proceed during the course.
 
 #### Lecture slides
 - [Lecture 13 Normal Distribution](/lecture_slides/Lecture_13_Normal_Distribution_handout.pdf)
-- [Lecture_14 Population And Sample](/lecture_slides/Lecture_14_Population_sample_handout.pdf)
+- [Lecture 14 Population And Sample](/lecture_slides/Lecture_14_Population_sample_handout.pdf)
 
 #### Extra reading material
 - [The Linear Function of A Normal Random Variable](/lecture_slides/Lecture_13_Linear_function_of_a_normal_random_variable.pdf)
@@ -29,5 +29,7 @@ You will see what those two points mean when we proceed during the course.
 #### Interesting links
 - [Tables Related to the Normal Distribution - A Short History](https://www.tandfonline.com/doi/abs/10.1198/000313005X70911)
 - [Christian Kramp](https://en.wikipedia.org/wiki/Christian_Kramp)
+- [Population](https://en.wikipedia.org/wiki/Statistical_population)
+- [Who and What Is a "Population"? Historical Debates, Current Controversies, and Implications for Understanding "Population Health" and Rectifying Health Inequities](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3530737/pdf/milq0090-0634.pdf)
 
 
