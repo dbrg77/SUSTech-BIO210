@@ -31,5 +31,6 @@ You will see what those two points mean when we proceed during the course.
 - [Christian Kramp](https://en.wikipedia.org/wiki/Christian_Kramp)
 - [Population](https://en.wikipedia.org/wiki/Statistical_population)
 - [Who and What Is a "Population"? Historical Debates, Current Controversies, and Implications for Understanding "Population Health" and Rectifying Health Inequities](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3530737/pdf/milq0090-0634.pdf)
+- [Survivorship bias](http://en.wikipedia.org/wiki/Survivorship_bias)
 
 
