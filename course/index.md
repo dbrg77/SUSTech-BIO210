@@ -72,3 +72,13 @@
   - [The Linear Function of A Normal Random Variable](/lecture_slides/Lecture_13_Linear_function_of_a_normal_random_variable.pdf)
   - [Calculating Probability Using Excel](/lecture_slides/Lecture_13_Calculating_probability_using_Excel.pdf)
 {{< /admonition >}}
+
+{{< admonition type=example title="Lesson 8 (2022-Mar-22)" open=true >}}
+- Lecture slides
+  - [Lecture 15 The Sampling Distribution And The CLT (Part I)](/lecture_slides/Lecture_15_Sampling_distribution_and_CLT_I_handout.pdf)
+  - [Lecture 16 The Sampling Distribution And The CLT (Part II)](/lecture_slides/Lecture_16_Sampling_distribution_and_CLT_II_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - None
+{{< /admonition >}}
