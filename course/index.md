@@ -90,5 +90,5 @@
 - Homework assignment
   - [Assignment 5](/assignments/Assignment_5.pdf)
 - Extra reading material
-  - None
+  - [MLE for Variance](/lecture_slides/Lecture_18_MLE_For_Variance.pdf)
 {{< /admonition >}}

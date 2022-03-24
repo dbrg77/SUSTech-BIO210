@@ -13,7 +13,7 @@ We will explain why using $n-1$ here, and briefly mention __degree of freedom__.
 - [Lecture 18 More On Maximum Likelihood Estimation](/lecture_slides/Lecture_18_More_On_Maximum_Likelihood_Estimation_handout.pdf)
 
 #### Extra reading material
-- None
+- [MLE for Variance](/lecture_slides/Lecture_18_MLE_For_Variance.pdf)
 
 #### Homework assignment
 - [Assignment 5](/assignments/Assignment_5.pdf)
