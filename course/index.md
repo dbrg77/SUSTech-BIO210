@@ -82,3 +82,13 @@
 - Extra reading material
   - None
 {{< /admonition >}}
+
+{{< admonition type=abstract title="Lesson 9 (2022-Mar-25)" open=true >}}
+- Lecture slides
+  - [Lecture 17 Maximum Likelihood Estimation (MLE)](/lecture_slides/Lecture_17_Maximum_Likelihood_Estimation_handout.pdf)
+  - [Lecture 18 More On Maximum Likelihood Estimation](/lecture_slides/Lecture_18_More_On_Maximum_Likelihood_Estimation_handout.pdf)
+- Homework assignment
+  - [Assignment 5](/assignments/Assignment_5.pdf)
+- Extra reading material
+  - None
+{{< /admonition >}}
