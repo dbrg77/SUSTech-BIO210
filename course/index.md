@@ -92,3 +92,13 @@
 - Extra reading material
   - [MLE for Variance](/lecture_slides/Lecture_18_MLE_For_Variance.pdf)
 {{< /admonition >}}
+
+{{< admonition type=example title="Lesson 10 (2022-Apr-01)" open=true >}}
+- Lecture slides
+  - [Lecture 19 Confidence Interval For The Mean](/lecture_slides/Lecture_19_Confidence_Interval_For_The_mean_handout.pdf)
+  - [Lecture 20 Confidence Interval For The Variance](/lecture_slides/Lecture_20_Confidence_Interval_For_The_Variance_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - [Probability calculation using R](/lecture_slides/Lecture_20_Calculating_probability_using_R.pdf)
+{{< /admonition >}}
