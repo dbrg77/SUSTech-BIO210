@@ -102,3 +102,13 @@
 - Extra reading material
   - [Probability calculation using R](/lecture_slides/Lecture_20_Calculating_probability_using_R.pdf)
 {{< /admonition >}}
+
+{{< admonition type=abstract title="Lesson 11 (2022-Apr-08)" open=true >}}
+- Lecture slides
+  - [Lecture 21 Sampling Distribution of Sample Proportion](/lecture_slides/Lecture_21_Sampling_Distribution_of_Sample_Proportion_handout.pdf)
+  - [Lecture 22 Confidence Interval For The Proportion](/lecture_slides/Lecture_22_Confidence_Interval_For_The_Proportion_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - None
+{{< /admonition >}}

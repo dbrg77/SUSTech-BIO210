@@ -84,7 +84,7 @@ Very often, it is important to know what the course is __NOT__ about.
   - The central limit theorem
 - __8. Point Estimation (2 hours)__
   - Estimator and estimate
-  - The idea and intuition of maximum likelihood estimation
+  - The idea and intuition of maximum likelihood estimation (MLE)
   - Examples of MLE
   - Why $n-1$: MLE of variance is biased
 - __9. Interval Estimation (4 hours)__
@@ -92,7 +92,7 @@ Very often, it is important to know what the course is __NOT__ about.
   - Interpretation of confidence intervals
   - Construct confidence intervals for the mean
     - Use the properties of the sampling distribution of the sample mean
-    - The Student’s t distribution
+    - The Student’s _t_ distribution
   - Construct confidence intervals for the variance
     - Sampling distribution of the sample variance
     - The _Chi_-square ($\chi^2$) distribution
