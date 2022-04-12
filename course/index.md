@@ -112,3 +112,13 @@
 - Extra reading material
   - None
 {{< /admonition >}}
+
+{{< admonition type=example title="Lesson 12 (2022-Apr-15)" open=true >}}
+- Lecture slides
+  - [Lecture 23 Introduction To Hypothesis Testing](/lecture_slides/Lecture_23_Introduction_To_Hypothesis_Testing_handout.pdf)
+  - [Lecture 24 Hypothesis Testing Terms](/lecture_slides/Lecture_24_Hypothesis_Testing_terms_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - None
+{{< /admonition >}}
