@@ -122,3 +122,13 @@
 - Extra reading material
   - None
 {{< /admonition >}}
+
+{{< admonition type=abstract title="Lesson 13 (2022-Apr-19)" open=true >}}
+- Lecture slides
+  - [Lecture 25 More On Hypothesis Testing](/lecture_slides/Lecture_25_More_On_Hypothesis_Testing_handout.pdf)
+  - [Lecture 26 Error Power And Sample Size Estimation](/lecture_slides/Lecture_26_Error_Power_And_Sample_Size_Estimation_handout.pdf)
+- Homework assignment
+  - [Assignment 6](/assignments/Assignment_6.pdf)
+- Extra reading material
+  - None
+{{< /admonition >}}
