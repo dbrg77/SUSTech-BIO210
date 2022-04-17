@@ -19,9 +19,9 @@ Then, we have some data at hands. Based on the observation, we come up with some
 - The normal body temperature is not 37 degree Celcius.
 {{< /admonition >}}
 
-How do we test them? As we mentioned repeatedly during previous lectures, there is no way we can directly test if those hypotheses are true or not. However, we can approach the probme in an indirect way. That is, we assume the opposite is true ($H_0$):
+How do we test them? As we mentioned repeatedly during previous lectures, there is no way we can directly test if those hypotheses are true or not. However, we can approach the problem in an indirect way. That is, we assume the opposite is true ($H_0$):
 
-{{< admonition type=abstract title="$\boldsymbol{H_0}$" open=true >}}
+{{< admonition type=abstract title="The null hypothesis" open=true >}}
 - The proportion of people who have type B is 9%.
 - The proportion of people who have type A is less than 32%.
 - The normal body temperature is 37 degree Celcius.
