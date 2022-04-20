@@ -132,3 +132,13 @@
 - Extra reading material
   - None
 {{< /admonition >}}
+
+{{< admonition type=example title="Lesson 14 (2022-Apr-22)" open=true >}}
+- Lecture slides
+  - [Lecture 27 Compare Two Population Proportions](/lecture_slides/Lecture_27_Compare_Two_Populations_Proportion_handout.pdf)
+  - [Lecture 28 Compare Two Population Means](/lecture_slides/Lecture_28_Compare_Two_Populations_Mean_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - [Sum of Independent Normal R.V.s](/lecture_slides/Lecture_27_Sum_of_independent_random_variables.pdf)
+{{< /admonition >}}
