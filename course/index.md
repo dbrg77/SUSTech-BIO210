@@ -142,3 +142,13 @@
 - Extra reading material
   - [Sum of Independent Normal R.V.s](/lecture_slides/Lecture_27_Sum_of_independent_random_variables.pdf)
 {{< /admonition >}}
+
+{{< admonition type=abstract title="Lesson 15 (2022-Apr-24)" open=true >}}
+- Lecture slides
+  - [Lecture 29 Testing For The Equity of Two Variances](/lecture_slides/Lecture_29_Testing_For_The_Equity_of_Two_Variances_handout.pdf)
+  - [Lecture 30 The Behaviour of The p-value](/lecture_slides/Lecture_30_The_Behaviour_of_The_p-value_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - None
+{{< /admonition >}}
