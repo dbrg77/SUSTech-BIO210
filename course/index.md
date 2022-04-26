@@ -152,3 +152,13 @@
 - Extra reading material
   - None
 {{< /admonition >}}
+
+{{< admonition type=example title="Lesson 16 (2022-Apr-29)" open=true >}}
+- Lecture slides
+  - [Lecture 31 Analysis of Variance (ANOVA)](/lecture_slides/Lecture_31_Analysis_of_Variance_ANOVA_handout.pdf)
+  - [Lecture 32 _Post hoc_ Multiple Comparisons](/lecture_slides/Lecture_32_Post_hoc_multiple_comparisons_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - [Using the F-test for two-sample comparisons](/lecture_slides/Lecture_32_F_test_and_t_test.pdf)
+{{< /admonition >}}

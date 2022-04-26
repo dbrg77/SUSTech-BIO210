@@ -4,9 +4,16 @@
         <link>https://dbrg77.github.io/SUSTech-BIO210/</link>
         <description>Course material for the BIO210 Biostatistics at SUSTech.</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>chenx9@sustech.edu.cn (Xi Chen)</managingEditor>
-            <webMaster>chenx9@sustech.edu.cn (Xi Chen)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 23 Apr 2022 00:00:00 &#43;0800</lastBuildDate>
+            <webMaster>chenx9@sustech.edu.cn (Xi Chen)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 Apr 2022 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Week 11, Friday</title>
+    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-16/</link>
+    <pubDate>Wed, 27 Apr 2022 00:00:00 &#43;0800</pubDate><author>
+        <name>Xi Chen</name>
+    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-16/</guid>
+    <description><![CDATA[<em>Course material for lectures on 2022-Apr-29</em>]]></description>
+</item><item>
     <title>Week 10, Sunday</title>
     <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-15/</link>
     <pubDate>Sat, 23 Apr 2022 00:00:00 &#43;0800</pubDate><author>
@@ -69,12 +76,5 @@
         <name>Xi Chen</name>
     </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-08/</guid>
     <description><![CDATA[<em>Course material for lectures on 2022-Mar-22</em>]]></description>
-</item><item>
-    <title>Week 5, Friday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-07/</link>
-    <pubDate>Wed, 16 Mar 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-07/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-Mar-18</em>]]></description>
 </item></channel>
 </rss>
