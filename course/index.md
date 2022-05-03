@@ -162,3 +162,13 @@
 - Extra reading material
   - [Using the F-test for two-sample comparisons](/lecture_slides/Lecture_32_F_test_and_t_test.pdf)
 {{< /admonition >}}
+
+{{< admonition type=abstract title="Lesson 17 (2022-May-06)" open=true >}}
+- Lecture slides
+  - [Lecture 33 One-way ANOVA Examples](/lecture_slides/Lecture_33_One-way_ANOVA_Examples_handout.pdf)
+  - [Lecture 34 Chi-square Tests For Categorical Data](/lecture_slides/Lecture_34_Chi-square_Tests_For_Categorical_Data_handout.pdf)
+- Homework assignment
+  - [Assignment 7](/assignments/Assignment_7.pdf)
+- Extra reading material
+  - None
+{{< /admonition >}}
