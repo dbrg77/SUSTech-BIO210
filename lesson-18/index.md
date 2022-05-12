@@ -14,7 +14,7 @@ Then, we will very briefly introduce the idea of assessing the relationship bewt
 - None
 
 #### Homework assignment
-- None
+- [Assignment 8](/assignments/Assignment_8.pdf)
 
 #### Interesting links
 - [The odds ratio](https://www.bmj.com/content/320/7247/1468.1)

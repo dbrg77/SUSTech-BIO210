@@ -178,7 +178,7 @@
   - [Lecture 35 Chi-square Test For Association And Odds Ratio](/lecture_slides/Lecture_35_Chi-square_Test_For_Association_And_Odds_Ratio_handout.pdf)
   - [Lecture 36 Exploring Bivariate Data Using Correlation](/lecture_slides/Lecture_36_Exploring_Bivariate_Data_Using_Correlation_handout.pdf)
 - Homework assignment
-  - None
+  - [Assignment 8](/assignments/Assignment_8.pdf)
 - Extra reading material
   - None
 {{< /admonition >}}
