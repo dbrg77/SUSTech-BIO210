@@ -182,3 +182,13 @@
 - Extra reading material
   - None
 {{< /admonition >}}
+
+{{< admonition type=abstract title="Lesson 19 (2022-May-17)" open=true >}}
+- Lecture slides
+  - [Lecture 37 Simple Linear Regression - The Idea](/lecture_slides/Lecture_37_Simple_Linear_Regression_The_Idea_handout.pdf)
+  - [Lecture 38 Simple Linear Regression - The Model](/lecture_slides/Lecture_38_Simple_Linear_Regression_The_Model_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - [SST Is SSR + SSE](/lecture_slids/Lecture_38_Proof_SST_Is_SSR_Plus_SSE.pdf)
+{{< /admonition >}}
