@@ -11,7 +11,7 @@ When we say "we want to fit a line on the data", what do we mean by that? How to
 - [Lecture 38 Simple Linear Regression - The Model](/lecture_slides/Lecture_38_Simple_Linear_Regression_The_Model_handout.pdf)
 
 #### Extra reading material
-- [SST Is SSR + SSE](/lecture_slids/Lecture_38_Proof_SST_Is_SSR_Plus_SSE.pdf)
+- [SST Is SSR + SSE](/lecture_slides/Lecture_38_Proof_SST_Is_SSR_Plus_SSE.pdf)
 
 #### Homework assignment
 - None
