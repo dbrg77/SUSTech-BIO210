@@ -190,5 +190,6 @@
 - Homework assignment
   - None
 - Extra reading material
-  - [SST Is SSR + SSE](/lecture_slids/Lecture_38_Proof_SST_Is_SSR_Plus_SSE.pdf)
+  - [SST Is SSR + SSE](/lecture_slides/Lecture_38_Proof_SST_Is_SSR_Plus_SSE.pdf)
 {{< /admonition >}}
+
