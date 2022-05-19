@@ -193,3 +193,12 @@
   - [SST Is SSR + SSE](/lecture_slides/Lecture_38_Proof_SST_Is_SSR_Plus_SSE.pdf)
 {{< /admonition >}}
 
+{{< admonition type=example title="Lesson 20 (2022-May-20)" open=true >}}
+- Lecture slides
+  - [Lecture 39 Sampling Distribution For Coefficients In Simple Linear Regression](/lecture_slides/Lecture_39_Sampling_Distribution_For_Coefficients_In_Simple_Linear_Regression_handout.pdf)
+  - [Lecture 40 Nonparametric Methods](/lecture_slides/Lecture_40_Nonparametric_Methods_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - None
+{{< /admonition >}}
