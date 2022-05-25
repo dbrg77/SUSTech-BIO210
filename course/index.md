@@ -202,3 +202,13 @@
 - Extra reading material
   - None
 {{< /admonition >}}
+
+{{< admonition type=abstract title="Lesson 21 (2022-May-27)" open=true >}}
+- Lecture slides
+  - [Lecture 41 Monte Carlo Simulation, Bootstrapping and Permutation Tests](/lecture_slides/Lecture_41_Monte_Carlo_Simulation_Bootstrapping_Permutation_Tests_handout.pdf)
+  - [Lecture 42 Wrap Up And Descriptive Statistics Revisited](/lecture_slides/Lecture_42_Wrap_Up_And_Descriptive_Statistics_Revisited_handout.pdf)
+- Homework assignment
+  - None
+- Extra reading material
+  - None
+{{< /admonition >}}
