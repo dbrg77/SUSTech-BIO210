@@ -1,80 +1,49 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>SUSTech BIO210 Biostatistics</title>
-        <link>https://dbrg77.github.io/SUSTech-BIO210/</link>
-        <description>Course material for the BIO210 Biostatistics at SUSTech.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>chenx9@sustech.edu.cn (Xi Chen)</managingEditor>
-            <webMaster>chenx9@sustech.edu.cn (Xi Chen)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 25 May 2022 00:00:00 &#43;0800</lastBuildDate>
-            <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Week 15, Friday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-21/</link>
-    <pubDate>Wed, 25 May 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-21/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-May-27</em>]]></description>
-</item><item>
-    <title>Week 14, Friday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-20/</link>
-    <pubDate>Thu, 19 May 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-20/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-May-20</em>]]></description>
-</item><item>
-    <title>Week 14, Tuesday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-19/</link>
-    <pubDate>Mon, 16 May 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-19/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-May-17</em>]]></description>
-</item><item>
-    <title>Week 13, Friday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-18/</link>
-    <pubDate>Thu, 12 May 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-18/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-May-13</em>]]></description>
-</item><item>
-    <title>Week 12, Friday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-17/</link>
-    <pubDate>Tue, 03 May 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-17/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-May-06</em>]]></description>
-</item><item>
-    <title>Week 11, Friday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-16/</link>
-    <pubDate>Wed, 27 Apr 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-16/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-Apr-29</em>]]></description>
-</item><item>
-    <title>Week 10, Sunday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-15/</link>
-    <pubDate>Sat, 23 Apr 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-15/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-Apr-24</em>]]></description>
-</item><item>
-    <title>Week 10, Friday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-14/</link>
-    <pubDate>Wed, 20 Apr 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-14/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-Apr-22</em>]]></description>
-</item><item>
-    <title>Week 10, Tuesday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-13/</link>
-    <pubDate>Sun, 17 Apr 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-13/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-Apr-19</em>]]></description>
-</item><item>
-    <title>Week 9, Friday</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/lesson-12/</link>
-    <pubDate>Tue, 12 Apr 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Xi Chen</name>
-    </author><guid>https://dbrg77.github.io/SUSTech-BIO210/lesson-12/</guid>
-    <description><![CDATA[<em>Course material for lectures on 2022-Apr-15</em>]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SUSTech BIO210 Biostatistics</title>
+    <link>https://dbrg77.github.io/SUSTech-BIO210/</link>
+    <description>Recent content on SUSTech BIO210 Biostatistics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 14 Feb 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 2 Descriptive Statistics</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/</link>
+      <pubDate>Tue, 14 Feb 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/</guid>
+      <description>Lecture 2 starts to introduce some basic techniques in descriptive statistics. You can think of this lecture as a recap of what you have already known in the past. Make sure you get familiar with all the graphs introduced in this lecture, because we are going to use them all the time in future lectures. Perhaps the most important graph in this course is the histogram, which is the most common way of showing frequency distributions:</description>
+    </item>
+    
+    <item>
+      <title>Lecture 1 Course Introduction</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-01/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-01/</guid>
+      <description>In the first lecture of the entire course, we will have a brief overview of the course structure and content. Lecture 1 starts with some administrative aspects of the course. Then we will provide an introduction about what is and is not included in the course, what to expect from the course and the difference between BIO210 and MA212.
+Your final grade is a weighted average 1 of the following:</description>
+    </item>
+    
+    <item>
+      <title>List of all course content</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/course/</link>
+      <pubDate>Fri, 10 Feb 2023 16:01:31 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
+      <description>All course content Lesson 1 (17-Feb-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None </description>
+    </item>
+    
+    <item>
+      <title>Welcome To BIO210 Biostatistics</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/about/</link>
+      <pubDate>Fri, 10 Feb 2023 16:01:31 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/about/</guid>
+      <description>This static website holds all course material from the BIO210 Biostatistics course delivered by the School of Life Sciences at SUSTech, Shenzhen. This is an entry level statistics course for undergraduates who have no prior knowledge about statistics at all. We do assume you are familiar with the math from your high school and the 1st year undergraduate training.
+About This Website You can find all material listed in this Content Index page, typically a few days before or after the actual lesson.</description>
+    </item>
+    
+  </channel>
 </rss>
