@@ -6,7 +6,25 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 17 Feb 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Feb 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 4 Probability Axioms</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/</link>
+      <pubDate>Tue, 21 Feb 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/</guid>
+      <description>Probability Axioms After we finished the content of descriptive statistics, we will move on to the section of probability, which is really good at dealing with randomness. You have probably already come across some concepts of probability. In Lecture 4, we will make things formal. Probability axioms will be introduced. Those are the things we need to agree on. They are quite intuitive, and hopefully, you will have no problem accepting them as facts:</description>
+    </item>
+    
+    <item>
+      <title>Lecture 3 Numerical Measures</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/</link>
+      <pubDate>Tue, 21 Feb 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/</guid>
+      <description>Numerical Measures Lecture 3 concludes the section of descriptive statistics. From the previous lectures we demonstrated that graphs were a nice way of showing the data. One can immediately get a rough idea about how the data look like from a good graph. However, when the data is presented in graphs, the quantitative information in the data is lost. Therefore, it would be good if we could just use a bunch of numbers to summarise the data.</description>
+    </item>
+    
     <item>
       <title>Lecture 2 Descriptive Statistics</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/</link>
