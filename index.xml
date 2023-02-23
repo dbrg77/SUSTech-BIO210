@@ -6,7 +6,28 @@
     <description>Recent content on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 21 Feb 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 6 The Bayes&#39; Theorem</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-06/</link>
+      <pubDate>Fri, 24 Feb 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-06/</guid>
+      <description>Now we have get familiar with conditional probabilities. The basic definition and formula is:
+$$P(A|B)=\cfrac{P(A \cap B)}{P(B)} \textmd{, } P(B) \neq 0$$
+In the previous lecture, we used some examples to show how to calculate three probabilities: $P(A \cap B)$, $P(B)$ and $P(A|B)$, which are essentially the three terms in the above formula. In reality, we sometimes need to calculate some very complicated probabilities, but they all boils down to some sort of combinations of those three probabilities.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 5 Conditional Probability</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-05/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-05/</guid>
+      <description>In Lectures 5, we will introduce the concept of conditional probability and see how we could use it to learn from the real world. Whenever we come across a new concept, the first thing is always to build up our intuition about it. Using a few simple examples, we start to get some ideas about conditional probabilities.
+In conditional probability, we are interested in calculating the probability of an event when taking into account some knowledge that we have.</description>
+    </item>
+    
     <item>
       <title>Lecture 4 Probability Axioms</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/</link>
@@ -50,7 +71,7 @@ Your final grade is a weighted average 1 of the following:</description>
       <pubDate>Fri, 10 Feb 2023 16:01:31 +0800</pubDate>
       
       <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content Lesson 1 (17-Feb-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (21-Feb-2023) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None </description>
+      <description>All course content Lesson 1 (17-Feb-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (21-Feb-2023) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (24-Feb-2023) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material None </description>
     </item>
     
     <item>
