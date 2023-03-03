@@ -6,7 +6,28 @@
     <description>Recent content on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 24 Feb 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Mar 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 8 Independent Events</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/</link>
+      <pubDate>Fri, 03 Mar 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/</guid>
+      <description>Lecture 8 introduces the concept of independence. It is a relatively straightforward concept to understand. Intuitively, events $A$ and $B$ are independent if:
+$$\mathbb{P}(A|B)=\mathbb{P}(A), \mathbb{P}(B) \neq 0$$
+Using Bayes&amp;rsquo; terms, we can say that the posterior probability is equal to the prior probability. In other words, event $B$ has nothing to do with $A$; event $B$ does not provide any information about event $A$; given that event $B$ has occurred, we do not change our belief about event $A$ &amp;hellip; Recall that from Lecture 5, we have:</description>
+    </item>
+    
+    <item>
+      <title>Lecture 7 More On The Bayes Theorem</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-07/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-07/</guid>
+      <description>Lecture 7 introduces more examples of using the Bayes&amp;rsquo; theorem to help us make decisions in real life. Sometimes, the conclusion seems counterintuitive at the beginning. However, if you grasp the idea of using the new information to update your prior belief, you will find the Bayes&amp;rsquo;s rule very natural. We will also introduce a new form of the Bayes&amp;rsquo; rule without talking about the events $A$, $B$ etc.:
+$$\mathbb{P}(H_i|E) = \cfrac{\mathbb{P}(H_i)\mathbb{P}(E|H_i)}{\mathbb{P}(E)} = \cfrac{\mathbb{P}(E|H_i)}{\sum_{i=1}^n \mathbb{P}(H_i)\mathbb{P}(E|H_i)} \cdot \mathbb{P}(H_i)$$</description>
+    </item>
+    
     <item>
       <title>Lecture 6 The Bayes&#39; Theorem</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-06/</link>
@@ -14,8 +35,8 @@
       
       <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-06/</guid>
       <description>Now we have get familiar with conditional probabilities. The basic definition and formula is:
-$$P(A|B)=\cfrac{P(A \cap B)}{P(B)} \textmd{, } P(B) \neq 0$$
-In the previous lecture, we used some examples to show how to calculate three probabilities: $P(A \cap B)$, $P(B)$ and $P(A|B)$, which are essentially the three terms in the above formula. In reality, we sometimes need to calculate some very complicated probabilities, but they all boils down to some sort of combinations of those three probabilities.</description>
+$$\mathbb{P}(A|B)=\cfrac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \textmd{, } \mathbb{P}(B) \neq 0$$
+In the previous lecture, we used some examples to show how to calculate three probabilities: $\mathbb{P}(A \cap B)$, $\mathbb{P}(B)$ and $\mathbb{P}(A|B)$, which are essentially the three terms in the above formula. In reality, we sometimes need to calculate some very complicated probabilities, but they all boils down to some sort of combinations of those three probabilities.</description>
     </item>
     
     <item>
@@ -71,7 +92,7 @@ Your final grade is a weighted average 1 of the following:</description>
       <pubDate>Fri, 10 Feb 2023 16:01:31 +0800</pubDate>
       
       <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content Lesson 1 (17-Feb-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (21-Feb-2023) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (24-Feb-2023) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material None </description>
+      <description>All course content Lesson 1 (17-Feb-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (21-Feb-2023) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (24-Feb-2023) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material None Lesson 4 (03-Mar-2023) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None </description>
     </item>
     
     <item>

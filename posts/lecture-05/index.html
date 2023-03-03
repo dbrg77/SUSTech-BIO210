@@ -177,21 +177,21 @@
     <div class="post-content">
         <p>
             <p>In <strong>Lectures 5</strong>, we will introduce the concept of conditional probability and see how we could use it to learn from the real world. Whenever we come across a new concept, the first thing is always to build up our intuition about it. Using a few simple examples, we start to get some ideas about conditional probabilities.</p>
-<p>In conditional probability, we are interested in calculating the probability of an event when taking into account some knowledge that we have. Recall that $P(A)$ denotes the probability of event $A$, which represents our belief on how likely event $A$ will occur. Now we know another event $B$ has occurred. Taking this new piece of information into account, what is the probability of event $A$ to occur? That is basically the probability of $A$ given $B$, denoted by:</p>
-<p>$$P(A|B)$$</p>
+<p>In conditional probability, we are interested in calculating the probability of an event when taking into account some knowledge that we have. Recall that $\mathbb{P}(A)$ denotes the probability of event $A$, which represents our belief on how likely event $A$ will occur. Now we know another event $B$ has occurred. Taking this new piece of information into account, what is the probability of event $A$ to occur? That is basically the probability of $A$ given $B$, denoted by:</p>
+<p>$$\mathbb{P}(A|B)$$</p>
 <p>We could look at the following Venn diagram:</p>
 <figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/venn2.png" width="500px"/>
 </figure>
 
-<p>Before we know anything or have any information, we think the probability of $A$ to occur is $P(A)$, which can be treated as the ratio of the areas between the ellipse $A$ and the rectangle. When we know that $B$ has occurred, all of a sudden we are living in a universe where $B$ has already occurred. That&rsquo;s is a fact now, and everything outside the ellipse $B$ becomes irrelevant. Our new sample space becomes $B$. Now we ask what is the probability of $A$, that is, $P(A|B)$. In this case, it is the ratio of the blue area and the ellipse $B$. Therefore, it is straightforward to see:</p>
-<p>$$P(A|B)=\cfrac{P(A \cap B)}{P(B)} \textmd{, } P(B) \neq 0$$</p>
-<p>You see, there are three different probabilities in the above equation: $P(A \cap B)$, $P(B)$ and $P(A|B)$. We are going to introduce how to calculate each of them. In addition, the new probability $P(A|B)$ may or may not be the same as $P(A)$, value-wise. We will see why we care about it in future.</p>
+<p>Before we know anything or have any information, we think the probability of $A$ to occur is $\mathbb{P}(A)$, which can be treated as the ratio of the areas between the ellipse $A$ and the rectangle. When we know that $B$ has occurred, all of a sudden we are living in a universe where $B$ has already occurred. That&rsquo;s is a fact now, and everything outside the ellipse $B$ becomes irrelevant. Our new sample space becomes $B$. Now we ask what is the probability of $A$, that is, $\mathbb{P}(A|B)$. In this case, it is the ratio of the blue area and the ellipse $B$. Therefore, it is straightforward to see:</p>
+<p>$$\mathbb{P}(A|B)=\cfrac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \textmd{, } \mathbb{P}(B) \neq 0$$</p>
+<p>You see, there are three different probabilities in the above equation: $\mathbb{P}(A \cap B)$, $\mathbb{P}(B)$ and $\mathbb{P}(A|B)$. We are going to introduce how to calculate each of them. In addition, the new probability $\mathbb{P}(A|B)$ may or may not be the same as $\mathbb{P}(A)$, value-wise. We will see why we care about it in future.</p>
 <p>When dealing with the conditional probability, remember that it is just normal probability in a new universe or a different (often smaller) sample space. For those properties we have in the normal probability, we also have them in the conditional probability. For example, for all the probability axioms, we have a conditional version of each of them:</p>
 <ol>
-<li><strong>Nonnegativity:</strong> $P(A|C) \geqslant 0$, for every event $A$</li>
-<li><strong>Normalisation:</strong> $P(\Omega|C) = 1$</li>
+<li><strong>Nonnegativity:</strong> $\mathbb{P}(A|C) \geqslant 0$, for every event $A$</li>
+<li><strong>Normalisation:</strong> $\mathbb{P}(\Omega|C) = 1$</li>
 <li><strong>Additivity:</strong> If $A$ and $B$ are disjoint given $C$ has occurred ($A \cap B|C = \varnothing$), then:
-$$P(A \cup B | C) = P(A|C) + P(B|C)$$</li>
+$$\mathbb{P}(A \cup B | C) = \mathbb{P}(A|C) + \mathbb{P}(B|C)$$</li>
 </ol>
 <p>During the lecture we use the <strong>&ldquo;virus detection&rdquo;</strong> example to showcase how sometimes conditional probabilities can provide counterintuitive results. However, if we adjust our way of thinking, we will see that the results not only make sense, but help us approach real-life problems in a more rational way as well.</p>
 
