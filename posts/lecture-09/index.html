@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 9 Counting</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 9 Counting">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 9 Counting">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/">
+    <meta name="twitter:image" content="/images/avatar.png">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.png" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 9 Counting</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            March 7, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>In <strong>Lecture 9</strong>, we are going to pause a little bit and do a quick recap about the basic counting principles. The content is basically what you have learnt during your high school math classes but in English. You will see that the counting principles we are talking about greatly help us calculate the probability of events consisting outcomes from discrete sample spaces.</p>
+<p>You might ask why we bother to do a recap about counting. The <strong>discrete uniform law</strong> tells us that if we let all outcomes in a discrete sample space be equally likely, the probability of any event can be simply calculated as:</p>
+<p>$$\mathbb{P}(A) = \cfrac{|A|}{|\Omega|}$$</p>
+<p>$|A|$, $|\Omega|$ $\cdots$ represent the <strong>cardinality</strong> of a set, which is basically the number of elements in the set. Therefore, calculating the probability of an event comes down to counting the number of outcomes in the event and the total number of outcomes in the sample space.</p>
+<h2 id="the-basic-counting-principle">The Basic Counting Principle</h2>
+<p>To help us count efficiently and systematically, we introduce a basic principle:</p>
+
+
+<div class="admonition note">
+    <div class="title">The Principle</div>
+    <div class="content"><p>We divide a process into $r$ stages. There are $n_1$ possible choices in the first stage; for each possible choice from the first stage, there are $n_2$ possible choices; for each possible choice from the second stage, there are $n_3$ possible choices; $\cdots$; for each possible choice from the $(r-1)th$ stage, there are $n_r$ possible choices. If we could do that, the total number of choices we have is:</p>
+<p>$$\prod_{i=1}^r n_i = n_1n_2n_3 \cdots n_r$$</p>
+</div>
+</div>
+<p>You can put the following picture in your mind to help visualise this principle:</p>
+<figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/basic_counting_principle.png" width="500px"/>
+</figure>
+
+<p>During the lecture, we used a few examples to practice using the basic principle. You have seen that most complicated counting problems can be easily broken down and use the above principle to count, meaning that the basic counting principle is all we need to know. However, it is still useful to know and memorise some common types of counting derived from the basic principle.</p>
+<h2 id="k-permutations">$k$-permutations</h2>
+<p>When we choose $k (k \leqslant n)$ objects from $n$ distinct objects and arrange them in a sequence, the total number of possible sequence, called $\boldsymbol{k}$-<strong>permutations</strong>, can be calculated by the basic counting principle:</p>
+<p>$$n(n-1)(n-2) \cdots (n-k+1) = \cfrac{n(n-1)(n-2) \cdots 2 \cdot 1}{(n-k)\cdots 2 \cdot 1} = \cfrac{n!}{(n-k)!}$$</p>
+<p>It is easy to see why the formula looks like that shown above. We can divide the problem into a $k$-stage counting process. In the first stage, we have $n$ choices; in the second stage, we are left with $n-1$ choices, <em>etc.</em> In the $k$th stage, we are left with $n-k+1$ choices. Therefore, based on the basic counting principle, the total number of choices is the product of them, which is exactly what is shown in the formula above.</p>
+<p>In the special case where $k=n$, the number of total sequences is simply called <strong>permutations</strong>, which is basically $n!$.</p>
+<h2 id="combinations">Combinations</h2>
+<p>When we simply choose $k (k \leqslant n)$ objects from $n$ distinct objects without arranging them, meaning the order of the $k$ objects does not matter. This process is called <strong>combination</strong>. The number of choices is $C_n^k$. That is the notation you learnt in your high school math class. In this course, we use this notation:</p>
+<p>$$\binom{n}{k}$$</p>
+<p>It reads <strong>&ldquo;n choose k&rdquo;</strong>, which is exactly the same as $C_n^k$ but used more often. It is called the <strong>binomial coefficient</strong>. You all know from your high school that:</p>
+<p>$$
+\begin{aligned}
+\binom{n}{k} &amp;= \cfrac{n(n-1)(n-2) \cdots (n-k+1)}{k!} \\[10pt]
+&amp;= \cfrac{n(n-1)(n-2) \cdots (n-k+1) \cdot (n-k)(n-k-1) \cdots 2 \cdot 1}{k! \cdot (n-k)(n-k-1) \cdots 2 \cdot 1} \\[10pt]
+&amp;= \cfrac{n!}{k!(n-k)!}
+\end{aligned}
+$$</p>
+<p>and</p>
+<p>$$
+(a+b)^n = \sum_{k=0}^{n} \binom{n}{k} a^kb^{n-k}
+$$</p>
+<h2 id="partitions">Partitions</h2>
+<p>Actually, <strong>combination</strong> is a special case of <strong>partition</strong>. You can think of combination as partition an $n-$element set into two subsets, one with $k$ elements and the other $n-k$ elements. In a more general case, we want to partition an $n-$element set into $r$ disjoint subsets, with the first subset containing $n_1$ elements, the second $n_2$ elements, the third $n_3$ elements, <em>etc.</em> and finally the $r$th subset $n_r$ elements. Of course, it needs to satisfy that $n_1 + n_2 + \cdots + n_r = n$. How many ways can we do the partition as described?</p>
+<p>We could divide this problem into an $r$-stage counting process. In the first stage, we choose $n_1$ elements for the first subset. Here we have $\binom{n}{n_1}$ choices. In the second stage, we are left with $n-n_1$ elements, and we choose $n_2$ elements for the second subset from those $n-n_1$ leftovers. Here we have $\binom{n-n_1}{n_2}$ choices. And so on &hellip; In the $r$th stage, we are left with $n-n_1 - \cdots - n_{r-1}$ elements, and we choose $n_r$ elements for the $r$th subset from those $n-n_1 - \cdots - n_{r-1}$ elements. Here, we have $\binom{n-n_1 - \cdots - n_{r-1}}{n_r}$ choices.</p>
+<p>Using the basic counting principle, the total number of choices we have is basically the product of the number of choices at each stage:</p>
+<p>$$\binom{n}{n_1} \cdot \binom{n-n_1}{n_2} \cdot \binom{n-n_1-n_2}{n_3} \cdots \binom{n-n_1-n_2- \cdots -n_{r-1}}{n_r}$$</p>
+<p>If you expand each combination, you will find that it is equal to:</p>
+<p>$$\cfrac{n!}{n_1!n_2! \cdots n_r!}$$</p>
+<p>We denote the above as:</p>
+<p>$$\binom{n}{n_1,n_2,\cdots,n_r}$$</p>
+<p>It is called the <strong>multinomial coefficient</strong>.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="https://www.mathsisfun.com/data/probability-shared-birthday.html">The Birthday Problem</a></li>
+<li><a href="https://brilliant.org/wiki/multinomial-theorem/">The Multinomial Theorem</a></li>
+</ul>
+</div>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-basic-counting-principle">The Basic Counting Principle</a></li>
+    <li><a href="#k-permutations">$k$-permutations</a></li>
+    <li><a href="#combinations">Combinations</a></li>
+    <li><a href="#partitions">Partitions</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
