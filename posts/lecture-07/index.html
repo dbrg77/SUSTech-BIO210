@@ -180,6 +180,7 @@
 <p>$$\mathbb{P}(H_i|E) = \cfrac{\mathbb{P}(H_i)\mathbb{P}(E|H_i)}{\mathbb{P}(E)} = \cfrac{\mathbb{P}(E|H_i)}{\sum_{i=1}^n \mathbb{P}(H_i)\mathbb{P}(E|H_i)} \cdot \mathbb{P}(H_i)$$</p>
 <p>Instead of talking about events $A$, $B$ <em>etc.</em>, we think about <strong>hypotheses</strong> and <strong>evidence</strong>. Before we observe anything, we have a few mutually exclusive hypotheses $H_i$. They are all reasonable to some degree, <em>i.e.</em> the prior $\mathbb{P}(H_i)$. Once we have some new information, we update our prior beliefs about how likely we think each of them might be true, <em>i.e.</em> the posterior $\mathbb{P}(H_i|E)$.</p>
 <p>In real life, the probability $\mathbb{P}(E|H_i)$ is relatively easy to calculate. Probability theory is really good at calculating the probability of some evidence given a hypothesis is true. Actually, that is what probability theory is all about. The difficult part is actually choosing and estimating the prior $\mathbb{P}(H_i)$. It requires more practice and experience.</p>
+<p>If you are interested in the not-so-optimised <code>python</code> code used for the simulation during the lecture, you can find it here in <a href="https://dbrg77.github.io/SUSTech-BIO210/src/Bayesian_Search.ipynb">Jupyter Notebook format</a> or the <a href="https://dbrg77.github.io/SUSTech-BIO210/src/Bayesian_Search.html">HTML version</a> of the code.</p>
 
 
 <div class="admonition tip">
