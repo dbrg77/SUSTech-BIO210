@@ -6,7 +6,29 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 10 Mar 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Mar 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 14 Populations And Samples</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-14/</link>
+      <pubDate>Fri, 17 Mar 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-14/</guid>
+      <description>Lecture 14 marks the start of the section of statistics, or more precisely, the inferential statistics section. In inferential statistics, we would like to use the information from the samples we get to make inference and some generalised conclusions about populations.
+First, we need to clarify the concepts of population and sample. We actually already talked about them in previous lectures, even though we have not formally defined them. The concepts of populations and samples are actually difficult to describe.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 13 Normal Distributions</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/</link>
+      <pubDate>Fri, 17 Mar 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/</guid>
+      <description>In Lecture 13, we will talk about why the normal distribution is useful and how we use it to calculate probabilities of events of our interest. This is the last lecture in the probability section. We will move on to statistics section after this lecture.
+Normal (Gaussian) Distributions We have come across some basics about the normal distributions. The PDF is:
+$$f_X(x)=\cfrac{1}{\sqrt{2\pi}\sigma}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+Expectation &amp;amp; Variance Like always, whenever we get a PDF or PMF, we always need to check whether it describes a valid probabilistic model.</description>
+    </item>
+    
     <item>
       <title>Lecture 12 Continuous Random Variables</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/</link>
