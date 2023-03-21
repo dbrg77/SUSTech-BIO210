@@ -205,9 +205,9 @@ $$</p>
 <p>Therefore, we need to do some manipulation. Let $t = \frac{x}{\sqrt{2}}$, then $\mathrm{d}t = \frac{1}{\sqrt{2}}\mathrm{d}x$. We could do the following manipulation:</p>
 <p>$$
 \begin{aligned}
-\int_{t}^{+\infty}e^{-t^2}\mathrm{d}t &amp;= \int_{x}^{+\infty}e^{-\frac{x^2}{2}} \cfrac{1}{\sqrt{2}}\,\mathrm{d}x = \cfrac{1}{\sqrt{2}} \int_{x}^{+\infty}e^{-\frac{x^2}{2}}\,\mathrm{d}x\\[15pt]
-&amp;= \cfrac{\sqrt{2\pi}}{\sqrt{2}} \cdot \cfrac{1}{\sqrt{2\pi}} \int_{x}^{+\infty}e^{-\frac{x^2}{2}}\,\mathrm{d}x = \sqrt{\pi}\int_{x}^{+\infty}\cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{x^2}{2}}\,\mathrm{d}x \\[15pt]
-&amp;= \sqrt{\pi} \left( 1 - {\color{blue} \int_{-\infty}^{x}\cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{x^2}{2}}\,\mathrm{d}x } \right)
+\int_{t}^{+\infty}e^{-t^2}\mathrm{d}t &amp;= \int_{x=\sqrt{2}t}^{+\infty}e^{-\frac{x^2}{2}} \cfrac{1}{\sqrt{2}}\,\mathrm{d}x = \cfrac{1}{\sqrt{2}} \int_{x=\sqrt{2}t}^{+\infty}e^{-\frac{x^2}{2}}\,\mathrm{d}x\\[15pt]
+&amp;= \cfrac{\sqrt{2\pi}}{\sqrt{2}} \cdot \cfrac{1}{\sqrt{2\pi}} \int_{x=\sqrt{2}t}^{+\infty}e^{-\frac{x^2}{2}}\,\mathrm{d}x = \sqrt{\pi}\int_{x=\sqrt{2}t}^{+\infty}\cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{x^2}{2}}\,\mathrm{d}x \\[15pt]
+&amp;= \sqrt{\pi} \left( 1 - {\color{blue} \int_{-\infty}^{x=\sqrt{2}t}\cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{x^2}{2}}\,\mathrm{d}x } \right)
 \end{aligned}
 $$</p>
 <p>Note that the blue part is the value from <code>NORM.DIST(x, 0, 1, 1)</code>. That&rsquo;s what we should compare to. Using the top 10 rows of the middle page from the lecture slide:</p>
