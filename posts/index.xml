@@ -6,7 +6,26 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 31 Mar 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Apr 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 22 Confidence Interval For The Proportion</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-22/</link>
+      <pubDate>Tue, 04 Apr 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-22/</guid>
+      <description>Now that we have figured out the sampling distribution of the sample proportion, we can make interval estimation and construct confidence intervals for the sample proportion. Before we do that, let&amp;rsquo;s use an example to look the distribution of $P$ one more time.
+A Simplified Version of Gene Expression As we know, DNA is our genetic material. In order for a gene to function, the gene needs to be &amp;ldquo;converted&amp;rdquo; into proteins1.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 21 Sampling Distribution of The Sample Proportion</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-21/</link>
+      <pubDate>Tue, 04 Apr 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-21/</guid>
+      <description>What we have been dealing with so far are all absolute quantities, such as the number of emails we received in a given time window and the body temperatures of healthy people. In many other situations, the relative quantities are more meaningful. In this lecture, we introduce a new population parameter: the population proportions, representing the proportion (or fraction, percentage etc.) of the thing of our interest. To be consistent with the notations we are using in this course, we use the Greek letter $\pi$ to denote the population proportion.</description>
+    </item>
+    
     <item>
       <title>Lecture 20 Confidence Interval For The Variance</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-20/</link>

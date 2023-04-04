@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 21 Sampling Distribution of The Sample Proportion</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-21/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 21 Sampling Distribution of The Sample Proportion">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 21 Sampling Distribution of The Sample Proportion">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-21/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-21/">
+    <meta name="twitter:image" content="/images/avatar.png">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-21/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.png" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 21 Sampling Distribution of The Sample Proportion</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            April 4, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>What we have been dealing with so far are all absolute quantities, such as the number of emails we received in a given time window and the body temperatures of healthy people. In many other situations, the relative quantities are more meaningful. In this lecture, we introduce a new population parameter: the <strong>population proportions</strong>, representing the proportion (or fraction, percentage <em>etc.</em>) of the thing of our interest. To be consistent with the notations we are using in this course, we use the Greek letter $\pi$ to denote the population proportion.</p>
+<h2 id="population-proportion-boldsymbolpi">Population Proportion $\boldsymbol{\pi}$</h2>
+<p>Let&rsquo;s use the correct answer of <strong>multiple choice question (MCQ)</strong> as an example. <strong>MCQs</strong> are a common type of question in many exams. Typically, four choices (a), (b), (c) and (d) are provided and only one of them is true. When I was a student, we were told that the test makers made sure that the correct answers had a uniform distribution among (a), (b), (c) and (d). In this case, the population can be thought as an abstract concept of all <strong>MCQs</strong> in the world. Let&rsquo;s say we are interested in those questions whose correct answer is <strong>(a)</strong>. We will talk about how to deal with (a), (b), (c) and (d) altogether in <strong>Lecture 34</strong>. For now, we only focus on those questions with <strong>(a)</strong> as the correct answer. We are interested in &ldquo;how many&rdquo; questions there are in the whole population whose correct answer is <strong>(a)</strong>. I think you can appreciate that the absolute number here is not really useful if you take it out from the context. It is only meaningful when we compare the number to all other numbers, that is, the numbers of questions whose correct answers is (b), (c) or (d). Therefore, when we say &ldquo;how many&rdquo;, what we really mean is the fraction or <strong>proportion</strong> of the questions in the population whose correct answer is <strong>(a)</strong>. This <strong>population proportion</strong>, denoted by $\pi$, is the new population parameter we are analysing in this lecture.</p>
+<p>As usual, $\pi$ is usually unknown. What we can do is to draw a sample and use the data from the sample to estimate $\pi$. Let&rsquo;s say, we take a random sample of size $n$, and it turns out that $x$ questions whose correct answer is <strong>(a)</strong>. You guessed it, the point estimate for $\pi$ is basically the <strong>sample proportion</strong>. Again, to be consistent with our naming convention, we use capital $P$ to denote the random variable sample proportion, and small letter $p$ to denote the number taken by $P$. Do not confuse with the probability notations.</p>
+<p>We have:</p>
+<p>$$P=\cfrac{X}{n}$$</p>
+<p>In order to use $P$ to get some generalised knowledge about the population parameter $\pi$, we need to know its behaviour. That is, the distribution of $P$, which we call it the <strong>sampling distribution of the sample proportion</strong>.</p>
+<h2 id="indicator-variable">Indicator Variable</h2>
+<p>Let&rsquo;s analyse the distribution of $P$. First, we take a sample of size $n$ from the population with the parameter $\pi$. That is, the <strong>proportion</strong> of <strong>MCQs</strong> whose correct answer is <strong>(a)</strong> is $\pi$. Like we discussed before, the best way of thinking about a sample is to treat them as $n$ <strong>i.i.d.</strong> random variables. In this case, we denote the random variables $I_1, I_2, \cdots, I_{n-1}, I_n$. They are slightly different from the random variables we talked about previously. These random variables take the outcome (a <strong>MCQ</strong>) from the population and return $1$ if the correct answer is <strong>(a)</strong> and $0$ otherwise. Now think about this question: what distribution do $I_i$ follow? Well &hellip; by definition, they all follow a <strong>Bernoulli distribution</strong>:</p>
+<p>$$I_1, I_2, \cdots, I_{n-1}, I_n \sim Ber(\pi)$$</p>
+<p>We call this type of random variable: <strong>indicator variables</strong>, hence the symbol $I$. They are very useful when we want to binarise the data. Based on the properties of the <strong>Bernoulli distribution</strong>, we know the population mean and variance are $\pi$ and $\pi(1-\pi)$. respectively:</p>
+<p>$$
+\begin{aligned}
+\mathbb{E}[I_1] = \mathbb{E}[I_2] = \cdots = \mathbb{E}[I_{n-1}] = \mathbb{E}[I_n] &amp;= \pi \\
+\mathbb{V}\textmd{ar}(I_1) = \mathbb{V}\textmd{ar}(I_2) = \cdots = \mathbb{V}\textmd{ar}(I_{n-1}) = \mathbb{V}\textmd{ar}(I_n) &amp;= \pi(1-\pi)
+\end{aligned}
+$$</p>
+<p>Now let&rsquo;s also introduce two other random variables: the sum $(Y)$ and the sample mean $(\bar{I})$, which will be useful soon:</p>
+<p>$$\bar{I} = \cfrac{1}{n}\sum_{i=1}^n I_i \textmd{ and } Y = \sum_{i=1}^n I_i$$</p>
+<p>Before we go any further, let&rsquo;s look at the meanings of these two random variables. Since each random variable $I_i$ takes the value $1$ if the correct answer is <strong>(a)</strong> and $0$ otherwise, the sum $Y$ is basically the total number of <strong>MCQs</strong> in the sample whose correct answer is <strong>(a)</strong>. The sample mean $\bar{I}$ is just the <strong>proportion</strong> of <strong>MCQs</strong> in the sample whose correct answer is <strong>(a)</strong>, and $\bar{I}$ is the <strong>sample proportion</strong> we want to analyse, that is, $P=\bar{I}$. This tells us that the <strong>sample proportion</strong> is just a special type of <strong>sample mean</strong>.</p>
+<p>The <strong>central limit theorem</strong> tells us that regardless of the population distribution, as long as the sample size $n$ is large enough, the sample mean is approximately normal:</p>
+<p>$$P \ \dot\sim \ \mathcal{N}\left( \mu_{P} = \pi, \, \sigma_{P}^2 = \cfrac{\pi(1-\pi)}{n} \right)$$</p>
+<p>Note the subscript $P$, meaning the distribution is about the <strong>sample proportion</strong>. In the next lecture, we see how we can use this to calculate probabilities and make interval estimation.</p>
+<h2 id="normal-approximation-to-the-binomial">Normal Approximation To The Binomial</h2>
+<p>Now let&rsquo;s turn our attention to the random viable $Y$, which is the sum of $I_i$ and the meaning of the sum is the total number of <strong>MCQs</strong> whose correct answer are <strong>(a)</strong> in the sample. In a more general term, the sum represents the number of outcomes that satisfy our standard per $n$ outcomes.</p>
+<p>Since we know that $I_1, I_2, \cdots, I_{n-1}, I_n$ are <strong>i.i.d.</strong> Bernoulli random variables with the parameter $\pi$, by definition the sum $Y$ follows a binomial distribution:</p>
+<p>$$Y \sim B(n,\pi)$$</p>
+<p>In addition, the central limit theorem tells us that, as long as $n$ is <strong>large enough</strong>, we should have expect:</p>
+<p>$$Y \ \dot\sim \ \mathcal{N}(\mu = n\pi, \sigma^2 = n\pi(1-\pi))$$</p>
+<p>Therefore, one can expect that we can use the normal distributions to approximate the binomial distributions when $n$ is large. This is a common trick to quick calculate probabilities. We will do some demonstrations during the lecture, and make you do some on your own in your homework.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="https://en.wikipedia.org/wiki/Dummy_variable_(statistics)">Indicator Variables</a></li>
+<li><a href="https://online.stat.psu.edu/stat414/lesson/28/28.1">Normal Approximation to Binomial</a></li>
+</ul>
+</div>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#population-proportion-boldsymbolpi">Population Proportion $\boldsymbol{\pi}$</a></li>
+    <li><a href="#indicator-variable">Indicator Variable</a></li>
+    <li><a href="#normal-approximation-to-the-binomial">Normal Approximation To The Binomial</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
