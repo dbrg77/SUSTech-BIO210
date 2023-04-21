@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 27 Compare Two Population Proportions</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-27/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 27 Compare Two Population Proportions">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 27 Compare Two Population Proportions">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-27/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-27/">
+    <meta name="twitter:image" content="/images/avatar.png">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-27/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.png" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 27 Compare Two Population Proportions</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            April 21, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>So far we have talked a lot about doing hypothesis testing for a particular population parameter, such as the population proportion $\pi$, the population mean $\mu$ and the population variance $\sigma^2$. We take one random sample from the population, and test if the population parameter is equal to or greater/less than a specific value. This is called a <strong>one-sample test</strong>. Most of the time the specific value comes from our previous knowledge about the population.</p>
+<p>In reality we very often need to compare the proportions or means of two different groups. This is a more useful test, called a <strong>two-sample test</strong>. We always start with the easier one. In this lecture, we introduce how do we compare two population proportions to see if they are equal or not, or if one is higher than the other. For example, we want to see if a drug can effectively treat certain disease. We compare two groups of people, one with placebo, the other with the drug. In this case, we are comparing the proportions of the cured patients between the placebo group and the drug group. The two samples here represent two populations, one is the population with placebo, the other the population treated with the drug. We want to figure out the proportions of cured people from the two populations are equal or not.</p>
+<p>To this end, we introduce a new population parameter $\delta$, representing the difference of the parameters of our interest from the two populations. In our current lecture, it means the difference of the two population proportions. Therefore, our null and alternative hypotheses for a two-sided test are:</p>
+<p>$$
+\boldsymbol{H_0:} \ \;\delta = \pi_1 - \pi_2 = 0 \\
+\boldsymbol{H_1:} \ \; \delta = \pi_1 - \pi_2 \neq 0
+$$</p>
+<p>Intuitively, the estimator for $\delta$ is basically the difference of the sample proportions:</p>
+<p>$$
+\boldsymbol{D} = \boldsymbol{P}_1 - \boldsymbol{P}_2
+$$</p>
+<p>Once we have our samples, we can have an estimate: $d = p_1 - p_2$. Now to (indirectly) figure out whether the difference we observed in our samples ($d$) is due to sampling variation or true population difference, we need to compute the <em>p</em>-value, which is:</p>
+
+
+<div class="admonition note">
+    <div class="title">p-value in this scenario</div>
+    <div class="content"><strong>If there is no difference whatsoever,</strong> what is the probability of observing the difference $d$ or more extreme?</div>
+</div>
+<p>Apparently, in order to calculate that, we need to figure out the distribution of $\boldsymbol{D}$, which is called <strong>the sampling distribution of the difference of the sample proportions</strong>.</p>
+<p>Let&rsquo;s say, we have two samples: sample 1 with a size $n_1$ comes from population 1 with a parameter $\pi_1$ and sample 2 with a size $n_2$ comes from population 2 with a parameter $\pi_2$. In previous lectures, we know that <strong>under some assumptions</strong>, we have</p>
+<p>$$
+\boldsymbol{P}_1 \sim \boldsymbol{\mathcal{N}}\left( \pi_1, \dfrac{\pi_1(1-\pi_1)}{n_1} \right) \textmd{ and } \boldsymbol{P}_2 \sim \boldsymbol{\mathcal{N}}\left( \pi_2, \dfrac{\pi_2(1-\pi_2)}{n_2} \right)
+$$</p>
+<p>Since a linear function of a normal random variable is still normal, we can see that $-\boldsymbol{P}_2 = (-1) \cdot \boldsymbol{P}_2 \sim \boldsymbol{\mathcal{N}}\left( -\pi_2, \dfrac{\pi_2(1-\pi_2)}{n_2} \right)$. Since the sum of two independent normal random variables is still normal, so $\boldsymbol{D} = \boldsymbol{P}_1 - \boldsymbol{P}_2$ is still a normal random variable. We only need to figure out its mean and variance.</p>
+<p>For the mean:</p>
+<p>$$
+\mathbb{E}[\boldsymbol{D}] = \mathbb{E}[\boldsymbol{P}_1 - \boldsymbol{P}_2] = \mathbb{E}[\boldsymbol{P}_1] - \mathbb{E}[\boldsymbol{P}_2] = \pi_1 - \pi_2
+$$</p>
+<p>Note we have two independent samples, so for the variance:</p>
+<p>$$
+\begin{aligned}
+\mathbb{V}\textmd{ar}(\boldsymbol{D}) &amp;= \mathbb{V}\textmd{ar}(\boldsymbol{P}_1 - \boldsymbol{P}_2) = \mathbb{V}\textmd{ar}\left(\boldsymbol{P}_1 + [-\boldsymbol{P}_2]\right) = \mathbb{V}\textmd{ar}(\boldsymbol{P}_1) +  \mathbb{V}\textmd{ar}(-\boldsymbol{P}_2) \\[7.5pt]
+&amp;= \dfrac{\pi_1(1-\pi_1)}{n_1} + \dfrac{\pi_2(1-\pi_2)}{n_2}
+\end{aligned}
+$$</p>
+<p>Therefore, we have figured out the distribution of $\boldsymbol{D}$:</p>
+<p>$$
+\boldsymbol{D} \sim \boldsymbol{\mathcal{N}}\left( \pi_1-\pi_2, \dfrac{\pi_1(1-\pi_1)}{n_1} + \dfrac{\pi_2(1-\pi_2)}{n_2} \right)
+$$</p>
+<p>Then we have:</p>
+<p>$$
+\dfrac{(\boldsymbol{P}_1 - \boldsymbol{P}_2) - (\pi_1-\pi_2)}{\sqrt{\frac{\pi_1(1-\pi_1)}{n_1} + \frac{\pi_2(1-\pi_2)}{n_2}}} \sim \boldsymbol{\mathcal{N}}(0,1)
+$$</p>
+<p>Now we can calculate the <em>p</em>-value based on the standard normal distribution. When we calculate the <em>p</em>-value, we are calculating the conditional probability where we live in a universe where the null hypothesis is true, which is $\delta = \pi_1 - \pi_2 = 0$, let&rsquo;s denote this common proportion simply as $\pi$. Once we have the samples, our test statistic would be:</p>
+<p>$$
+z = \dfrac{p_1 - p_2}{\sqrt{\frac{\pi(1-\pi)}{n_1} + \frac{\pi(1-\pi)}{n_2}}} = \dfrac{p_1 - p_2}{\sqrt{\pi(1-\pi) \cdot \left(\frac{1}{n_1} + \frac{1}{n_2}\right)}}  \sim \boldsymbol{\mathcal{N}}(0,1)
+$$</p>
+<p>We have one problem now: we do not know the value of $\pi$. The intuitive thing to do is to replace it with the sample estimate. Now the question becomes: what is the best estimate for $\pi$? Remember when we first entered the section of inferential statistics, we say that in terms of the sample size, bigger is always better. Since we assume the two population proportions are the same, then the best estimation would be the one by combining two samples:</p>
+<p>$$
+p = \dfrac{n_1p_1 + n_2p_2}{n_1 + n_2}
+$$</p>
+<p>Replace $\pi$ with $p$, we can calculate the <em>p</em>-value.</p>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
