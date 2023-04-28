@@ -6,7 +6,35 @@
     <description>Recent content on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 21 Apr 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Apr 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 30 The Behaviour of The p-value</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-30/</link>
+      <pubDate>Fri, 28 Apr 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-30/</guid>
+      <description>There is not much to say in this post, because Lecture 30 is more like a practical session where we demonstrate how p-values behave if we perform a lot of hypothesis testing. We will do some live coding during the lecture.
+References Examples of misinterpretation of p-values </description>
+    </item>
+    
+    <item>
+      <title>Lecture 29 Compare Two Population Variances</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-29/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-29/</guid>
+      <description>In this lecture, we will introduce one method for comparing two population variances. In this case, we have two samples, independently drawn from two populations. Based on the sample variances, we want to investigate if the population variances are equal or not. Like said before, we cannot assess this problem directly. Instead, we approach this problem in an indirect way using the p-value. That is, if wa assumed that there is no difference between the two variances from the two populations, what would be the probability of observing the data we have or more extreme?</description>
+    </item>
+    
+    <item>
+      <title>Week 11, Friday</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-16/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-16/</guid>
+      <description>&lt;em&gt;Course material for lectures on 2022-Apr-29&lt;/em&gt;</description>
+    </item>
+    
     <item>
       <title>Lecture 28 Compare Two Population Means</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-28/</link>
@@ -301,7 +329,7 @@ Your final grade is a weighted average 1 of the following:</description>
       <pubDate>Fri, 10 Feb 2023 16:01:31 +0800</pubDate>
       
       <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content Lesson 1 (17-Feb-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (21-Feb-2023) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (24-Feb-2023) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (03-Mar-2023) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (07-Mar-2023) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV Lesson 6 (10-Mar-2023) Lecture slides Lecture 11 Discrete Probability Distribution Lecture 12 Continuous Probability Distribution Homework assignment Assignment 3 Extra reading material Mean &amp;amp; Variance of Binomial &amp;amp; Poisson Lesson 7 (17-Mar-2023) Lecture slides Lecture 13 Normal Distribution Lecture 14 Population And Sample Homework assignment None Extra reading material Calculate Probabilities Using Excel Useful Properties of A Normal Random Variable Lesson 8 (21-Mar-2023) Lecture slides Lecture 15 Sampling Distribution And The CLT Lecture 16 Sampling Distribution of The Sample Variance Homework assignment None Extra reading material None Lesson 9 (24-Mar-2023) Lecture slides Lecture 17 Maximum Likelihood Estimation Lecture 18 The Error Curve Derived By MLE Homework assignment Assignment 4 Extra reading material MLE For Variance Lesson 10 (31-Mar-2023) Lecture slides Lecture 19 Confidence Interval For The Mean Lecture 20 Confidence Interval For The Variance Homework assignment None Extra reading material Calculating Probabilities Using R The Student&amp;rsquo;s t Distribution Lesson 11 (03-Apr-2023) Lecture slides Lecture 21 Sampling Distribution of Sample Proportion Lecture 22 Confidence Interval For The Proportion Homework assignment None Extra reading material None Lesson 12 (06-Apr-2023) Lecture slides Lecture 23 Introduction To Hypothesis Testing Lecture 24 Hypothesis Testing Terms Homework assignment None Extra reading material None Lesson 13 (18-Apr-2023) Lecture slides Lecture 25 More On Hypothesis Testing Lecture 26 Error Power And Sample Size Estimation Homework assignment Assignment 5 Extra reading material None Lesson 14 (21-Apr-2023) Lecture slides Lecture 27 Compare Two Populations - Proportion Lecture 28 Compare Two Populations - Mean Homework assignment None Extra reading material The Distribution of The Test Statistics </description>
+      <description>All course content Lesson 1 (17-Feb-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (21-Feb-2023) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (24-Feb-2023) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (03-Mar-2023) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (07-Mar-2023) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV Lesson 6 (10-Mar-2023) Lecture slides Lecture 11 Discrete Probability Distribution Lecture 12 Continuous Probability Distribution Homework assignment Assignment 3 Extra reading material Mean &amp;amp; Variance of Binomial &amp;amp; Poisson Lesson 7 (17-Mar-2023) Lecture slides Lecture 13 Normal Distribution Lecture 14 Population And Sample Homework assignment None Extra reading material Calculate Probabilities Using Excel Useful Properties of A Normal Random Variable Lesson 8 (21-Mar-2023) Lecture slides Lecture 15 Sampling Distribution And The CLT Lecture 16 Sampling Distribution of The Sample Variance Homework assignment None Extra reading material None Lesson 9 (24-Mar-2023) Lecture slides Lecture 17 Maximum Likelihood Estimation Lecture 18 The Error Curve Derived By MLE Homework assignment Assignment 4 Extra reading material MLE For Variance Lesson 10 (31-Mar-2023) Lecture slides Lecture 19 Confidence Interval For The Mean Lecture 20 Confidence Interval For The Variance Homework assignment None Extra reading material Calculating Probabilities Using R The Student&amp;rsquo;s t Distribution Lesson 11 (03-Apr-2023) Lecture slides Lecture 21 Sampling Distribution of Sample Proportion Lecture 22 Confidence Interval For The Proportion Homework assignment None Extra reading material None Lesson 12 (06-Apr-2023) Lecture slides Lecture 23 Introduction To Hypothesis Testing Lecture 24 Hypothesis Testing Terms Homework assignment None Extra reading material None Lesson 13 (18-Apr-2023) Lecture slides Lecture 25 More On Hypothesis Testing Lecture 26 Error Power And Sample Size Estimation Homework assignment Assignment 5 Extra reading material None Lesson 14 (21-Apr-2023) Lecture slides Lecture 27 Compare Two Populations - Proportion Lecture 28 Compare Two Populations - Mean Homework assignment None Extra reading material The Distribution of The Test Statistics Lesson 15 (28-Apr-2023) Lecture slides Lecture 29 Compare Two Population Variances Lecture 30 The Behaviour of The p-value Homework assignment None Extra reading material The Quotient of Two Independent Random Variables </description>
     </item>
     
     <item>
