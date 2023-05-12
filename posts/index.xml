@@ -6,7 +6,34 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 05 May 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 May 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 34 Chi-squared Tests For Categorical Data</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-34/</link>
+      <pubDate>Fri, 12 May 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-34/</guid>
+      <description>In this lecture, we will introduce the Chi-square goodness-of-fit test. It is useful when we want to compare some categorical distributions observed from the data to a theoretical distribution. We will go through the intuition, the logic and the use case of it. We are going to revisit what you learnt during high school: the Mendel&amp;rsquo;s Plant Hybridisation experiments. You will be introduced to a very famous debate in the history of science.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 33 One-way ANOVA Examples</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-33/</link>
+      <pubDate>Fri, 12 May 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-33/</guid>
+      <description>In the previous two lectures, we talked about the idea of ANOVA. We see why it is called ANOVA when it is actually used to compare means. As you have already seen, the calculation involved in doing an ANOVA test, even for only three groups, is quite daunting, especially when you want to perform post hoc tests. Therefore, you should always use a statistical software to perform this kind of test in practice.</description>
+    </item>
+    
+    <item>
+      <title>Week 13, Friday</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-18/</link>
+      <pubDate>Fri, 12 May 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-18/</guid>
+      <description>&lt;em&gt;Course material for lectures on 2022-May-13&lt;/em&gt;</description>
+    </item>
+    
     <item>
       <title>Lecture 32 ANOVA &amp; Post hoc Multiple Comparisons</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-32/</link>
@@ -25,15 +52,6 @@ We will elaborate more during the lecture.</description>
       
       <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-31/</guid>
       <description>In our real life, there are many situations where we need to compare the means from many groups ($\geqslant 3$), representing many different populations. How do we do this? Intuitively, we just perform t-tests for every pair of them. This is actually not a bad idea when the number of groups ($k$) is small. However, when $k$ becomes large, we have to perform many tests. If you remember the content from the previous lecture, you should understand that this actually increases our chances of making type I errors.</description>
-    </item>
-    
-    <item>
-      <title>Week 12, Friday</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-17/</link>
-      <pubDate>Wed, 03 May 2023 00:00:00 +0800</pubDate>
-      
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-17/</guid>
-      <description>&lt;em&gt;Course material for lectures on 2022-May-06&lt;/em&gt;</description>
     </item>
     
     <item>
