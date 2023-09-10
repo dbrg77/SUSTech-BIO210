@@ -5,14 +5,26 @@
     <link>https://dbrg77.github.io/SUSTech-BIO210/</link>
     <description>Recent content on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 11 Sep 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Posts</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/</link>
-      <pubDate>Wed, 06 Sep 2023 09:01:31 +0800</pubDate>
+      <title>Lecture 2 Descriptive Statistics</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/</link>
+      <pubDate>Mon, 11 Sep 2023 00:00:10 +0800</pubDate>
       
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/</guid>
-      <description>Posts about each lecture will be posted here as the course is going.</description>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/</guid>
+      <description>Lecture 2 started to introduce some basic techniques in descriptive statistics. You can think of this lecture as a recap of what you have already known in the past. Make sure you get familiar with all the graphs introduced in this lecture, because we are going to use them all the time in future lectures. Perhaps the most important graph in this course is the histogram, which is the most common way of showing frequency distributions:</description>
+    </item>
+    
+    <item>
+      <title>Lecture 1 Course Introduction</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-01/</link>
+      <pubDate>Mon, 11 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-01/</guid>
+      <description>In the first lecture of the entire course, we had a brief overview of the course structure and content. Lecture 1 started with some administrative aspects of the course. Then we provided an introduction about what is and is NOT included in the course, what to expect from the course and the difference between BIO210 and MA212.
+Your final grade is a weighted average 1 of the following:
+Attendance Homework Mid-term Final exam $10\%$ $20\%$ $30\%$ $40\%$ Not much stuff in this lecture really, so you could just relax and listen.</description>
     </item>
     
     <item>
@@ -21,7 +33,7 @@
       <pubDate>Fri, 10 Feb 2023 16:01:31 +0800</pubDate>
       
       <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content will be listed here as the course is going.</description>
+      <description>All course content Lesson 1 (11-Sep-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None </description>
     </item>
     
     <item>
