@@ -21,25 +21,25 @@
     
 
     
-    <title>Posts</title>
+    <title>Lecture 4 Probability Axioms</title>
     <meta name="description" content="by School of Life Sciences at SUSTech">
     <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
 
-    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/">
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Posts">
+    <meta property="og:title" content="Lecture 4 Probability Axioms">
     <meta property="og:description" content="by School of Life Sciences at SUSTech">
     <meta property="og:image" content="/images/avatar.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Posts">
+    <meta name="twitter:title" content="Lecture 4 Probability Axioms">
     <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
-    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/">
-    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/">
     <meta name="twitter:image" content="/images/avatar.jpg">
 
     
-    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/" />
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/" />
 
     <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
@@ -161,37 +161,90 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 4 Probability Axioms</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            September 14, 2023
+        </p>
 
-    <h1 class="list-title">Posts</h2>
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
 
-    
+    <div class="post-content">
+        <p>
+            <h2 id="probability-axioms">Probability Axioms</h2>
+<p>After we finished the content of descriptive statistics, we moved on to the section of probability, which is really good at dealing with randomness. You have probably already come across some concepts of probability. In <strong>Lecture 4</strong>, we just made things formal. Probability axioms were introduced in this lecture. Those are the things we need to agree on. They are quite intuitive, and hopefully, you have no problem accepting them as facts:</p>
+<ol>
+<li><strong>Nonnegativity:</strong> $\mathbb{P}(A) \geqslant 0$, for every event $A$</li>
+<li><strong>Normalisation:</strong> $\mathbb{P}(\Omega) = 1$</li>
+<li><strong>Additivity:</strong> If $A$ and $B$ are disjoint ($A \cap B = \varnothing$), then
+$$\mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B)$$</li>
+</ol>
+<h2 id="a-recap-of-set-notations">A Recap of Set Notations</h2>
+<p>The sample space ($\Omega$) and probabilistic events ($A,B,C,\cdots$) are all expressed as <strong>sets</strong>, which can be written in the following two ways:</p>
+<p>$$ \{s_1, s_2, s_3, \cdots \} \textmd{ or } \{s | s \textmd{ satisfies something} \} $$</p>
+<p>The symbol <code>|</code> is read as &ldquo;such that&rdquo;. The complement of a set $S$ with respect to the sample space $\Omega$ is denoted by $S^C$. $A \cap B$ represents the common elements of sets $A$ and $B$:</p>
+<p>$$ A \cap B = \{ x | x \in A \textmd{ and } x \in B \}$$</p>
+<p>$A \cup B$ represents all the elements that are in either $A$ or $B$:</p>
+<p>$$ A \cup B = \{ x | x \in A \textmd{ or } x \in B \}$$</p>
+<p>$\varnothing$ is the empty set. In general, we visualise the relationship among different sets in <strong>Venn digrams</strong>:</p>
+<figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/venn.png" width="500px"/>
+</figure>
 
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/" class="post-link" target="_blank">Lecture 4 Probability Axioms</a>
-    <div class="flex-break"></div>
-    <span class="post-date">Sep 14, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/" class="post-link" target="_blank">Lecture 3 Numerical Measures</a>
-    <div class="flex-break"></div>
-    <span class="post-date">Sep 14, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/" class="post-link" target="_blank">Lecture 2 Descriptive Statistics</a>
-    <div class="flex-break"></div>
-    <span class="post-date">Sep 11, 2023</span>
-</article>
-<article class="post-title">
-    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-01/" class="post-link" target="_blank">Lecture 1 Course Introduction</a>
-    <div class="flex-break"></div>
-    <span class="post-date">Sep 11, 2023</span>
-</article>
+<h2 id="zero-probability">Zero Probability</h2>
+<p>For most of the stuff we have talked about in this lecture, I think they follow our intuitions and we do not have a problem understanding them. One exception is the case when we have a continuos sample space. When we are dealing with a sample space with uncountably infinite outcomes, <strong>the probability of getting any specific outcome is zero</strong>. It has to be zero. Maybe I should say that we have to assign zero to any specific outcome, under the axioms we are using. It cannot be positive. Otherwise, using the additivity axiom, an event with a sufficiently large number of outcomes would have a probability of $&gt;1$. When dealing with continuous or uncountable sample space, it makes more sense to work on <strong>intervals</strong>, which we will investigate more later.</p>
+<p>For now, you can think that <strong>&ldquo;probability of 0&rdquo; does not necessarily mean &ldquo;impossible&rdquo;</strong>. To provide a rough example, consider the experiment in the lecture: we keep tossing a fair coin until the head appears for the first time and stop. Let the total number of tosses be $n$, the probability for some outcomes are:</p>
+<p>$$
+\begin{aligned}
+\mathbb{P}(H) &amp;= \cfrac{1}{2}\\
+\mathbb{P}(TH) &amp;= \cfrac{1}{4}\\
+\mathbb{P}(TTH) &amp;= \cfrac{1}{8}\\
+&amp;\vdots
+\end{aligned}
+$$</p>
+<p>The probability of any outcome would be $\cfrac{1}{2^n}$. Now let the event $A$ = { we keep getting tails and never stop }. We could calculate:</p>
+<p>$$\mathbb{P}(A) = \lim_{n \to \infty}\cfrac{1}{2^n} $$</p>
+<p>By definition, $\mathbb{P}(A) = 0$. Event $A$ is very unlikely to happen in real life, but theoretically, it is an event that could happen.</p>
 
-    
 
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="http://en.wikipedia.org/wiki/Andrey_Kolmogorov">Andrey Kolmogorov</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Probability_axioms">Probability Axioms</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Georg_Cantor">Georg Cantor</a></li>
+<li><strong>Why &ldquo;probability of 0&rdquo; does not mean &ldquo;impossible&rdquo;</strong> by <strong>3Blue1Brown</strong>. Links: <a href="https://youtu.be/ZA4JkHKZM50">YouTube</a> or <a href="https://www.bilibili.com/video/BV1ga4y147sC?share_source=copy_web">Bilibili</a></li>
+</ul>
+</div>
 </div>
 
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#probability-axioms">Probability Axioms</a></li>
+    <li><a href="#a-recap-of-set-notations">A Recap of Set Notations</a></li>
+    <li><a href="#zero-probability">Zero Probability</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
 
         </main><footer class="footer">
     <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
