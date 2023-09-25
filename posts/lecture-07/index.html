@@ -21,25 +21,25 @@
     
 
     
-    <title>List of all course content</title>
+    <title>Lecture 7 More On The Bayes Theorem</title>
     <meta name="description" content="by School of Life Sciences at SUSTech">
     <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
 
-    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/course/">
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-07/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="List of all course content">
+    <meta property="og:title" content="Lecture 7 More On The Bayes Theorem">
     <meta property="og:description" content="by School of Life Sciences at SUSTech">
     <meta property="og:image" content="/images/avatar.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="List of all course content">
+    <meta name="twitter:title" content="Lecture 7 More On The Bayes Theorem">
     <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
-    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/course/">
-    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/course/">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-07/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-07/">
     <meta name="twitter:image" content="/images/avatar.jpg">
 
     
-    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/course/" />
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-07/" />
 
     <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
@@ -161,120 +161,47 @@
     </nav>
 </header>
 <main id="content">
-    
-
     <div class="post container">
-
     <div class="post-header-section">
-        <h1>List of all course content</h1>
+        <h1>Lecture 7 More On The Bayes Theorem</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            September 25, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <h1 id="all-course-content">All course content</h1>
-
-
-<div class="admonition note">
-    <div class="title">Lesson 1 (11-Sep-2023)</div>
-    <div class="content"><ul>
-<li>Lecture slides
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_1_Introduction_To_BIO210.pdf">Lecture 1 Introduction To BIO210</a></li>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_2_Data_Presentation.pdf">Lecture 2 Data Presentation</a></li>
-</ul>
-</li>
-<li>Homework assignment
-<ul>
-<li>None</li>
-</ul>
-</li>
-<li>Extra reading material
-<ul>
-<li>None</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
+            <p><strong>Lecture 7</strong> introduced more examples of using the Bayes&rsquo; theorem to help us make decisions in real life. Sometimes, the conclusion seems counterintuitive at the beginning. However, if you grasp the idea of <strong>&ldquo;using the new information to update your prior belief&rdquo;</strong>, you will find the Bayes&rsquo;s rule very natural. We also introduced a new form of the Bayes&rsquo; rule without talking about the events $A$, $B$ <em>etc.</em>:</p>
+<p>$$\mathbb{P}(H_i|E) = \cfrac{\mathbb{P}(H_i)\mathbb{P}(E|H_i)}{\mathbb{P}(E)} = \cfrac{\mathbb{P}(E|H_i)}{\sum_{i=1}^n \mathbb{P}(H_i)\mathbb{P}(E|H_i)} \cdot \mathbb{P}(H_i)$$</p>
+<p>Instead of talking about events $A$, $B$ <em>etc.</em> which are confusing and sometimes swapped in different textbooks, we think about <strong>hypotheses</strong> and <strong>evidence</strong>. Before we observe anything, we have a few hypotheses $H_i$. They are all reasonable to some degree, <em>i.e.</em> the prior $\mathbb{P}(H_i)$. Once we have some new information, we update our prior beliefs about how likely we think each of them might be true, <em>i.e.</em> the posterior $\mathbb{P}(H_i|E)$.</p>
+<p>In real life, the probability $\mathbb{P}(E|H_i)$ is relatively easy to calculate. Probability theory is really good at calculating the probability of some evidence given a hypothesis is true. That is what probability theory is all about. The difficult part is actually choosing and estimating the prior $\mathbb{P}(H_i)$. It requires more practice and experience.</p>
 
 
 <div class="admonition tip">
-    <div class="title">Lesson 2 (14-Sep-2023)</div>
+    <div class="title">References</div>
     <div class="content"><ul>
-<li>Lecture slides
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_3_Numerical_Measures.pdf">Lecture 3 Numerical Measures</a></li>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_4_Probability_Axioms.pdf">Lecture 4 Probability Axioms</a></li>
-</ul>
-</li>
-<li>Homework assignment
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/assignments/Assignment_1_Fall2023.pdf">Assignment 1</a></li>
-</ul>
-</li>
-<li>Extra reading material
-<ul>
-<li>None</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-
-<div class="admonition note">
-    <div class="title">Lesson 3 (18-Sep-2023)</div>
-    <div class="content"><ul>
-<li>Lecture slides
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_5_Conditional_Probability.pdf">Lecture 5 Conditional Probability</a></li>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_6_The_Bayes_Theorem.pdf">Lecture 6 The Bayes Theorem</a></li>
-</ul>
-</li>
-<li>Homework assignment
-<ul>
-<li>None</li>
-</ul>
-</li>
-<li>Extra reading material
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_6_ERM_Assigning_Conditional_Prob_As_Rescaling.pdf">The Pedigree Analysis</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-
-<div class="admonition tip">
-    <div class="title">Lesson 4 (25-Sep-2023)</div>
-    <div class="content"><ul>
-<li>Lecture slides
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_7_More_On_The_Bayes_Theorem.pdf">Lecture 7 More On The Bayes&rsquo; Theorem</a></li>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_8_Independent_Events.pdf">Lecture 8 Independent Events</a></li>
-</ul>
-</li>
-<li>Homework assignment
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/assignments/Assignment_2_Fall2023.pdf">Assignment 2</a></li>
-</ul>
-</li>
-<li>Extra reading material
-<ul>
-<li>None</li>
-</ul>
-</li>
+<li><a href="https://www.science.org/doi/10.1126/science.185.4157.1124">Judgment under Uncertainty: Heuristics and Biases</a></li>
+<li><a href="https://jaredsmurray.github.io/sta371h/files/05_bayes_rule%20(2).pdf">The Bayesian Search</a></li>
 </ul>
 </div>
 </div>
 
         </p>
     </div>
+
+    <div class="prev-next">
+        
+    </div>
 </div>
 
 
 
+    
 
         </main><footer class="footer">
     <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>

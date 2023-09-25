@@ -21,25 +21,25 @@
     
 
     
-    <title>List of all course content</title>
+    <title>Lecture 8 Independent Events</title>
     <meta name="description" content="by School of Life Sciences at SUSTech">
     <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
 
-    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/course/">
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="List of all course content">
+    <meta property="og:title" content="Lecture 8 Independent Events">
     <meta property="og:description" content="by School of Life Sciences at SUSTech">
     <meta property="og:image" content="/images/avatar.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="List of all course content">
+    <meta name="twitter:title" content="Lecture 8 Independent Events">
     <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
-    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/course/">
-    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/course/">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/">
     <meta name="twitter:image" content="/images/avatar.jpg">
 
     
-    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/course/" />
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/" />
 
     <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
@@ -161,120 +161,77 @@
     </nav>
 </header>
 <main id="content">
-    
-
     <div class="post container">
-
     <div class="post-header-section">
-        <h1>List of all course content</h1>
+        <h1>Lecture 8 Independent Events</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            September 25, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <h1 id="all-course-content">All course content</h1>
-
-
-<div class="admonition note">
-    <div class="title">Lesson 1 (11-Sep-2023)</div>
-    <div class="content"><ul>
-<li>Lecture slides
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_1_Introduction_To_BIO210.pdf">Lecture 1 Introduction To BIO210</a></li>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_2_Data_Presentation.pdf">Lecture 2 Data Presentation</a></li>
-</ul>
-</li>
-<li>Homework assignment
-<ul>
-<li>None</li>
-</ul>
-</li>
-<li>Extra reading material
-<ul>
-<li>None</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-
-<div class="admonition tip">
-    <div class="title">Lesson 2 (14-Sep-2023)</div>
-    <div class="content"><ul>
-<li>Lecture slides
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_3_Numerical_Measures.pdf">Lecture 3 Numerical Measures</a></li>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_4_Probability_Axioms.pdf">Lecture 4 Probability Axioms</a></li>
-</ul>
-</li>
-<li>Homework assignment
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/assignments/Assignment_1_Fall2023.pdf">Assignment 1</a></li>
-</ul>
-</li>
-<li>Extra reading material
-<ul>
-<li>None</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-
-<div class="admonition note">
-    <div class="title">Lesson 3 (18-Sep-2023)</div>
-    <div class="content"><ul>
-<li>Lecture slides
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_5_Conditional_Probability.pdf">Lecture 5 Conditional Probability</a></li>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_6_The_Bayes_Theorem.pdf">Lecture 6 The Bayes Theorem</a></li>
-</ul>
-</li>
-<li>Homework assignment
-<ul>
-<li>None</li>
-</ul>
-</li>
-<li>Extra reading material
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_6_ERM_Assigning_Conditional_Prob_As_Rescaling.pdf">The Pedigree Analysis</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
+            <p><strong>Lecture 8</strong> introduced the concept of <strong>independence</strong>. It is a relatively straightforward concept to understand. Intuitively, events $A$ and $B$ are independent if:</p>
+<p>$$\mathbb{P}(A|B)=\mathbb{P}(A), \mathbb{P}(B) \neq 0$$</p>
+<p>Using Bayes&rsquo; terms, we can say that the <strong>posterior probability</strong> is equal to the <strong>prior probability</strong>. In other words, event $B$ has nothing to do with $A$; event $B$ does not provide any information about event $A$; given that event $B$ has occurred, we do not change our belief about event $A$ &hellip; Recall that from <strong>Lecture 5</strong>, we have:</p>
+<p>$$\mathbb{P}(A|B)=\cfrac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \textmd{, } \mathbb{P}(B) \neq 0$$</p>
+<p>If we move $\mathbb{P}(B)$ to the other side of the equation, and use our intuition about <strong>independence</strong> $\mathbb{P}(A|B) = \mathbb{P}(A)$, we get the mathematical definition of independence:</p>
+<p>$$
+\begin{aligned}
+A \textmd{ and } B &amp;\textmd{ are independent if and only if:}\\
+&amp; \mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B)
+\end{aligned}
+$$</p>
+<p>The good thing about this definition is that it is easy to see $A$ and $B$ are symmetrical, and we do not really need to specify the ugly $\mathbb{P}(B) \neq 0$ in our intuitive definition.</p>
+<p>Similarly, for a collection of events $A_1, A_2, &hellip;, A_n$, they are independent if and only if:</p>
+<p>$$
+\mathbb{P} \left( \bigcap_{i \in S} A_i \right) = \prod_{i \in S}\mathbb{P}(A_i), \textmd{ for every subset $S$ of } \{1,2, \cdots, n\}
+$$</p>
+<p>During the lecture, we used many examples to showcase that the only way of checking if two events or a collection of events are independent or not is through the mathematical definition. In reality, people often use common sense, prior knowledge, intuition and experience to assume some events are independent. However, one needs to be very careful when doing so, as it might lead to wrong conclusions, which in certain situation can be catastrophic. We use the <a href="https://en.wikipedia.org/wiki/Sally_Clark"><strong>Sally Clark case</strong></a> to demonstrate this point.</p>
+<p>When talking about <strong>conditional independence</strong>, we introduced a small quiz during the lecture:</p>
+<blockquote>
+<p>It is known that the <strong>prevalence</strong> of a virus in the population is 0.5. We have a kit dedicated to detect this particular virus. The <strong>sensitivity</strong> of the kit is 0.9, and the <strong>specificity</strong> of the kit is 0.9 as well. Now a random person from the population gets tested by the kit, repeatedly. The first 3 tests all show positive results. What is the probability that the 4th test shows a positive result?</p>
+</blockquote>
+<p>In general, always make a guess before you formally solve the problem. The process of guessing forces you to think about and get an intuition about the question. Sometimes, the intuition is more important and more difficult to come about. A correct intuition shows that you truly understand the question. In addition, once you get an answer by doing the formal calculation, you can always have a sanity check by comparing the calculated result to your intuitive guess. Doing this in a iterative way will help you learn.</p>
+<p>Now let&rsquo;s build up our intuition. Apparently, the test results are independent of each other if we know the person&rsquo;s virus status (<strong>conditional independence</strong>). The probability of the 4th test being positive is basically 0.9 (if the person carries the virus) or 0.1 (if the person does not carry the virus). However, we do not know the person&rsquo;s virus status. Therefore, before anything happens, we expect that the person has an equal chance of carrying or not carrying the virus. Now we observe that all 3 tests are positive, which is a new piece of information that can help us update our prior belief. We should take that information into account to calculate the probability of the next test (4th) being positive. We could think in this way: if the person does not carry the virus, the probability of observing 3 positive test results is $0.1^{3}$, which is quite small meaning it is kind of unlikely to happen. Yet, it happened! We see 3 positive test results, meaning that we are <strong>almost certain</strong> that the person carries the virus. If the person carries the virus, the probability of the 4th test being positive is 0.9. Therefore, our final answer should be very close to 0.9.</p>
+<p>Is it? Let&rsquo;s define $A=$ {the first 3 tests are positive} and $B=$ {the 4th test is positive} and build the following tree:</p>
+<p><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/conditional_ind.png" alt=""></p>
+<p>Since we know that $A$ has occurred, all of a sudden, we are living in a universe of the red branches. Our event of interest is basically the blue leaves. For each leaf, we could calculate the probability by the <strong>multiplication rule</strong>:</p>
+<p>$$
+\begin{aligned}
+\mathbb{P}(B|A) &amp;= \cfrac{\textmd{Blue leaves}}{\textmd{Red branches}} \\[10pt]
+&amp;= \cfrac{0.5 \times 0.9^{3} \times 0.9 + 0.5 \times 0.1^{3} \times 0.1}{0.5 \times 0.9^{3} + 0.5 \times 0.1^{3}}\\[10pt]
+&amp; \approx 0.8989041095890411
+\end{aligned}
+$$</p>
+<p>The answer is very close to $0.9$, which is consistent with our intuition.</p>
 
 
 <div class="admonition tip">
-    <div class="title">Lesson 4 (25-Sep-2023)</div>
+    <div class="title">References</div>
     <div class="content"><ul>
-<li>Lecture slides
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_7_More_On_The_Bayes_Theorem.pdf">Lecture 7 More On The Bayes&rsquo; Theorem</a></li>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/lecture_slides/Lecture_8_Independent_Events.pdf">Lecture 8 Independent Events</a></li>
-</ul>
-</li>
-<li>Homework assignment
-<ul>
-<li><a href="https://dbrg77.github.io/SUSTech-BIO210/assignments/Assignment_2_Fall2023.pdf">Assignment 2</a></li>
-</ul>
-</li>
-<li>Extra reading material
-<ul>
-<li>None</li>
-</ul>
-</li>
+<li><a href="https://en.wikipedia.org/wiki/Gambler%27s_fallacy">Gamlber&rsquo;s fallacy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sally_Clark">Sally Clark</a></li>
 </ul>
 </div>
 </div>
 
         </p>
     </div>
+
+    <div class="prev-next">
+        
+    </div>
 </div>
 
 
 
+    
 
         </main><footer class="footer">
     <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
