@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 10 Random Variables</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 10 Random Variables">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 10 Random Variables">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 10 Random Variables</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            September 28, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>In this lecture, we introduced perhaps the first <strong>&ldquo;new&rdquo;</strong><!-- raw HTML omitted --><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><!-- raw HTML omitted --> concept in this course: <strong>random variables</strong>. It is very important to understand the concepts of random variables and the expectation and variance of a random variable. When coming across something new, always start with something simple to get a rough idea. Therefore, we used some simple and intuitive examples, such as coin tossing, during the lectures.</p>
+<h2 id="random-variables">Random Variables</h2>
+<p>A random variable is defined as a <strong>a real-valued function</strong> defined on a sample space $\Omega$. In a particular experiment, a random variable (<strong>r.v.</strong>) would be some function that assign a real-valued number to each possible outcome.</p>
+<p>Recall the definition of a <strong>function</strong> back in your high school math class. When we talk about functions, we can think of them in two ways:</p>
+<ol>
+<li>A function is like a machine with a set of defined rules. You input one thing. Then the machine returns a single output. The output is purely dependent on the input. If you put an apple in, and the machine returns a pear. Then the machine always returns a pear as long as the input is an apple. It does not matter whether you put an apple yesterday, today or tomorrow.</li>
+<li>A function is a <strong>&ldquo;mapping&rdquo;</strong> or <strong>&ldquo;association&rdquo;</strong> of the elements from one set (say, $\boldsymbol{A}$) to the elements of another set (say, $\boldsymbol{B}$). <strong>Every</strong> element in $\boldsymbol{A}$ must have one and only one element in $\boldsymbol{B}$ associated with it.</li>
+</ol>
+<p>I find both interpretations are useful in different scenarios. In the case of <strong>random variables</strong>, a random variable is basically a function that maps the outcome from the sample space to a real-valued number. That is: $\Omega \mapsto \mathbb{R}$.</p>
+<p>We could use <strong>&ldquo;tossing a coin three times&rdquo;</strong> as an example. Again, do not think of this as three experiments. Instead, treat this example as a single experiment with three tosses. We only assess the final results after three tosses. It is easy to list every outcome in the sample space. We could define different random variables on the same sample space, depending on what we are interested in. For example, we could let the random variable $X$ be the number of tails. Or we could also define the random variable $Y$ as the number of heads. To visualise the random variables:</p>
+<p><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/random_variables.png" alt=""></p>
+<h2 id="why-introducing-random-variables">Why Introducing Random Variables?</h2>
+<p>Now you may ask: <strong>why? Why</strong> do we care about and introduce <strong>random variables</strong>? In many probabilistic models, the outcomes are numerical, or we could associate some numerical values to them. In future, we would like to gradually put the sample space at the background and directly work on the numbers and assign probabilities to the numbers, because sometimes it is not even clear what the sample space is. In addition, with the concept of random variables, we could talk about other useful things, such as <strong>expectation</strong> and <strong>variance</strong>.</p>
+<h2 id="probability-mass-functions-pmfs">Probability Mass Functions (PMFs)</h2>
+<p>Again, <strong>when we come across a new concept, we should always start with simple examples to get our intuition right</strong>. Based on the numbers that a random variable can take, we have <strong>discrete</strong> or <strong>continuous</strong> random variables. The discrete case is simpler than the continuous one. Therefore, let&rsquo;s first talk about <strong>discrete random variables</strong>.</p>
+<p>In general, we use the capital latin letter $X,Y,Z, \cdots$ to represent the random variable itself and use the lower-case latin letter $x,y,z,\cdots$ to represent the real-valued number that the random variable can take. Using the previous example, apparently the random variables $X$ and $Y$ have different chances of taking different values $x$ and $y$, respectively. For discrete random variables, we would describe the probability of them taking different values. To this end, we use <strong>probability mass function</strong>, or <strong>PMF</strong>. You can think of it as a table with every single possible value that the random variable can take together with the probability of taking the value. In terms of the random variable $X$ in the previous example of &ldquo;tossing a coin three times&rdquo;:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$x$</th>
+<th style="text-align:center">$\mathbb{P}(X=x)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$\frac{1}{8}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$\frac{3}{8}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$2$</td>
+<td style="text-align:center">$\frac{3}{8}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$3$</td>
+<td style="text-align:center">$\frac{1}{8}$</td>
+</tr>
+</tbody>
+</table>
+<p>More formally we write a PMF like this:</p>
+<p>$$
+p_X(x) = \begin{cases}
+\cfrac{1}{8} &amp; \textmd{, when } x=0 \textmd{ or } 3\\[10pt]
+\cfrac{3}{8} &amp; \textmd{, when } x=1 \textmd{ or } 2\\[10pt]
+0 &amp; \textmd{, otherwise}
+\end{cases}
+$$</p>
+<p>The small $p$ stands for <strong>P</strong>MF. The subscript capital $X$ is telling us the PMF is with respect to the random variable $X$. The small $x$ in the parentheses is the real-valued number taken by the random variable $X$. This is how we interpret the PMF $p_{X}(x)$:</p>
+<p>$$p_X(x) = \mathbb{P}(\{ X=x \}) = \mathbb{P}(\{ \omega \in \Omega | X(\omega) = x \})$$</p>
+<p>With the introduction of random variables and PMFs, we can now talk about the <strong>average</strong> and <strong>dispersion</strong> of a random variable, which will be very useful in terms of modelling probabilistic events.</p>
+<h2 id="expectation">Expectation</h2>
+<p>The <strong>expectation</strong> (also called the <strong>expected value</strong> or the <strong>mean</strong>) of a random variable can be thought as some sort of <strong>average</strong> number that the random variable takes after repeating the experiment for a large number of times. For examples, the random variable $X$ can take the values $x_1, x_2, x_3, \cdots, x_r$, each with a probability of $p_X(x_1), p_X(x_2), p_X(x_3), \cdots, p_X(x_r)$, respectively. If I keep repeating the experiment for $N$ times, the number of times $X$ takes the specific value $x_i$ is $n_i$. Then the average of $X$ is:</p>
+<p>$$\cfrac{x_1n_1 + x_2n_2 + \cdots x_rn_r}{n_1 + n_2 + \cdots + n_r} = \cfrac{n_1}{N} \cdot x_1 + \cfrac{n_2}{N} \cdot x_2 + \cdots + \cfrac{n_r}{N} \cdot x_r$$</p>
+<p>If we interpret probability as <strong>relative frequency</strong> and $N$ is really large, we believe that $\frac{n_i}{N} \approx p_X(x_i)$. Now recall what we have learnt from <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-02/"><strong>Lecture 3</strong></a>, the above average is essentially a <strong>weighted average</strong> of all the possible values of $X$.</p>
+<p>Therefore, we denote the <strong>expectation</strong> of $X$ as $\mathbb{E}[X]$, and it is calculated by:</p>
+<p>$$\mathbb{E}[X] = \sum_{x} xp_X(x)$$</p>
+<p>Some useful properties of the <strong>expectation</strong> include:</p>
+<ol>
+<li>$\mathbb{E}[g(X)] = \sum\limits_{x}g(x)p_X(x)$</li>
+<li>$\mathbb{E}[a X + b] = a \mathbb{E}[{X}] + b$, where $a, b$ are constants</li>
+</ol>
+<p>The proof can be found in the <a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_10_ERM_Various_Proofs_About_RV.pdf"><strong>Extra Reading Material</strong></a> from this lecture.</p>
+<h2 id="variance--standard-deviation">Variance &amp; Standard Deviation</h2>
+<p>The <strong>variance</strong> of $X$, denoted by $\mathbb{V}\textmd{ar}(X)$, is defined as:</p>
+<p>$$\mathbb{V}\textmd{ar}(X) = \mathbb{E}\left[ \left( X - \mathbb{E}[X] \right)^2 \right]$$</p>
+<p>The <strong>standard deviation</strong> of $X$, denoted by $\sigma_X$, is defined as:</p>
+<p>$$\sigma_X = \sqrt{\mathbb{V}\textmd{ar}(X)}$$</p>
+<p>Before we look at the meaning of <strong>variance</strong>, let&rsquo;s analyse the expression first. $X$ is a random variable, and $\mathbb{E}[X]$ is a value. Then $(X - \mathbb{E}[X])^2$ is a function of the random variable $X$, which is also a random variable. Therefore, it is reasonable to ask what the expectation of $(X - \mathbb{E}[X])^2$ is. That is what the formula about.</p>
+<p>By taking a closer look, we see that the random variable $(X - \mathbb{E}[X])^2$ is basically the squared distance between a random variable and its mean. It is a measurement of the dispersion of a random variable, which you can relate to what we have talked about in <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/"><strong>Lecture 3</strong></a>. The <strong>standard deviation</strong> is basically the square root of the variance, which has the same unit with the original random variable.</p>
+<p>Some useful properties of the <strong>variance</strong> include:</p>
+<ol>
+<li>$\mathbb{V}\textmd{ar}(X) = \mathbb{E}[X^2] - (\mathbb{E}[{X}])^2$</li>
+<li>$\mathbb{V}\textmd{ar}(aX) = a^2\mathbb{V}\textmd{ar}(X)$</li>
+</ol>
+<p>The proof can be found in the <a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_10_ERM_Various_Proofs_About_RV.pdf"><strong>Extra Reading Material</strong></a> from this lecture.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="https://en.wikipedia.org/wiki/Random_variable">Random Variable</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician">LOTUS</a></li>
+</ul>
+</div>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>I put double quotes here because the concept is not really new. It appears to be new, but if you think about it carefully, it is not different from what we have been talking about since <strong>Lecture 3</strong>. Before we talk about probabilities with respect to events. Now we apply the same thing to random variables. We just need to get familiar with all the notations.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#random-variables">Random Variables</a></li>
+    <li><a href="#why-introducing-random-variables">Why Introducing Random Variables?</a></li>
+    <li><a href="#probability-mass-functions-pmfs">Probability Mass Functions (PMFs)</a></li>
+    <li><a href="#expectation">Expectation</a></li>
+    <li><a href="#variance--standard-deviation">Variance &amp; Standard Deviation</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

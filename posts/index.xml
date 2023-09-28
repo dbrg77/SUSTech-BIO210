@@ -6,7 +6,27 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 25 Sep 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 00:10:00 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 10 Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/</link>
+      <pubDate>Thu, 28 Sep 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/</guid>
+      <description>In this lecture, we introduced perhaps the first &amp;ldquo;new&amp;rdquo;1 concept in this course: random variables. It is very important to understand the concepts of random variables and the expectation and variance of a random variable. When coming across something new, always start with something simple to get a rough idea. Therefore, we used some simple and intuitive examples, such as coin tossing, during the lectures.
+Random Variables A random variable is defined as a a real-valued function defined on a sample space $\Omega$.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 9 Counting</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/</guid>
+      <description>In Lecture 9, we paused a little bit and did a quick recap about the basic counting principles. The content was basically what you have learnt during your high school math classes but in English. You see that the counting principles we are talking about greatly help us calculate the probability of events consisting outcomes from discrete sample spaces.
+You might ask why we bother to do a recap about counting.</description>
+    </item>
+    
     <item>
       <title>Lecture 8 Independent Events</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/</link>
