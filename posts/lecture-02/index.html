@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 2 Descriptive Statistics</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 2 Descriptive Statistics">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 2 Descriptive Statistics">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 2 Descriptive Statistics</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            September 11, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><strong>Lecture 2</strong> started to introduce some basic techniques in descriptive statistics. You can think of this lecture as a recap of what you have already known in the past. Make sure you get familiar with all the graphs introduced in this lecture, because we are going to use them all the time in future lectures. Perhaps the most important graph in this course is the <a href="https://online.stat.psu.edu/stat200/lesson/2/2.2/2.2.1"><strong>histogram</strong></a>, which is the most common way of showing frequency distributions:</p>
+<figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/histogram.png" width="400px"/>
+</figure>
+
+<p>When we say &ldquo;let&rsquo;s look at the distribution of the data&rdquo;, most of the time we just mean looking at the <strong>histograms</strong> of the data we&rsquo;ve got. Note that I am using the plural form <strong>histograms</strong> here, because for some data we need to make more than one histogram with different bin sizes to get an idea about our data. Make sure you understand how histograms are generated and the pros and cons of them.</p>
+<p>There is no homework today, but please have a look at the practice section below. Can you answer those questions? How do you solve the problems? Is it easy or difficult to do? We will discuss the ways of solving those problems later on. Hopefully, through BIO210, you will also gain some practical skills in terms of text file manipulation, which is actually quite important but missing in many courses.</p>
+
+
+<div class="admonition note">
+    <div class="title">Practice</div>
+    <div class="content"><ol>
+<li>A series of publications in 2008 (<a href="https://www.ncbi.nlm.nih.gov/pubmed/18451266">Nagalakshmi <em>et al. Science</em></a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/18488015">Wilhelm <em>et al. Nature</em></a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/18516045">Mortazavi <em>et al. Nature Methods</em></a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/18423832">Lister <em>et al. Cell</em></a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/18516046">Cloonan <em>et al. Nature Methods</em></a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/18550803">Marioni <em>et al. Genome Res.</em></a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/18611170">Morin <em>et al. Biotechniques</em></a>) marked the start of a new technology: RNA-seq, a method that can profile the whole transcriptome of a sample. Let&rsquo;s look at the Mortazavi <em>et al.</em> paper published in <strong>Nature Methods</strong>. Go to the journal page of the paper by clicking <a href="https://www.nature.com/articles/nmeth.1226">here</a>. Scroll down to the <strong>&ldquo;Supplementary Information&rdquo;</strong> section, and download the <strong>&ldquo;Supplementary Dataset 1&rdquo;</strong>, which is a tab-delimited file that you can open with Excel (be careful NOT to save in Excel, though!) or whatever suitable programs you like. Look at the 6th column named <strong>&lsquo;finalRPKM&rsquo;</strong>. This column contains the values of the expression of all the genes in the human genome in that specific sample. <strong>Can you plot the distribution of those values using a graph or table we introduced during the lecture? What are the smallest/largest values, the median and the lower/upper quartile? Do you see any patterns in the graph or table you just created?</strong></li>
+<li>I have compiled some information of all annotated human genes from the <a href="https://ensembl.org">Ensembl database</a> (<strong>time stamp: 2022-02-14T16:59:00+08:00</strong>). You can donwload the zipped file from <a href="https://dbrg77.github.io/SUSTech-BIO210/src/grch38_ensembl_gene_105.txt.gz">here</a>. If you unzip it, you will find a tab-delimited file again. Each row describes a gene, and the meaning of each column is indicated in the header (the first row). Scientists have categorised all genes into different types (the 3rd column). <strong>Can you figure out how many types of genes are there? How many genes are there in each type?</strong> Here we only care about all the <strong>&ldquo;protein_coding&rdquo;</strong> genes. The length of those protein_coding genes can be simply computed by Gene end (bp) - Gene start (bp) + 1. Once you computed the lengths of all genes, look at the first digit of those numbers. Of course, the first digit can only be 1 - 9. <strong>Can you created a frequency table or bar chart to show the absolute frequency of each digit?</strong></li>
+</ol>
+</div>
+</div>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="https://matplotlib.org/stable/gallery/index.html">Examples of different plots from Matplotlib</a></li>
+<li><a href="https://plotly.com/python/">Examples of interactive plots from Plotly</a></li>
+</ul>
+</div>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

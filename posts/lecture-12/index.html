@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 12 Continuous Random Variables</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 12 Continuous Random Variables">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 12 Continuous Random Variables">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 12 Continuous Random Variables</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            October 9, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>Once we have seen some discrete random variables, we can move on to look at <strong>continuous random variables</strong>. As the name indicated, the numbers taken by a continuous random variable are continuous. Like we discussed before, in this case the probability of taking any specific number is zero. Therefore, it does NOT make sense to use <strong>PMF</strong> to describe a continuous random variable. Instead, we use <strong>probability density function (PDF)</strong>, denoted by $f_X(x)$.</p>
+<h2 id="probability-density-functions-pdfs">Probability Density Functions (PDFs)</h2>
+<p>A <strong>PDF</strong> similar to a <strong>PMF</strong> that it still takes a number that the random variable can take and return a new number. However, unlike <strong>PMF</strong>, the number returned by a <strong>PDF</strong> is the <strong>probability density</strong>, NOT the probability. Probability densities satisfy:</p>
+<p>$$\mathbb{P}(x \in B) = \int_{B}f_{X}(x)\,\mathrm{d}x$$</p>
+<p>for every subset $B$ of the real line. And:</p>
+<p>$$\mathbb{P}(a \leqslant X \leqslant b) = \int_{a}^{b}f_{X}(x)\,\mathrm{d}x$$</p>
+<p>for any interval on a real line.</p>
+<p>When dealing with continuous random variables, it does not make sense to talk about each specific number. We talk about <strong>intervals</strong>. We use <strong>PDF</strong> such that the <strong>area under the curve</strong> of an interval represents the probability of the random variable falling into that interval.</p>
+<p>Having said that, now if I put a number $x$ into $f_X(x)$, I still get a number returned by the PDF. You tell me that the number is not the probability. What is it? How should I interpret this <strong>probability density</strong>? One way of looking at densities is to think about a very small interval $\delta$, and put the following picture in your head:</p>
+<figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/small_interval_prob.png" width="500px"/>
+</figure>
+
+<p>Since $\delta$ is vary small we have:</p>
+<p>$$\mathbb{P}(x \leqslant X \leqslant x+\delta) = \int_{x}^{x+\delta}f_X(x)\,\mathrm{d}x = f_X(x)\cdot \delta$$</p>
+<p>It means that the probability of the random variable falling into a very small interval is basically the probability density multiplied by the length of the small interval. Alternatively, you can move the small interval to the other side of the equation:</p>
+<p>$$f_X(x) = \cfrac{\mathbb{P}(x \leqslant X \leqslant x+\delta)}{\delta}$$</p>
+<p>It shows that we could interpret the probability density as the probability per unit length.</p>
+<h2 id="comparisons-to-discrete-random-variables">Comparisons To Discrete Random Variables</h2>
+<p>Since we have introduced discrete random variables, there is not really anything new in terms of continuous random variables. For the things related to discrete random variables, we also have them for continuous random variables, such as expectations and variances. When having trouble dealing with a concept in the continuous case, think of its counterpart in the discrete case. When we do <strong>summation</strong> in the discrete case, we do <strong>integration</strong> in the continuous case:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">The continuous case</th>
+<th style="text-align:center">The discrete case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\mathbb{E}[X] = \int_{-\infty}^{\infty}xf_X(x)\,\mathrm{d}x$</td>
+<td style="text-align:center">$\mathbb{E}[X] = \sum_{x}xp_X(x)$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbb{E}[g(X)] = \int_{-\infty}^{\infty}g(x)f_X(x)\,\mathrm{d}x$</td>
+<td style="text-align:center">$\mathbb{E}[g(X)] = \sum_{x}g(x)p_X(x)$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbb{V}\textmd{ar}(X) = \int_{-\infty}^{\infty}\left(X-\mathbb{E}[X]\right)^2f_X(x)\,\mathrm{d}x$</td>
+<td style="text-align:center">$\mathbb{V}\textmd{ar}(X)= \sum_{x}\left( X - \mathbb{E}[X] \right)^2p_X(x)$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cumulative-density-functions-cdfs">Cumulative Density Functions (CDFs)</h2>
+<p>To help calculate probabilities in a convenient way, we can look at the <strong>cumulative density function (CDF)</strong> of a continuous random variable. It is denoted and defined as:</p>
+<p>$$F_X(x) = \mathbb{P}(X \leqslant x) = \int_{-\infty}^{x}f_X(t)\,\mathrm{d}t$$</p>
+<p>It is easy to see that:</p>
+<p>$$\mathbb{P}(a \leqslant X \leqslant b) = \int_{a}^{b}f_X(x)\,\mathrm{d}x = F_X(b) - F_X(a)$$</p>
+<p>Therefore, the <strong>CDF</strong> is the original function of the <strong>PDF</strong>, and the <strong>PDF</strong> is basically the derivate of the <strong>CDF</strong>:</p>
+<p>$$f_X(x) = F^{\prime}_X(x)$$</p>
+<h2 id="normal-gaussian-random-variables">Normal (Gaussian) Random Variables</h2>
+<p>Perhaps one of the most important continuous random variables is <strong>normal</strong> or <strong>Gaussian</strong> random variables. The <strong>PDF</strong> of a normal random variable is:</p>
+<p>$$f_X(x)=\cfrac{1}{\sqrt{2\pi}\sigma}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$</p>
+<p>When the normal random variables were introduced to me in school, the above PDF was just thrown to us. We then started to use it for various things. I have always been wondering where exactly it comes from, how to derive that PDF and why $e$ and $\pi$ are there. If you do some internet search, you will find some articles about how to derive the normal PDF. Many of them (for example, <a href="https://math.stackexchange.com/questions/384893/how-was-the-normal-distribution-derived">this one</a>), use the &ldquo;dart throwing&rdquo; example and introduce <strong>polar coordinates</strong> to eventually get the famous PDF shown above. It is indeed a beautiful calculus practice. However, the example is not really intuitive. It is not so obvious why the &ldquo;dart throwing&rdquo; thought experiment is done in the first place and how it is related to the normal PDF.</p>
+<p>Apparently, more context is needed. I think the most intuitive way of introducing the normal PDF is just follow the history. We have the following two ways of deriving the normal PDF &hellip; roughly &hellip;</p>
+<h3 id="1-as-an-approximation-tool">1. As An Approximation Tool</h3>
+<p>In late 1600s and early 1700s, some mathematicians were working on gambling-related problems. They used binomial distributions a lot. Calculating the binomial coefficients was difficult, apparently, due to the complexity of factorials. They wanted to have some sort of approximation to avoid the calculation of factorials. The French mathematician <a href="https://en.wikipedia.org/wiki/Abraham_de_Moivre">Abraham de Moivre</a> started working on that in 1721. In 1733, using an factorial approximation (today known as the <a href="https://brilliant.org/wiki/stirlings-formula/">Stirling&rsquo;s Formula</a>), he found out that when $n$ is large the probabilities around the central terms of the binomial distribution with $p=\frac{1}{2}$ can be approximated by:</p>
+<p>$$\binom{n}{\frac{n}{2}+d}\left(\cfrac{1}{2}\right)^n \approx \cfrac{2}{\sqrt{2\pi n}}\,e^{-\frac{2d^2}{n}}$$</p>
+<p>Later on, the French mathematician <a href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace">Pierre-Simon Laplace</a> extended it to a more general case, and eventually led to <a href="https://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem"><strong>the De Moivre–Laplace Theorem</strong></a>:</p>
+<p>$$\binom{n}{k}p^k q^{n-k} \approx \cfrac{1}{\sqrt{2\pi npq}}\,e^{-\frac{(k-np)^2}{2npq}} \textmd{ , where } p+q=1,p,q &gt; 0$$</p>
+<p>which you may recognise as very similar to the normal PDF. The proof of the above theorem can be found in this <a href="https://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem#Alternate_proof">Wikipedia page</a>. In order to understand the proof, you need to know <strong>Stirling&rsquo;s formula</strong>:</p>
+<p>$$n! \approx \sqrt{2\pi n} \left( \cfrac{n}{e} \right)^n $$</p>
+<p>In addition, you also need to be familiar with the following <strong>Taylor expansion</strong>:</p>
+<p>$$\ln(1+x) = \sum_{n=1}^{\infty}(-1)^{n+1}\cfrac{x^n}{n} = 1 - \cfrac{x^2}{2} + \cfrac{x^3}{3} - \cfrac{x^4}{4} + \cdots $$</p>
+<p>That&rsquo;s all you need to know. The rest are basically algebraic manipulation, and you just have to be patient. Try it yourself!</p>
+<h3 id="2-the-error-curve">2. The Error Curve</h3>
+<p>Back in the days, many astronomers were trying to measure and predict the trajectories and positions of different &ldquo;heavenly bodies&rdquo;. They were well aware that their measurements had <strong>errors</strong>, that is, the difference between the real location and the measurement. People were interested in finding a function to describe the error. The legendary <strong>Carl Friedrich Gauss</strong> was one of them. In his seminal work <em>Theoria motus corporum coelestium in sectionibus conicis solem ambientium</em> (<em>Theory of the Motion of the Heavenly Bodies Moving about the Sun in Conic Sections</em>), Gauss was trying to find the function to describe the error. Based on some assumptions that were supported by experience and data accumulated previously, he was abel to get the following PDF describing the error:</p>
+<p>$$f_X(x) = \cfrac{h}{\sqrt{\pi}}\,e^{-h^2x^2}$$</p>
+<p>which is kind of a prototype of the standard normal PDF that is used today. Of course, the above formula is a modernised version. Gauss&rsquo; original writing was:</p>
+<p>$$\varphi\Delta=\cfrac{h}{\sqrt{\pi}}\,e^{-hh\Delta\Delta}$$</p>
+<p>Gauss also commented on $h$:</p>
+<blockquote>
+<p>Finally, the constant $h$ can be considered as the measure of precision of the observations.</p>
+</blockquote>
+<p>The exact procedures to get to that point and the final form of the normal PDF that is commonly seen in modern text books deserves an entire post on its own on another day. I will probably write about it in future when I have time and fully digested the section in Gauss&rsquo; book. We will make an attempt to partly reproduce Gauss&rsquo; procedure in <strong>Lecture 18</strong>. For now, check those articles in the <strong>References</strong> section for more details.</p>
+<p>The French mathematician <strong>Pierre-Simon Laplace</strong> was also searching for the error PDF but ended up with a weird one. However, it is his <strong>Central Limit Theorem</strong> that makes the normal PDF so useful. Anyway, we will dedicate an entire lecture (<strong>Lecture 13</strong>) in the next lesson to talk about normal PDFs. You will see why and how it is useful.</p>
+<h2 id="about-the-word-distribution">About The Word &ldquo;Distribution&rdquo;</h2>
+<p>I know that we have used the word <strong>&ldquo;distribution&rdquo;</strong>, even though we have not really define what exactly do we mean by &ldquo;distribution&rdquo;. In the <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-01/"><strong>Descriptive Statistics</strong></a> section, it is a <strong>histogram</strong> of the data you have. Now that we know the concept of random variables, the word <strong>&ldquo;distribution&rdquo;</strong> essentially means the PMF or the PDF of the random variable. When we say &ldquo;a random variable $X$ <strong>follows</strong> a binomial (or normal) distribution&rdquo;, we mean the PMF (or PDF) of $X$ is a binomial PMF (or a normal PDF).</p>
+<h2 id="parameters-of-a-distribution">Parameters of A Distribution</h2>
+<p>If you pay attention to the titles of each sections in this post, you will notice that all of them are in plural forms, such as random variables, PMFs and PDFs. Why? When we talk about binomial random variables, there are many of them. When we talk about normal random variables, there are many of them as well. What are the differences? They have different <strong>parameters</strong>.</p>
+<p>The <strong>parameters</strong> describe the shape and some characteristics of the distribution. Once the random variable takes a value, you need the parameters to get the probability or density. For example, if $X$ is a binomial random variable and we want to calculate $\mathbb{P}(X=2)$, we need $n$ and $p$ for the calculation. Therefore, $n$ and $p$ are the parameters of binomial random variables. Similarly, if $Y$ is a normal random variable and we want to get the probability density at $Y=0$, we need $\mu$ and $\sigma^2$. Therefore, $\mu$ and $\sigma^2$ (some use $\sigma$) are the parameters of normal random variables.</p>
+<p>When we say $X$ <strong>follows</strong> a certain distribution, we use the the following notation:</p>
+<p>$$X \sim \textmd{Distribution short name (list of parameters)}$$</p>
+<p>Here are some examples:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Distribution</th>
+<th style="text-align:center">Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Bernoulli</td>
+<td style="text-align:center">$X \sim Ber(p)$</td>
+</tr>
+<tr>
+<td style="text-align:center">Binomial</td>
+<td style="text-align:center">$X \sim B(n,p)$</td>
+</tr>
+<tr>
+<td style="text-align:center">Poisson</td>
+<td style="text-align:center">$X \sim Pois(\lambda)$</td>
+</tr>
+<tr>
+<td style="text-align:center">Normal</td>
+<td style="text-align:center">$X \sim \mathcal{N}(\mu, \sigma^2)$</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="https://en.wikipedia.org/wiki/Normal_distribution">Normal distribution</a></li>
+<li><a href="https://www.tandfonline.com/doi/abs/10.1080/0025570X.2006.11953386">The Evolution of the Normal Distribution</a></li>
+<li>More on the history related to the normal distribution (in Chinese):
+<ul>
+<li><a href="https://cosx.org/2013/01/story-of-normal-distribution-1">Part 1</a></li>
+<li><a href="https://cosx.org/2013/01/story-of-normal-distribution-2">Part 2</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#probability-density-functions-pdfs">Probability Density Functions (PDFs)</a></li>
+    <li><a href="#comparisons-to-discrete-random-variables">Comparisons To Discrete Random Variables</a></li>
+    <li><a href="#cumulative-density-functions-cdfs">Cumulative Density Functions (CDFs)</a></li>
+    <li><a href="#normal-gaussian-random-variables">Normal (Gaussian) Random Variables</a>
+      <ul>
+        <li><a href="#1-as-an-approximation-tool">1. As An Approximation Tool</a></li>
+        <li><a href="#2-the-error-curve">2. The Error Curve</a></li>
+      </ul>
+    </li>
+    <li><a href="#about-the-word-distribution">About The Word &ldquo;Distribution&rdquo;</a></li>
+    <li><a href="#parameters-of-a-distribution">Parameters of A Distribution</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
