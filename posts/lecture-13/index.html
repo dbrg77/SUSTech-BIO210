@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 13 Normal Distributions</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 13 Normal Distributions">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 13 Normal Distributions">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 13 Normal Distributions</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            October 16, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>In Lecture 13, we talked about why the normal distribution was useful and how we used it to calculate probabilities of events of our interest. This was the last lecture in the probability section. We moved on to statistics section after this lecture.</p>
+<h2 id="normal-gaussian-distributions">Normal (Gaussian) Distributions</h2>
+<p>We have come across some basics about the normal distributions. The PDF is:</p>
+<p>$$f_X(x)=\cfrac{1}{\sqrt{2\pi}\sigma}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$</p>
+<h2 id="expectation--variance">Expectation &amp; Variance</h2>
+<p>Like always, whenever we get a PDF or PMF, we always need to check whether it describes a valid probabilistic model. On top of that, it is always good to know the expectation and variance of the distribution. We can show that:</p>
+<p>$$
+\begin{aligned}
+\int_{-\infty}^{\infty}\cfrac{1}{\sqrt{2\pi}\sigma}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}} \mathrm{d}x &amp;= 1 \\[10pt]
+\mathbb{E}[X] &amp;= \mu\\[10pt]
+\mathbb{V}\textmd{ar}(X) &amp; = \sigma^2
+\end{aligned}
+$$</p>
+<p>The proof is a bit complicated and unnecessary to show during the lecture. Therefore, I put them into <a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_13_ERM_Useful_Properties_of_A_Normal_Random_Variable.pdf"><strong>the first Extra Reading Material</strong></a>. You can have a look if you are interested.</p>
+<h2 id="normal-probability-calculation">Normal Probability Calculation</h2>
+<p>In modern days there are many calculators and computer programs to help us calculate normal probabilities. In <a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_13_Calculating_Probability_Using_Excel.pdf"><strong>the second Extra Reading Material</strong></a>, we have a detailed explanation on how to use the functions in spreadsheet software, such as <code>Microsoft Excel</code> and <code>LibreOffice Calc</code>, to calculate the normal densities and probabilities. You need to know how to use the function <code>NORM.DIST</code>. It will be very helpful for finishing your homework and exams. In the old days, people just used the <strong>standard normal table</strong> to get the probability from the standard normal distribution $\mathcal{N}(0,1)$. We will demonstrate how to use the table, but we are not going to spend too much on it.</p>
+<h2 id="the-first-standard-normal-table">The First Standard Normal Table</h2>
+<p>You can easily find many different versions of the standard normal table on the internet. Make sure you read the description and be careful about what the numbers actually represent. Some tables show the <strong>lower-tail probabilities</strong> that are basically the <strong>cumulative probabilities</strong>:</p>
+<p>$$F_X(x) = \mathbb{P}(X \leqslant x) = \int_{-\infty}^{x} \cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{t^2}{2}} \mathrm{d}t$$</p>
+<p>Other tables show the <strong>upper-tail probabilities</strong>:</p>
+<p>$$1-F_X(x) = \mathbb{P}(X &gt; x) = \int_{x}^{\infty} \cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{t^2}{2}} \mathrm{d}t$$</p>
+<p>Have you ever wondered who actually created the first standard normal table? I put some interesting material in the <strong>References</strong> section for you to have a look if you are curious. People tend to think the first table related to the standard normal distribution came from <a href="https://en.wikipedia.org/wiki/Christian_Kramp">Christian Kramp</a> who was astronomer. Kramp did not really constructed the standard normal table that many people are have been using. Instead, the table contains probabilities of $\int_{x}^{\infty}e^{-t^2}\mathrm{d}t$. There is a very nice paper about roughly how Kramp constructed the table using the <strong>Taylor expansion</strong>, and you can find the paper in the <strong>References</strong>.</p>
+<p>For curiosity, let&rsquo;s have a look at how accurate Kramp&rsquo;s table is by comparing to the results from the <code>NORM.DIST(x, 0, 1, 1)</code> function in a spreadsheet program (I&rsquo;m using <code>Microsoft Excel</code>). Before we do the checking, some extra work needs to be done. Remember that the <code>NORM.DIST(x, 0, 1, 1)</code> returns the following probability:</p>
+<p>$$\int_{-\infty}^{x}\cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{y^2}{2}}\mathrm{d}y$$</p>
+<p>where $y$ is the dummy variable. However, Kramp&rsquo;s table shows the following probability:</p>
+<p>$$\int_{x}^{\infty}e^{-t^2}\mathrm{d}t$$</p>
+<p>where $t$ is the dummy variable. Therefore, we need to do some manipulation. Let $t = \frac{y}{\sqrt{2}}$, then $\mathrm{d}t = \frac{1}{\sqrt{2}}\mathrm{d}y$. When $t=x$, we have $y=\sqrt{2}x$; when $t \rightarrow \infty$, we have $y \rightarrow \infty$. Now, we could do the following manipulation:</p>
+<p>$$
+\begin{aligned}
+\int_{x}^{\infty}e^{-t^2}\mathrm{d}t &amp;= \int_{\sqrt{2}x}^{\infty}e^{-\frac{y^2}{2}} \cfrac{1}{\sqrt{2}}\,\mathrm{d}y = \cfrac{1}{\sqrt{2}} \int_{\sqrt{2}x}^{\infty}e^{-\frac{y^2}{2}}\,\mathrm{d}y\\[15pt]
+&amp;= \cfrac{\sqrt{2\pi}}{\sqrt{2}} \cdot \cfrac{1}{\sqrt{2\pi}} \int_{\sqrt{2}x}^{\infty}e^{-\frac{y^2}{2}}\,\mathrm{d}y = \sqrt{\pi}\int_{\sqrt{2}x}^{\infty}\cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{y^2}{2}}\,\mathrm{d}y \\[15pt]
+&amp;= \sqrt{\pi} \left( 1 - {\color{blue} \int_{-\infty}^{\sqrt{2}x}\cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{y^2}{2}}\,\mathrm{d}y } \right)
+\end{aligned}
+$$</p>
+<p>Note that the blue part is the value from <code>NORM.DIST(y, 0, 1, 1)</code>. That&rsquo;s what we should compare to. Using the top 10 rows of the middle page from the lecture slide:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$t$</th>
+<th style="text-align:center">$y$</th>
+<th style="text-align:center">$[1 - \textmd{NORM.DIST}(y, 0, 1, 1)] \times \sqrt{\pi}$</th>
+<th style="text-align:center">Kramp&rsquo;s value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$0.76$</td>
+<td style="text-align:center">$1.074802307$</td>
+<td style="text-align:center">$0.250326533$</td>
+<td style="text-align:center">$0.25032654$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.77$</td>
+<td style="text-align:center">$1.088944443$</td>
+<td style="text-align:center">$0.244756720$</td>
+<td style="text-align:center">$0.24475673$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.78$</td>
+<td style="text-align:center">$1.103086579$</td>
+<td style="text-align:center">$0.239272023$</td>
+<td style="text-align:center">$0.23927203$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.79$</td>
+<td style="text-align:center">$1.117228714$</td>
+<td style="text-align:center">$0.233872223$</td>
+<td style="text-align:center">$0.23387223$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.80$</td>
+<td style="text-align:center">$1.131370850$</td>
+<td style="text-align:center">$0.228557067$</td>
+<td style="text-align:center">$0.22855708$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.81$</td>
+<td style="text-align:center">$1.145512986$</td>
+<td style="text-align:center">$0.223326276$</td>
+<td style="text-align:center">$0.22332629$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.82$</td>
+<td style="text-align:center">$1.159655121$</td>
+<td style="text-align:center">$0.218179539$</td>
+<td style="text-align:center">$0.21817955$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.83$</td>
+<td style="text-align:center">$1.173797257$</td>
+<td style="text-align:center">$0.213116520$</td>
+<td style="text-align:center">$0.21311653$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.84$</td>
+<td style="text-align:center">$1.187939392$</td>
+<td style="text-align:center">$0.208136851$</td>
+<td style="text-align:center">$0.20813686$</td>
+</tr>
+<tr>
+<td style="text-align:center">$0.85$</td>
+<td style="text-align:center">$1.202081528$</td>
+<td style="text-align:center">$0.203240140$</td>
+<td style="text-align:center">$0.20324015$</td>
+</tr>
+</tbody>
+</table>
+<p>You can see, they are pretty accurate, which is amazing.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="https://www.tandfonline.com/doi/abs/10.1198/000313005X70911">Tables Related to the Normal Distribution - A Short History</a></li>
+<li><a href="https://stats.stackexchange.com/questions/233356/who-created-the-first-standard-normal-table">Who created the first standard normal table</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Christian_Kramp">Christian Kramp</a></li>
+</ul>
+</div>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#normal-gaussian-distributions">Normal (Gaussian) Distributions</a></li>
+    <li><a href="#expectation--variance">Expectation &amp; Variance</a></li>
+    <li><a href="#normal-probability-calculation">Normal Probability Calculation</a></li>
+    <li><a href="#the-first-standard-normal-table">The First Standard Normal Table</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
