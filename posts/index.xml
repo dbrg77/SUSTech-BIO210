@@ -6,7 +6,27 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 16 Oct 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Oct 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 16 Sampling Distributions of The Sample Variance</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/</link>
+      <pubDate>Thu, 19 Oct 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/</guid>
+      <description>The content in this article is a bit dry and difficult, but you only need to pay attention to the logic, not the math details1.
+Now that we know the distribution of the sample mean $\bar{X}$, the next question comes naturally: what is the sampling distribution of the sample variance $S^2$? We do not really have a theorem to tell us about the distribution of the sample variance, so we have to figure it out by ourselves.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 15 Sampling Distributions &amp; The Central Limit Theorem</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-15/</link>
+      <pubDate>Thu, 19 Oct 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-15/</guid>
+      <description>In this lecture, we introduced the most important two concepts in this entire course: the sampling distribution and the central limit theorem. We have seen how they help us make inferences about the population based on just one sample with limited size ($n$). They are the foundation for the hypothesis testing that we are going to introduce in the future.
+Like mentioned before, in inferential statistics we would like to use the data from the sample to make inferences about certain unknown properties of the population.</description>
+    </item>
+    
     <item>
       <title>Lecture 14 Populations And Samples</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-14/</link>
