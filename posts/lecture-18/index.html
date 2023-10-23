@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 18 The Error Curve Derived By MLE</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 18 The Error Curve Derived By MLE">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 18 The Error Curve Derived By MLE">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 18 The Error Curve Derived By MLE</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            October 23, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><a href="http://en.wikipedia.org/wiki/Ronald_Fisher">Ronald Fisher</a> introduced the method of using maximum likelihood estimation to estimate the parameters of a distribution or population. However, it was <a href="http://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Carl Friedrich Gauss</a> who first developed the idea of maximum likelihood. Actually, the normal PDF can be derived using the idea of maximum likelihood. We will investigate in this lecture.</p>
+<p>Like mentioned in <strong>Lecture 12</strong>, the first question everybody has when they first encountered the normal PDF is: where does it come from? The PDF is beautiful. Why are two of the most important constants $\pi$ and $e$ there? The eureka moment comes after reading <a href="https://www.tandfonline.com/doi/abs/10.1080/0025570X.2006.11953386">The Evolution of the Normal Distribution</a> by <a href="https://stahl.ku.edu">Prof. Saul Stahl</a> and, of course, Gauss&rsquo; <a href="https://archive.org/details/theoryofmotionof00gausuoft">Theory of the Motion of the Heavenly Bodies Moving about the Sun in Conic Sections</a>, the translated version. The most intuitive way of deriving the normal PDF is actually follow the history to see what was known in Gauss&rsquo; time and how he derived the normal PDF as a curve to describe errors in measurements, that is, the <strong>error curve</strong>.</p>
+<p>&ldquo;Inventing&rdquo; or finding the error curve is difficult. Many tried and got it wrong. Here are a few examples from <a href="https://en.wikipedia.org/wiki/Thomas_Simpson">Thomas Simpson</a> and <a href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace">Pierre Simon Laplace</a>:</p>
+<p><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/error_curves.png" alt=""></p>
+<p>However, following Gauss&rsquo; thoughts to derive the normal PDF is not that difficult. We just need to get familiar about the historical context and be very clear about the assumptions people had back then about errors.</p>
+<h2 id="assumptions-about-errors-around--before-gauss-time">Assumptions About Errors Around &amp; Before Gauss&rsquo; Time</h2>
+<p>We have talked about some history in previous lectures. You might notice that many historical figures we introduced are working on astronomy. Back in the days, many astronomers were trying to measure and predict the trajectories and positions of different planets and stars. They were well aware that their measurements had <strong>errors</strong> due to the observers, the instruments and many other factors. Even for the same object, they had distinct observations. In this context, an <strong>error</strong> refers to the difference between the measurement and the real location. Around the end of the 16th century, <a href="http://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe</a>, the astronomer known for his accurate astronomical observations, incorporated repeated measurements into his methodology, a practice adopted by many astronomers. Surprisingly, he did not really specify how he converted those different measurements into a single <strong>representative</strong> value to <strong>represent</strong> the true location of an object. Did he use the mean? Did he use the median? Or did he just choose one that he saw fit? We do not know.</p>
+<p><a href="http://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a> is thought to be the first person who proposed a systematic analysis of errors in writing. In his work <em>Dialogue Concerning the Two Chief World Systems, Ptolemaic and Copernican</em> in 1632, Galileo informally discussed what he called <strong>&ldquo;observational errors&rdquo;</strong>, which is basically what is called &ldquo;distribution of random errors&rdquo; today. He provided a few statements or assumptions based on accumulated astronomical data. The relevant ones to this lecture which I took from <a href="https://www.jstor.org/stable/1403145">Hald 1986</a> are:</p>
+
+
+<div class="admonition note">
+    <div class="title">Assumptions</div>
+    <div class="content"><ol>
+<li>The observations are distributed symmetrically about the true value; that is, the errors are distributed symmetrically about zero.</li>
+<li>Small errors occur more frequently than large errors</li>
+</ol>
+</div>
+</div>
+<p>Note that there were no formal and solid proofs for those assumptions. They had been thought to be true based on the data accumulated in the past. The data seemed to support those two assumptions. In addition, they had been intuitive as well. For example, if an instrument is designed meticulously to measure the location of a planet or star, it is more likely for us to obtain a measurement around the true location. Just like when we draw a good random sample from a population, the sample is a micro-version of the population and we should not expect the sample to deviate too much from the population. If errors are random, they should be equally likely to be positively and negatively deviating from the true value.</p>
+<p>There seemed to be some patterns of errors. In order to systematically analyse errors, people wanted to find the <strong>error curve</strong> to describe the errors. Using the terms we learnt during the lectures, they wanted to find <strong>the PDF of the error</strong>, since the error is apparently continuous.</p>
+<h2 id="how-did-gauss-do-it">How Did Gauss Do It?</h2>
+<p><strong>Gauss</strong> was among one of those people trying to find the error curve. In his seminal work <em>Theoria motus corporum coelestium in sectionibus conicis solem ambientium</em> (<em>Theory of the Motion of the Heavenly Bodies Moving about the Sun in Conic Sections</em>), Gauss used the idea of MLE (not exactly<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>) and his educational guess to derive the following prototype:</p>
+<p><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/gauss_book_pdf2.png" alt=""></p>
+<p>where $\Delta$ is the error, which is basically $x-\mu$ in modern terms, and $h$ is a constant that &ldquo;can be considered as the measure of precision of the observations&rdquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>Now let&rsquo;s use what we learnt in <strong>Lecture 17</strong> to <strong>briefly and partially</strong><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> reproduce Gauss&rsquo; derivation.</p>
+<p>First, we let the true location of an object of interest be $m$. Then we have some repeated measurements $X_1,X_2,\cdots,X_{n-1},X_n$, and we know they all have some errors. Let&rsquo;s denote the error using the capital Greek letter $\Epsilon$ (Epsilon) $\Epsilon_i = X_i - m$. We think the errors have some pattern that can be described by an unknown PDF: $f_{\Epsilon}(\varepsilon)$.</p>
+<p>Based on the two assumptions mentioned above, we have already known some properties of the PDF. <strong>Assumption 1</strong> tells us that:</p>
+<p>$$f_{\Epsilon}(\varepsilon) = f_{\Epsilon}(-\varepsilon)$$</p>
+<p>which means $f_{\Epsilon}$ is an <strong>even function</strong>. <strong>Assumptions 2</strong> tells us that the closer $\varepsilon$ to zero, the more likely it will occur. We can roughly see the shape of the function as something like these curves:</p>
+<figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/hypothetical_error_curves.png" width="300px"/>
+</figure>
+
+<p>Now that we have a set of repeated measures $x_1,x_2,\cdots,x_{n-1},x_n$ that yield a set of errors $\varepsilon_i = x_i - m$. Using what we learnt from <strong>Lecture 17</strong>, the likelihood function on this set of data is:</p>
+<p>$$\mathcal{L} = \prod_{i=1}^n f_{\Epsilon}(\varepsilon_i)$$</p>
+<p>The log likelihood function is basically:</p>
+<p>$$\ell = \sum_{i=1}^{n}\ln f_{\Epsilon}(\varepsilon_i)$$</p>
+<p>Basically, we want to maximise the log likelihood function $\ell$. Therefore, we should let $\ell^{\prime} = \cfrac{\mathrm{d}\ell}{\mathrm{d}\varepsilon}=0$. Recall that $\left(\ln x\right)^{\prime} = \cfrac{1}{x}$. Using the <strong>chain rule</strong>, we have $\left[\ln f(x)\right]^{\prime} = \cfrac{f^{\prime}(x)}{f(x)}$. Then the derivative of our log likelihood function becomes:</p>
+<p>$$\ell^{\prime} = \left[ \sum_{i=1}^n \ln f_{\Epsilon}(\varepsilon_i) \right]^{\prime} = \sum_{i=1}^{n}\cfrac{f_{\Epsilon}^{\prime}(\varepsilon_i)}{f_{\Epsilon}(\varepsilon_i)} $$</p>
+<p>For simplicity, we let $g_{\Epsilon}(\varepsilon) = \cfrac{f_{\Epsilon}^{\prime}(\varepsilon)}{f_{\Epsilon}(\varepsilon)}$. Then $\ell^{\prime}$ becomes:</p>
+<p>$$
+\begin{aligned}
+\begin{align*}
+\ell^\prime &amp;= \sum_{i=1}^{n}g_{\Epsilon}(\varepsilon_i) \\
+&amp;= g_{\Epsilon}(\varepsilon_1) + g_{\Epsilon}(\varepsilon_2) + \cdots + g_{\Epsilon}(\varepsilon_{n-1}) + g_{\Epsilon}(\varepsilon_n) \\
+&amp;= g_{\Epsilon}(x_1 - m) + g_{\Epsilon}(x_2 - m) + \cdots + g_{\Epsilon}(x_{n-1} - m) + g_{\Epsilon}(x_n - m) \tag{1}
+\end{align*}
+\end{aligned}
+$$</p>
+<p>In <strong>Lecture 17</strong>, what we practised was that we knew the PDF, we just needed to figure out $m$ such that $\ell^\prime = 0$. In this case, we also want to let $\ell^\prime = 0$, but we know neither the PDF ($\boldsymbol{g}$ or $\boldsymbol{f}$) nor $m$. What should we do here?</p>
+<p>Well, Gauss thinks that in order for $\ell^\prime = 0$, $m$ must take the value of the arithmetic mean of those measurements we have. Using the terms we have been using, it means:</p>
+<p>$$\hat{m} = \cfrac{1}{n}\sum_{i=1}^n x_i$$</p>
+<p>There was no formal proof that the above statement was true. It is just Gauss&rsquo; educational guess. Here I quote from Gauss&rsquo; original words (well &hellip; not really &ldquo;original&rdquo; but the translated version from <a href="https://archive.org/details/theoryofmotionof00gausuoft">page 258</a>):</p>
+<p><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/gauss_book.png" alt=""></p>
+<blockquote>
+<p>&hellip; It has been customary certainly to regard as an axiom the hypothesis that if any quantity has been determined by several direct observations, made under the same circumstances and with equal care, the arithmetical mean of the observed values affords the most probable value, if not rigorously, yet very nearly at least, so that it is always most safe to adhere to it &hellip;</p>
+</blockquote>
+<p>You see, like I said at the very first lecture of this course, mathematics is not always about calculations. Sometimes, you need some good intuition and guesses.</p>
+<p>You may not think it was a big deal for Gauss to make that guess, because it is &hellip; intuitive &hellip;, right? Actually, it was not so obvious or intuitive that the mean should be used back then. The history of people getting used to the mean is long and complicated. For now you can check the last article in the <strong>References</strong> section to get an idea.</p>
+<p>Now back to our work. We need to let $\ell^\prime = 0$. Using Gauss&rsquo; guess to replace $m$ with $\bar{x}$ in equation $(1)$, we have:</p>
+<p>$$ g_{\Epsilon}(x_1 - \bar{x}) + g_{\Epsilon}(x_2 - \bar{x}) + \cdots + g_{\Epsilon}(x_{n-1} - \bar{x}) + g_{\Epsilon}(x_n - \bar{x}) = 0 \tag{2}$$</p>
+<p>where $\bar{x}$ is the arithmetic mean of our measurements.</p>
+<p>Equation $(2)$ must be true for any $n$ measurements. Therefore, if we let:</p>
+<p>$$ x_1 = m \textmd{, \ \ and \ \ } x_2 = x_3 = x_4 = \cdots = x_{n-1} = x_n = m - nN$$</p>
+<p>where $N$ is just some constant number. Then we have:</p>
+<p>$$
+\begin{aligned}
+\bar{x} &amp;= \cfrac{x_1 + x_2 + \cdots + x_{n-1} + x_n}{n}\\[10pt]
+&amp;= \cfrac{m + (m - nN) + (m - nN) + \cdots + (m - nN)}{n}\\[10pt]
+&amp;= \cfrac{m + (n-1) \cdot (m-nN) }{n}\\[10pt]
+&amp;= m-(n-1)N
+\end{aligned}
+$$</p>
+<p>Putting those values back into equation $(2)$, we have:</p>
+<p>$$
+\begin{aligned}
+&amp; g_{\Epsilon}(x_1 - \bar{x}) + g_{\Epsilon}(x_2 - \bar{x}) + \cdots + g_{\Epsilon}(x_{n-1} - \bar{x}) + g_{\Epsilon}(x_n - \bar{x}) = 0 \\[12.5pt]
+\Rightarrow &amp; g_{\Epsilon}[m - (m-(n-1)N)] + g_{\Epsilon}[(m - nN) - (m-(n-1)N)] + \cdots + &amp; \\
+&amp; g_{\Epsilon}[(m - nN) - (m-(n-1)N)] + g_{\Epsilon}[(m - nN) - (m-(n-1)N)] = 0 \\[12.5pt]
+\Rightarrow &amp; g_{\Epsilon}[(n-1)N] + g_{\Epsilon}(-N) + \cdots + g_{\Epsilon}(-N) + g_{\Epsilon}(-N) =0 \\[12.5pt]
+\end{aligned}
+$$</p>
+<p>Note that $g_{\Epsilon}(x_2-\bar{x}) = g_{\Epsilon}(x_3-\bar{x}) = \cdots = g_{\Epsilon}(x_n-\bar{x}) = g_{\Epsilon}(-N)$. There are $n-1$ of them, so we have:</p>
+<p>$$g_{\Epsilon}[(n-1)N] + (n-1)g_{\Epsilon}(-N) = 0 \tag{3}$$</p>
+<p>Now recall that <strong>Assumption 1</strong> tells us that $f_{\Epsilon}(\varepsilon) = f_{\Epsilon}(-\varepsilon)$, meaning that it is an even function, so we have<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>:</p>
+<p>$$f_{\Epsilon}^{\prime}(\varepsilon) = -f_{\Epsilon}^{\prime}(-\varepsilon)$$</p>
+<p>Dividing $f_{\Epsilon}(\varepsilon)$ at the left-hand side and dividing $f_{\Epsilon}(-\varepsilon)$ at the right-hand side, we have:</p>
+<p>$$\cfrac{f_{\Epsilon}^{\prime}(\varepsilon)}{f_{\Epsilon}(\varepsilon)} = - \cfrac{f_{\Epsilon}^{\prime}(-\varepsilon)}{f_{\Epsilon}(-\varepsilon)}$$</p>
+<p>That means $g_{\Epsilon}(\varepsilon) = -g_{\Epsilon}(-\varepsilon)$, and hence $g_{\Epsilon}(-N) = -g_{\Epsilon}(N)$. Putting this back to equation $(3)$:</p>
+<p>$$g_{\Epsilon}[(n-1)N] - (n-1)g_{\Epsilon}(N) = 0$$</p>
+<p>Move the second term to the other side of the equation:</p>
+<p>$$g_{\Epsilon}[(n-1)N] = (n-1)g_{\Epsilon}(N)$$</p>
+<p>Now we have a situation of $f(a\cdot x) = a\cdot f(x)$, and In this case $\cfrac{\Delta f(x)}{\Delta x}$ must be a constant. Therefore, $g_{\Epsilon}$ must be a linear function in the form:</p>
+<p>$$g_{\Epsilon}(\varepsilon) = k \cdot \varepsilon$$</p>
+<p>where $k$ is some constant. Since $g_{\Epsilon}(\varepsilon) = \cfrac{f_{\Epsilon}^{\prime}(\varepsilon)}{f_{\Epsilon}(\varepsilon)}$, we have:</p>
+<p>$$
+\cfrac{f_{\Epsilon}^{\prime}(\varepsilon)}{f_{\Epsilon}(\varepsilon)} = k \cdot \varepsilon \tag{4}
+$$</p>
+<p>Again, recall that $ \left[ \ln f(x) \right] ^{\prime} = \cfrac{f^{\prime}(x)}{f(x)}$, so if we integrate both sides of equation $(4)$ with respect to $\varepsilon$, we have:</p>
+<p>$$
+\begin{aligned}
+&amp; \int \cfrac{f_{\Epsilon}^{\prime}(\varepsilon)}{f_{\Epsilon}(\varepsilon)}\, \mathrm{d}\varepsilon = \int k \cdot \varepsilon \mathrm{d}\varepsilon\\[12.5pt]
+\Rightarrow &amp; \ln f_{\Epsilon}(\varepsilon) = \cfrac{k}{2} \, \varepsilon^2 + c
+\end{aligned}
+$$</p>
+<p>where $k,c$ are some constants. Therefore, we have:</p>
+<p>$$
+f_{\Epsilon}(\varepsilon) = e^{\frac{k}{2}\varepsilon^2 + c} = e^c \cdot e^{\frac{k}{2}\varepsilon^2} = Ae^{\frac{k}{2}\varepsilon^2}
+$$</p>
+<p>where $A, k$ are some constants.</p>
+<p>Finally, we are actually getting somewhere. Now we need to figure out the constants $A, k$.</p>
+<p><strong>Assumption 2</strong> tells us that the smaller $\varepsilon$ is, the higher the chance it will occur. Therefore, the <strong>coefficient</strong> before $e$ must be a negative number. Then we can let $\cfrac{k}{2} = -h^2$, where $h$ is some constant:</p>
+<p>$$f_{\Epsilon}(\varepsilon) = Ae^{-h^2\varepsilon^2} \tag{5}$$</p>
+<p>Since equation $(5)$ is a PDF, when we integrate from $-\infty$ to $\infty$, it must be equal to $1$. That is:</p>
+<p>$$
+\begin{aligned}
+\int_{-\infty}^{\infty} f_{\Epsilon}(\varepsilon) \mathrm{d}\varepsilon &amp;= 1 \\[10pt]
+\int_{-\infty}^{\infty} Ae^{-h^2\varepsilon^2} \mathrm{d}\varepsilon &amp;= 1 \\[10pt]
+A\int_{-\infty}^{\infty} e^{-h^2\varepsilon^2} \mathrm{d}\varepsilon &amp;= 1
+\end{aligned}
+$$</p>
+<p>When Gauss was doing the derivation, Laplace had already worked out the following integral, which we called the <strong>Gausssian integrals</strong> today:</p>
+<p>$$ \int_{-\infty}^{\infty} e^{-x^2} \mathrm{d}x = \sqrt{\pi} \textmd{ \ \ and \ \ } \int_{-\infty}^{\infty} e^{-a^2x^2} \mathrm{d}x = \cfrac{\sqrt{\pi}}{a} $$</p>
+<p>There are many proofs out there. One of the most popular proof is by doing a double integral and converting to polar coordinates. It is highly likely that you have already come across it in your calculus class. If not, I will let you search it on the internet by yourself, which should be easy to find.</p>
+<p>Anyway, Gauss used the results from Laplace, and concluded $A = \cfrac{h}{\sqrt{\pi}}$. Therefore, the <strong>error curve</strong> that everybody had been looking for was:</p>
+<p>$$\cfrac{h}{\sqrt{\pi}}\,e^{-h^2\varepsilon^2}$$</p>
+<p>We can take a moment to ponder how beautiful the process and the final product is.</p>
+<h2 id="the-modern-form-of-the-normal-pdf">The Modern Form of The Normal PDF</h2>
+<p>The above PDF is still a bit different from what we are using today as a normal distribution. We still need a bit work to do to work out the value of $h$. That&rsquo;s where the variance $\sigma^2$ comes in.</p>
+<p>By definition, the expected value of the above PDF is:</p>
+<p>$$\mathbb{E}[\Epsilon] = \int_{-\infty}^{\infty} \varepsilon \cdot \cfrac{h}{\sqrt{\pi}}\,e^{-h^2\varepsilon^2}$$</p>
+<p>It is easy to see that the above function is an <strong>odd function</strong>. If we integrate from $-\infty$ to $\infty$, eventually the area under the curve at the negative side and the positive side will cancel out<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, so $\mathbb{E}[\Epsilon] = 0$.</p>
+<p>Now we use $\sigma^2$ to denote the variance of the error: $\textmd{var}(\Epsilon) = \sigma^2$. Again, by the common trick of calculating the variance, we have $\textmd{var}(\Epsilon) = \mathbb{E}[\Epsilon^2] - (\mathbb{E}[\Epsilon])^2 = \mathbb{E}[\Epsilon^2] -0^2 = \mathbb{E}[\Epsilon^2]$. Basically, the variance is $\mathbb{E}[\Epsilon^2]$. Therefore, we have the following:</p>
+<p>$$
+\begin{aligned}
+\mathbb{E}[\Epsilon^2] &amp;= \sigma^2 \\
+\int_{-\infty}^{\infty} \varepsilon^2 \cdot \cfrac{h}{\sqrt{\pi}}\,e^{-h^2\varepsilon^2} \mathrm{d}\varepsilon &amp;= \sigma^2 \\[10pt]
+\cfrac{h}{\sqrt{\pi}} \int_{-\infty}^{\infty} \varepsilon^2 \cdot e^{-h^2\varepsilon^2} \mathrm{d}\varepsilon &amp;= \sigma^2
+\end{aligned}
+$$</p>
+<p>Note that $\varepsilon^2 \cdot e^{-h^2\varepsilon^2}$ is an <strong>even function</strong>. Therefore, the above equation becomes<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>:</p>
+<p>$$\cfrac{2h}{\sqrt{\pi}} \int_{0}^{\infty} \varepsilon^2 \cdot e^{-h^2\varepsilon^2} \mathrm{d}\varepsilon = \sigma^2 \tag{6}$$</p>
+<p>Recall the <strong>integration-by-parts</strong> technique tells us:</p>
+<p>$$\int\boldsymbol{u}(x)\boldsymbol{v}^{\prime}(x) = \boldsymbol{u}(x)\boldsymbol{v}(x) - \int \boldsymbol{u}^{\prime}(x)\boldsymbol{v}(x)\mathrm{d}x$$</p>
+<p>Also note that $\left( e^{-h^2\varepsilon^2} \right)^{\prime} = -2h^2 \varepsilon e^{-h^2\varepsilon^2}$. Now we could rewrite equation $(6)$ as follows:</p>
+<p>$$
+\cfrac{2h}{\sqrt{\pi}} \int_{0}^{\infty} \left( -\cfrac{1}{2h^2}\, \varepsilon \right) \cdot \left( -2h^2 \varepsilon e^{-h^2\varepsilon^2} \right) \mathrm{d}\varepsilon = \sigma^2 \tag{7}
+$$</p>
+<p>Now we can let $\boldsymbol{u}(\varepsilon) = -\cfrac{1}{2h^2}\, \varepsilon$ and $\boldsymbol{v}^{\prime}(\varepsilon) = -2h^2 \varepsilon e^{-h^2\varepsilon^2}$, and hence $\boldsymbol{v}(\varepsilon) = e^{-h^2\varepsilon^2}$. Using <strong>integration by parts</strong>, equation $(7)$ becomes:</p>
+<p>$$
+\begin{aligned}
+\cfrac{2h}{\sqrt{\pi}} \left( \left[ \left( -\cfrac{1}{2h^2}\, \varepsilon \right) \cdot \left( e^{-h^2\varepsilon^2} \right) \right]_{0}^{\infty} - \int_{0}^{\infty} -\cfrac{1}{2h^2} \cdot e^{-h^2\varepsilon^2} \right) &amp;= \sigma^2 \\[10pt]
+\cfrac{2h}{\sqrt{\pi}} \left( \left[ -\cfrac{\varepsilon}{2h^2 e^{h^2\varepsilon^2}} \right]_{0}^{\infty} + \cfrac{1}{2h^2} \int_{0}^{\infty} e^{-h^2\varepsilon^2} \right)&amp;= \sigma^2 \tag{8}
+\end{aligned}
+$$</p>
+<p>Note there is a <strong>Gaussian integral</strong> in the second term in the parenthesis, so we can see that $\cfrac{1}{2h^2}\int_{0}^{\infty} e^{-h^2x^2} \mathrm{d}x = \cfrac{1}{2h^2} \cdot \cfrac{\sqrt{\pi}}{2h} = \cfrac{1}{4h^3} \sqrt{\pi}$. For the first term in the parenthesis, we can do:</p>
+<p>$$
+\begin{aligned}
+\left[ -\cfrac{\varepsilon}{2h^2 e^{h^2\varepsilon^2}} \right]_{0}^{\infty} &amp;= \lim_{t \to \infty} \left[ -\cfrac{\varepsilon}{2h^2 e^{h^2\varepsilon^2}} \right]_{0}^{t} \\[12.5pt]
+&amp;= \lim_{t \to \infty} \left( -\cfrac{t}{2h^2 e^{h^2t^2}} \right) - \left( -\cfrac{0}{2h^2 e^{h^2 \cdot 0^2}} \right) \\[12.5pt]
+&amp;= - \lim_{t \to \infty} \left( \cfrac{t}{2h^2 e^{h^2t^2}} \right) - 0 \\[12.5pt]
+&amp;= -\lim_{t \to \infty} \left( \cfrac{t}{2h^2 e^{h^2t^2}} \right)
+\end{aligned}
+$$</p>
+<p>Here we have a situation of $\cfrac{\infty}{\infty}$. Using <strong>L&rsquo;Hopital&rsquo;s rule</strong>:</p>
+<p>$$
+\begin{aligned}
+\left[ -\cfrac{\varepsilon}{2h^2 e^{h^2\varepsilon^2}} \right]_{0}^{\infty} &amp;= -\lim_{t \to \infty} \left( \cfrac{t}{2h^2 e^{h^2t^2}} \right) =  -\lim_{t \to \infty} \left( \cfrac{t^\prime}{(2h^2 e^{h^2t^2})^\prime} \right) \\[12.5pt]
+&amp;= -\lim_{t \to \infty} \left( \cfrac{1}{4h^4t e^{h^2t^2}} \right) = 0
+\end{aligned}
+$$</p>
+<p>Put those results back to equation $(8)$, we have:</p>
+<p>$$
+\begin{aligned}
+\cfrac{2h}{\sqrt{\pi}} \cdot \left( 0 + \cfrac{1}{4h^3} \sqrt{\pi} \right) &amp;= \sigma^2 \\
+\cfrac{1}{2h^2} &amp;= \sigma^2\\
+h &amp;= \cfrac{1}{\sqrt{2}\sigma}
+\end{aligned}
+$$</p>
+<p>Putting the value of $h$ back to Gauss error curve, we have:</p>
+<p>$$\cfrac{h}{\sqrt{\pi}}\,e^{-h^2\varepsilon^2} = \cfrac{1}{\sqrt{2\pi}\sigma}\,e^{-\frac{\varepsilon^2}{2\sigma^2}}$$</p>
+<p>Note that the error is basically $x - m$, where $m$ is the true location. In our modern terms, it is basically the true mean $\mu$. Therefore, we have the general form of the normal PDF that we are using today:</p>
+<p>$$f_{X}(x) = \cfrac{1}{\sqrt{2\pi}\sigma}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$</p>
+<p>Amazing, isn&rsquo;t it?</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="https://www.ucpress.edu/ebook/9780520342941/dialogue-concerning-the-two-chief-world-systems-ptolemaic-and-copernican-second-revised-edition">Dialogue Concerning the Two Chief World Systems, Ptolemaic and Copernican</a></li>
+<li><a href="https://archive.org/details/theoryofmotionof00gausuoft">Theory of the Motion of the Heavenly Bodies Moving about the Sun in Conic Sections</a></li>
+<li><a href="https://www.jstor.org/stable/1403145">Galileo&rsquo;s Statistical Analysis of Astronomical Observations</a></li>
+<li><a href="https://www.tandfonline.com/doi/abs/10.1080/0025570X.2006.11953386">The Evolution of the Normal Distribution</a></li>
+<li><a href="https://link.springer.com/chapter/10.1007/978-0-387-46409-1_7">Gauss’s Derivation of the Normal Distribution and the Method of Least Squares, 1809</a></li>
+<li><a href="https://dbrg77.github.io/SUSTech-BIO210/src/normal.pdf">The Normal Distribution: A derivation from basic principles</a></li>
+<li><a href="https://youtu.be/N-bI-Dsm-rw">Deriving The Normal Distribution Probability Density Function Formula</a></li>
+<li><a href="https://alanhdu.github.io/posts/2019-10-21-normal-distribution-derivation/">Three Derivations of the Gaussian Distribution</a></li>
+<li><a href="https://www.significancemagazine.com/2-uncategorised/584-response-to-shock-of-the-mean?highlight=WyJzaG9jayJd">The shock of the mean: a missing element</a></li>
+</ul>
+</div>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>There seems to be some confusion about whether Gauss used maximum likelihood estimation or least squares to derive the normal PDF. The two methods lead to the same estimate ($\bar{x}$), but they are based on different concepts. I’m not qualified to comment on this … yet … See <a href="https://link.springer.com/chapter/10.1007/978-0-387-46409-1_7">Gauss’s Derivation of the Normal Distribution and the Method of Least Squares, 1809</a> in the References for more details. For now, let’s go with MLE to see how to derive the normal PDF.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Those are Gauss&rsquo; original words translated. See the paper in the <strong>References</strong> section.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>The full and rigorous proof is actually more complicated than the content presented in this post. You can check the papers in the <strong>References</strong> section.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Think about the shape of an even function if you have trouble understanding this.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Strictly speaking, what we should do here is $\int_{-\infty}^{\infty} \varepsilon \cdot \cfrac{h}{\sqrt{\pi}}\,e^{-h^2\varepsilon^2} = \int_{-\infty}^{0} \varepsilon \cdot \cfrac{h}{\sqrt{\pi}}\,e^{-h^2\varepsilon^2} + \int_{0}^{\infty} \varepsilon \cdot \cfrac{h}{\sqrt{\pi}}\,e^{-h^2\varepsilon^2}$ and show they converge.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>Again, strictly speaking, we should do $\int_{-\infty}^{\infty} \varepsilon^2 \cdot e^{-h^2\varepsilon^2} \mathrm{d}\varepsilon = \int_{-\infty}^{0} \varepsilon^2 \cdot e^{-h^2\varepsilon^2} \mathrm{d}\varepsilon + \int_{0}^{\infty} \varepsilon^2 \cdot e^{-h^2\varepsilon^2} \mathrm{d}\varepsilon$ and show they converge.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#assumptions-about-errors-around--before-gauss-time">Assumptions About Errors Around &amp; Before Gauss&rsquo; Time</a></li>
+    <li><a href="#how-did-gauss-do-it">How Did Gauss Do It?</a></li>
+    <li><a href="#the-modern-form-of-the-normal-pdf">The Modern Form of The Normal PDF</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
