@@ -6,7 +6,26 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 23 Oct 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 20 Confidence Interval For The Variance</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-20/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-20/</guid>
+      <description>Once we have introduced the confidence intervals for the population mean $\mu$, the next question comes natural: how do we construct confidence intervals for the population variance $\sigma^2$? Since we have previously discussed the sampling distribution of the sample variance, it is kind of straightforward for us to derive the confidence interval for the population variance.
+Interval Estimation For $\boldsymbol{\sigma^2}$ We can just follow the same thought from the previous lecture when we derived the CI for the population mean $\mu$.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 19 Confidence Interval For The Mean</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/</guid>
+      <description>In the previous lectures, we talked about using the sample mean ($\bar{X}$ and $\bar{x}$) as the estimator and estimate for the population mean ($\mu$) and using the sample variance ($S^2$ and $s^2$) as the estimator and estimate for the population variance ($\sigma^2$). We also introduced one intuitive way of constructing an estimator: the maximum likelihood estimation (MLE). In those cases, we were just using one specific value, that is, just one number, to estimate the population parameter of interest.</description>
+    </item>
+    
     <item>
       <title>Lecture 18 The Error Curve Derived By MLE</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/</link>
