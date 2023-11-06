@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on SUSTech BIO210 Biostatistics</title>
+    <link>https://dbrg77.github.io/SUSTech-BIO210/posts/</link>
+    <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 06 Nov 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 22 Confidence Interval For The Proportion</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-22/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-22/</guid>
+      <description>Now that we have figured out the sampling distribution of the sample proportion, we can make interval estimation and construct confidence intervals for the sample proportion. Before we do that, let&amp;rsquo;s use an example to look the distribution of $P$ one more time.
+A Simplified Version of Gene Expression As we know, DNA is our genetic material. In order for a gene to function, the gene needs to be &amp;ldquo;converted&amp;rdquo; into proteins1.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 21 Sampling Distribution of The Sample Proportion</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-21/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-21/</guid>
+      <description>What we have been dealing with so far are all absolute quantities, such as the number of emails we received in a given time window and the body temperatures of healthy people. In many other situations, the relative quantities are more meaningful. In this lecture, we introduce a new population parameter: the population proportions, representing the proportion (or fraction, percentage etc.) of the thing of our interest. To be consistent with the notations we are using in this course, we use the Greek letter $\pi$ to denote the population proportion.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 20 Confidence Interval For The Variance</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-20/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-20/</guid>
+      <description>Once we have introduced the confidence intervals for the population mean $\mu$, the next question comes natural: how do we construct confidence intervals for the population variance $\sigma^2$? Since we have previously discussed the sampling distribution of the sample variance, it is kind of straightforward for us to derive the confidence interval for the population variance.
+Interval Estimation For $\boldsymbol{\sigma^2}$ We can just follow the same thought from the previous lecture when we derived the CI for the population mean $\mu$.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 19 Confidence Interval For The Mean</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/</guid>
+      <description>In the previous lectures, we talked about using the sample mean ($\bar{X}$ and $\bar{x}$) as the estimator and estimate for the population mean ($\mu$) and using the sample variance ($S^2$ and $s^2$) as the estimator and estimate for the population variance ($\sigma^2$). We also introduced one intuitive way of constructing an estimator: the maximum likelihood estimation (MLE). In those cases, we were just using one specific value, that is, just one number, to estimate the population parameter of interest.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 18 The Error Curve Derived By MLE</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/</guid>
+      <description>Ronald Fisher introduced the method of using maximum likelihood estimation to estimate the parameters of a distribution or population. However, it was Carl Friedrich Gauss who first developed the idea of maximum likelihood. Actually, the normal PDF can be derived using the idea of maximum likelihood. We will investigate in this lecture.
+Like mentioned in Lecture 12, the first question everybody has when they first encountered the normal PDF is: where does it come from?</description>
+    </item>
+    
+    <item>
+      <title>Lecture 17 Maximum Likelihood Estimation (MLE)</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-17/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-17/</guid>
+      <description>Previously we all assumed that we somehow knew the population parameters, such as the mean ($\mu$) and the variance ($\sigma^2$). Starting this lecture, we have finally reached a stage where we do NOT know the population parameters. Instead, we have a representative sample. Using the information from the sample, we &amp;ldquo;make a guess&amp;rdquo;, or estimate the parameters of the population.
+In the simplest case, if we are interested in the population mean $\mu$ or variance $\sigma^2$, we can just provide a number to represent our best &amp;ldquo;guess&amp;rdquo; or estimate to the mean or variance.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 16 Sampling Distributions of The Sample Variance</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/</link>
+      <pubDate>Thu, 19 Oct 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/</guid>
+      <description>The content in this article is a bit dry and difficult, but you only need to pay attention to the logic, not the math details1.
+Now that we know the distribution of the sample mean $\bar{X}$, the next question comes naturally: what is the sampling distribution of the sample variance $S^2$? We do not really have a theorem to tell us about the distribution of the sample variance, so we have to figure it out by ourselves.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 15 Sampling Distributions &amp; The Central Limit Theorem</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-15/</link>
+      <pubDate>Thu, 19 Oct 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-15/</guid>
+      <description>In this lecture, we introduced the most important two concepts in this entire course: the sampling distribution and the central limit theorem. We have seen how they help us make inferences about the population based on just one sample with limited size ($n$). They are the foundation for the hypothesis testing that we are going to introduce in the future.
+Like mentioned before, in inferential statistics we would like to use the data from the sample to make inferences about certain unknown properties of the population.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 14 Populations And Samples</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-14/</link>
+      <pubDate>Mon, 16 Oct 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-14/</guid>
+      <description>Lecture 14 marks the start of the section of statistics, or more precisely, the inferential statistics section. In inferential statistics, we would like to use the information from the samples we get to make inference and some generalised conclusions about populations.
+First, we need to clarify the concepts of population and sample. We actually already talked about them in previous lectures, even though we have not formally defined them. The concepts of populations and samples are actually difficult to describe.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 13 Normal Distributions</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/</link>
+      <pubDate>Mon, 16 Oct 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/</guid>
+      <description>In Lecture 13, we talked about why the normal distribution was useful and how we used it to calculate probabilities of events of our interest. This was the last lecture in the probability section. We moved on to statistics section after this lecture.
+Normal (Gaussian) Distributions We have come across some basics about the normal distributions. The PDF is:
+$$f_X(x)=\cfrac{1}{\sqrt{2\pi}\sigma}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+Expectation &amp;amp; Variance Like always, whenever we get a PDF or PMF, we always need to check whether it describes a valid probabilistic model.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 12 Continuous Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/</link>
+      <pubDate>Mon, 09 Oct 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/</guid>
+      <description>Once we have seen some discrete random variables, we can move on to look at continuous random variables. As the name indicated, the numbers taken by a continuous random variable are continuous. Like we discussed before, in this case the probability of taking any specific number is zero. Therefore, it does NOT make sense to use PMF to describe a continuous random variable. Instead, we use probability density function (PDF), denoted by $f_X(x)$.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 11 Discrete Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/</link>
+      <pubDate>Mon, 09 Oct 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/</guid>
+      <description>Now we have introduced the concept of random variables, let&amp;rsquo;s look at some common random variables, starting with the easier cases of discrete random variables. They are common because we can easily relate them to our real-life events. Once we get familiar with them, we can use them to model and solve problems.
+Bernoulli Random Variables Like I said before, when we first come across a new thing, always ALWAYS start with simple examples to get our intuition right.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 10 Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/</link>
+      <pubDate>Thu, 28 Sep 2023 00:10:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/</guid>
+      <description>In this lecture, we introduced perhaps the first &amp;ldquo;new&amp;rdquo;1 concept in this course: random variables. It is very important to understand the concepts of random variables and the expectation and variance of a random variable. When coming across something new, always start with something simple to get a rough idea. Therefore, we used some simple and intuitive examples, such as coin tossing, during the lectures.
+Random Variables A random variable is defined as a a real-valued function defined on a sample space $\Omega$.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 9 Counting</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/</guid>
+      <description>In Lecture 9, we paused a little bit and did a quick recap about the basic counting principles. The content was basically what you have learnt during your high school math classes but in English. You see that the counting principles we are talking about greatly help us calculate the probability of events consisting outcomes from discrete sample spaces.
+You might ask why we bother to do a recap about counting.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 8 Independent Events</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/</link>
+      <pubDate>Mon, 25 Sep 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/</guid>
+      <description>Lecture 8 introduced the concept of independence. It is a relatively straightforward concept to understand. Intuitively, events $A$ and $B$ are independent if:
+$$\mathbb{P}(A|B)=\mathbb{P}(A), \mathbb{P}(B) \neq 0$$
+Using Bayes&amp;rsquo; terms, we can say that the posterior probability is equal to the prior probability. In other words, event $B$ has nothing to do with $A$; event $B$ does not provide any information about event $A$; given that event $B$ has occurred, we do not change our belief about event $A$ &amp;hellip; Recall that from Lecture 5, we have:</description>
+    </item>
+    
+    <item>
+      <title>Lecture 7 More On The Bayes Theorem</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-07/</link>
+      <pubDate>Mon, 25 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-07/</guid>
+      <description>Lecture 7 introduced more examples of using the Bayes&amp;rsquo; theorem to help us make decisions in real life. Sometimes, the conclusion seems counterintuitive at the beginning. However, if you grasp the idea of &amp;ldquo;using the new information to update your prior belief&amp;rdquo;, you will find the Bayes&amp;rsquo;s rule very natural. We also introduced a new form of the Bayes&amp;rsquo; rule without talking about the events $A$, $B$ etc.:
+$$\mathbb{P}(H_i|E) = \cfrac{\mathbb{P}(H_i)\mathbb{P}(E|H_i)}{\mathbb{P}(E)} = \cfrac{\mathbb{P}(E|H_i)}{\sum_{i=1}^n \mathbb{P}(H_i)\mathbb{P}(E|H_i)} \cdot \mathbb{P}(H_i)$$</description>
+    </item>
+    
+    <item>
+      <title>Lecture 6 The Bayes&#39; Theorem</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-06/</link>
+      <pubDate>Mon, 18 Sep 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-06/</guid>
+      <description>Now we have get familiar with conditional probabilities. The basic definition and formula is:
+$$\mathbb{P}(A|B)=\cfrac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \textmd{, } \mathbb{P}(B) \neq 0$$
+In the previous lecture, we used some examples to show how to calculate three probabilities: $\mathbb{P}(A \cap B)$, $\mathbb{P}(B)$ and $\mathbb{P}(A|B)$, which are essentially the three terms in the above formula. In reality, we sometimes need to calculate some very complicated probabilities, but they all boils down to some sort of combinations of those three probabilities.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 5 Conditional Probability</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-05/</link>
+      <pubDate>Mon, 18 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-05/</guid>
+      <description>In Lectures 5, we have introduced the concept of conditional probability and see how we could use it to learn from the real world. Whenever we come across a new concept, the first thing is always to build up our intuition about it. Using a few simple examples, we start to get some ideas about conditional probabilities.
+In conditional probability, we are interested in calculating the probability of an event when taking into account some knowledge that we have.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 4 Probability Axioms</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-04/</guid>
+      <description>Probability Axioms After we finished the content of descriptive statistics, we moved on to the section of probability, which is really good at dealing with randomness. You have probably already come across some concepts of probability. In Lecture 4, we just made things formal. Probability axioms were introduced in this lecture. Those are the things we need to agree on. They are quite intuitive, and hopefully, you have no problem accepting them as facts:</description>
+    </item>
+    
+    <item>
+      <title>Lecture 3 Numerical Measures</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/</guid>
+      <description>Numerical Measures Lecture 3 concludes the section of descriptive statistics. From the previous lectures we demonstrated that graphs were a nice way of showing the data. One can immediately get a rough idea about how the data look like from a good graph. However, when the data is presented in graphs, the quantitative information in the data is lost. Therefore, it would be good if we could just use a bunch of numbers to summarise the data.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 2 Descriptive Statistics</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/</link>
+      <pubDate>Mon, 11 Sep 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/</guid>
+      <description>Lecture 2 started to introduce some basic techniques in descriptive statistics. You can think of this lecture as a recap of what you have already known in the past. Make sure you get familiar with all the graphs introduced in this lecture, because we are going to use them all the time in future lectures. Perhaps the most important graph in this course is the histogram, which is the most common way of showing frequency distributions:</description>
+    </item>
+    
+    <item>
+      <title>Lecture 1 Course Introduction</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-01/</link>
+      <pubDate>Mon, 11 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-01/</guid>
+      <description>In the first lecture of the entire course, we had a brief overview of the course structure and content. Lecture 1 started with some administrative aspects of the course. Then we provided an introduction about what is and is NOT included in the course, what to expect from the course and the difference between BIO210 and MA212.
+Your final grade is a weighted average 1 of the following:
+Attendance Homework Mid-term Final exam $10\%$ $20\%$ $30\%$ $40\%$ Not much stuff in this lecture really, so you could just relax and listen.</description>
+    </item>
+    
+  </channel>
+</rss>

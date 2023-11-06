@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 3 Numerical Measures</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 3 Numerical Measures">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 3 Numerical Measures">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-03/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 3 Numerical Measures</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            September 14, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="numerical-measures">Numerical Measures</h2>
+<p><strong>Lecture 3</strong> concludes the section of descriptive statistics. From the previous lectures we demonstrated that graphs were a nice way of showing the data. One can immediately get a rough idea about how the data look like from a good graph. However, when the data is presented in graphs, the quantitative information in the data is lost. Therefore, it would be good if we could just use a bunch of numbers to summarise the data. This was what we talked about during Lecture 3.</p>
+<p>We have introduced some numerical measurements that summarise the data. In particular, we focused on two most frequently used measurements which you will see repeatedly in this course and in your real life:</p>
+<ol>
+<li>the <strong>mean</strong>, a measurement for the central tendency</li>
+<li>the <strong>variance</strong> and the <strong>standard deviation</strong>，measurements for the dispersion</li>
+</ol>
+<p>In addition, some practical skills and data visualisation tricks were also introduced along the way.</p>
+<h2 id="the-mean">The Mean</h2>
+<p>There are actually different kinds of means. The one that we often use is called the <strong>arithmetic mean</strong> that is basically the average of the data. This is the concept you are already very familiar with:</p>
+<p>$$ \bar{x} = \cfrac{1}{n}\sum_{i=1}^{n}x_i $$</p>
+<p>Another type of mean is called the <strong>geometric mean</strong>, which is defined as:</p>
+<p>$$ GM = \sqrt[n]{x_1 \cdot x_2 \cdot x_3 \cdots x_n} = \left( \prod_{i=1}^{n}x_i \right)^{\frac{1}{n}}$$</p>
+<p>The <strong>geometric mean</strong> is very useful especially in the field of chemistry and biology. For example, the <strong>pH</strong> of a buffer, the <strong>growth rate</strong> of bacteria, the <strong>length (in base pairs)</strong> of a gene <em>etc.</em> It is the geometric mean that is relevant in those cases. Note that the calculation of the product is computationally heavy. Therefore, the geometric mean is never really calculated in a direct way in practice. When we have to compute the product of many terms, one trick is to take the log:</p>
+<p>$$
+\begin{aligned}
+\log GM &amp;= \log \left( \prod_{i=1}^{n}x_i \right)^{\frac{1}{n}} = \cfrac{1}{n} \log \prod_{i=1}^{n}x_i = \cfrac{1}{n} \log (x_1 \cdot x_2 \cdot x_3 \cdots x_n) \\
+&amp;= \cfrac{1}{n} ( \log x_1 + \log x_2 + \log x_3 + \cdots \log x_n ) \\[10pt]
+&amp;= \cfrac{1}{n} \sum_{i=1}^n \left( \log x_i \right)
+\end{aligned}
+$$</p>
+<p>As you can see, the geometric mean in the original scale can be obtained indirectly by calculating the arithmetic mean in the log scale. The base of the log does not really matter. In the end we could just use the <strong>arithmetic mean</strong> when we say the <strong>mean</strong>. Also, <strong>&ldquo;take the log&rdquo;</strong> is a general trick when dealing with data that spans several orders of magnitude. We will see this trick a lot in later sections.</p>
+<h2 id="weighted-average">Weighted Average</h2>
+<p>There is one extra thing we need to talk about in terms of the way of calculating means. Let&rsquo;s say we got a data of the following numbers:</p>
+<p>$$ 11, 13, 13, 11, 17, 11, 11, 13, 11, 13, 13, 11, 13, 13, 16, 11, 11, 11, 16, 11 $$</p>
+<p>As you can see some of the numbers are repeating. We could organise them into a frequency table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Number</th>
+<th style="text-align:center">Absolute Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p>The total sum is:</p>
+<p>$$ 11 \times 10 + 13 \times 7 + 16 \times 2 + 17 \times 1 $$</p>
+<p>The total number of data points is:</p>
+<p>$$ 10 + 7 + 2 + 1 $$</p>
+<p>By definition, the mean is:</p>
+<p>$$
+\begin{aligned}
+\bar{x} &amp;= \cfrac{11 \times 10 + 13 \times 7 + 16 \times 2 + 17 \times 1}{13 + 7 + 2 + 1} \\[10pt]
+&amp;= \cfrac{11 \times 10 + 13 \times 7 + 16 \times 2 + 17 \times 1}{20}
+\end{aligned}
+$$</p>
+<p>We could re-write it as:</p>
+<p>$$ \bar{x} = \cfrac{10}{20} \times 11 + \cfrac{7}{20} \times 13 + \cfrac{2}{20} \times 16 + \cfrac{1}{20} \times 17 $$</p>
+<p>This is basically the unique values multiplied by their relative frequency, respectively, and summed up together. In a more general case, when we have a data of $n$ numbers and some values are repeating, say the value $x_i$ appears $f_i$ times. We could calculate the mean in the following way:</p>
+<p>$$
+\begin{aligned}
+\bar{x} &amp;= \cfrac{\sum_{i=1}^n{f_i x_i}}{\sum_{i=1}^n{f_i}} \\[10pt]
+&amp;= \cfrac{f_1}{\sum_{i=1}^n{f_i}} \cdot x_1 + \cfrac{f_2}{\sum_{i=1}^n{f_i}} \cdot x_2 + \cfrac{f_3}{\sum_{i=1}^n{f_i}} \cdot x_3 + \cdots + \cfrac{f_n}{\sum_{i=1}^n{f_i}} \cdot x_n \\[15pt]
+&amp;= w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + \cdots w_n \cdot x_n \\[10pt]
+&amp;= \sum_{i=1}^n w_i x_i
+\end{aligned}
+$$</p>
+<p>It doesn&rsquo;t matter if there are no repeating values in the data. In that case, each $f_i$ is just $1$. The $\sum_{i=1}^n w_i x_i$ is called the <strong>weighted average</strong>. You may ask why we introduce a new term called <strong>weight</strong>, instead of just using relative frequencies. The reason is that the term <strong>&ldquo;weight&rdquo;</strong> is more general. The weight $w_i$ indicates how important we think $x_i$ is in our calculation. Sometimes it can be subjective. As long as it is reasonable, we are fine with it. Very often all the weights sum up to $1$. In the previous example, we think relative frequencies in our calculation of the mean are intuitive and reasonable. In other cases, we cannot use relative frequencies. For example, the pixel luminance on a screen is essentially a weighted average of RGB values (<a href="https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color">see here</a>). The weights in this case are not relative frequencies but our opinion on how our eyes perceive the brightness of each colour.</p>
+<p>I hope you get used to this interpretation of the mean as the <strong>weighted average</strong>, because this will become very useful when we come across the calculation of the average outcome of a probabilistic event.</p>
+<h2 id="the-variance-and-the-standard-deviation">The Variance And The Standard Deviation</h2>
+<p>Apart from the central tendency, we also care about the dispersion of the data. The common measurement is the variance. The sample variance is calculated as:</p>
+<p>$$ s^2 = \cfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2 $$</p>
+<p>The standard deviation $s$, which has the same unit as the original data, is basically the square root of the variance. We will talk about why dividing by $n-1$ in <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lesson-09/"><strong>Lecture 18</strong></a>. Now you might ask why performing the calculation in this way. Why not use $\frac{1}{n} \sum_{i=1}^n|x_i - \bar{x}|$? While &hellip; <a href="http://en.wikipedia.org/wiki/Average_absolute_deviation"><strong>you can</strong></a>. However, in statistics the fact that you can make a measurement does not necessarily mean it is useful. In order for a measurement to be useful, they need to have nice properties so that we could use those properties to make inferences. In future lectures, you will see that the sample variance has nice properties.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="http://korflab.ucdavis.edu/unix_and_Perl/">Unix &amp; Perl Primer for Biologists</a> (Only the Unix part)</li>
+<li><strong>How THIS wallpaper kills your phone</strong> by <strong>Mrwhosetheboss</strong>. Links: <a href="https://youtu.be/iXKvwPjCGnY">YouTube</a> or <a href="https://www.bilibili.com/video/BV1cD4y1Q7DB?share_source=copy_web">Bilibili</a></li>
+</ul>
+</div>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#numerical-measures">Numerical Measures</a></li>
+    <li><a href="#the-mean">The Mean</a></li>
+    <li><a href="#weighted-average">Weighted Average</a></li>
+    <li><a href="#the-variance-and-the-standard-deviation">The Variance And The Standard Deviation</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

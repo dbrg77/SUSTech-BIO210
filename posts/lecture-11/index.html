@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 11 Discrete Random Variables</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 11 Discrete Random Variables">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 11 Discrete Random Variables">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 11 Discrete Random Variables</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            October 9, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>Now we have introduced the concept of <strong>random variables</strong>, let&rsquo;s look at some common random variables, starting with the easier cases of discrete random variables. They are common because we can easily relate them to our real-life events. Once we get familiar with them, we can use them to model and solve problems.</p>
+<h2 id="bernoulli-random-variables">Bernoulli Random Variables</h2>
+<p>Like I said before, when we first come across a new thing, always <strong>ALWAYS</strong> start with simple examples to get our intuition right. Then, what is the simplest discrete random variable? Well &hellip; probably a random variable that can take only two numbers. A random variables that takes two values, usually 1 (head, success, on, <em>etc.</em>) or 0 (tail, failure, off, <em>etc.</em>), is a <strong>Bernoulli</strong> random variable.</p>
+<p>Whenever we talked about a discrete random variable, it is important for us to know its PMF, expectation and variance. The PMF of a <strong>Bernoulli</strong> random variable is:</p>
+<p>$$p_X(k)=\begin{cases}
+p &amp; \textmd{, if } k=1\\[10pt]
+1-p &amp; \textmd{, if } k=0
+\end{cases}$$</p>
+<p>In the lecture we see that it is relatively easy to compute the expectation and variance of a <strong>Bernoulli</strong> random variable by the definitions:</p>
+<p>$$\mathbb{E}[X] = \sum_{x}xp_X(x) = 1 \times p + 0 \times (1-p) = p$$</p>
+<p>and</p>
+<p>$$\begin{aligned}
+\mathbb{V}\textmd{ar}(X) &amp;= \mathbb{E}\left[ (X-\mathbb{E}[X])^2 \right] = \sum_x(X-p)^2p_X(x)\\[12.5pt]
+&amp;= (1-p)^2 \times p + (0-p)^2(1-p)\\
+&amp;= p(1-p)
+\end{aligned}$$</p>
+<h2 id="binomial-random-variables">Binomial Random Variables</h2>
+<p>The sum of $n$ <strong>independent Bernoulli</strong> random variables is a <strong>binomial</strong> random variable. A basic example would be keep tracking the number of heads (or tails) after $n$ independent flips of a coin. We could also think of it as flipping $n$ coins independently at the same time. For each outcome with $k$ heads, the probability is the same: $p^k(1-p)^k$. Then the probability of the random variable taking the value of $k$ is essentially the number of possible outcomes with $k$ heads multiplied by $p^k(1-p)^k$. How many possible outcomes are there with $k$ heads after $n$ flips? We can see it is $\binom{n}{k}$. Therefore, the PMF of a binomial random variable is:</p>
+<p>$$
+p_X(x) = \begin{cases}
+\binom{n}{k} p^k (1-p)^{n-k} &amp; \textmd{, when } k=0,1,2,3,\cdots,n\\[10pt]
+0 &amp; \textmd{, otherwise}
+\end{cases}
+$$</p>
+<p>The PMF makes sense to us, but we need to do a sanity check to see if it is a valid probabilistic model. That is:</p>
+<p>$$\textmd{whether this is true: } \sum_{k=0}^{n}\binom{n}{k}p^k(1-p)^{n-k} = 1 \textmd{ ?}$$</p>
+<p>Recall the <strong>binomial theorem</strong> from the math class:</p>
+<p>$$(a+b)^n = \binom{n}{0}a^0b^n + \binom{n}{1}a^1b^{n-1} + \binom{n}{2}a^2b^{n-2} + \cdots + \binom{n}{n}a^nb^0$$</p>
+<p>Note that the right-hand side is $\sum_{k=0}^n\binom{n}{k}a^kb^{n-k}$. If we let $a=p$ and $b=1-p$, then we have:</p>
+<p>$$\sum_{k=0}^{n}\binom{n}{k}p^k(1-p)^{n-k} = [p + (1-p)]^n = 1$$</p>
+<p>We can also calculate that $\mathbb{E}[X]=np$ and $\mathbb{V}\textmd{ar}(X)=np(1-p)$. The proof can be found in the <a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_11_ERM_Mean_And_Variance_of_Binomial_Poisson.pdf"><strong>Extra Reading Material</strong></a> from this lecture.</p>
+<h2 id="poisson-random-variables">Poisson Random Variables</h2>
+<p><strong>Poisson</strong> in French means <strong>fish</strong>. A Poisson random variable is used to model the number of occurrence of a rare event in a time or space interval. We have introduced a few examples during the lecture. The Poisson PMF can be derived by treating it as a special case of the binomial random variable.</p>
+<p>Let $\lambda = np$, then $p=\cfrac{\lambda}{n}$. The binomial PMF becomes: $\binom{n}{k}\left( \frac{\lambda}{n} \right)^k \left(1-\frac{\lambda}{n} \right)^{n-k}$. Now if we let $n \to \infty$, it becomes the Poisson PMF.</p>
+<p>Before we begin the derivation, we need to recall from the math class: what is $\lim_{n \to \infty} \left(1+\frac{a}{n}\right)^n$, where $a$ is a constant. If we let $n=ax$, then we have:</p>
+<p>$$\lim_{n \to \infty} \left(1+\cfrac{a}{n}\right)^n = \lim_{x \to \infty} \left(1+\frac{a}{ax}\right)^{ax} = \lim_{n \to \infty} \left(1+\frac{1}{x}\right)^{ax} = \lim_{n \to \infty} \left[ \left(1+\frac{1}{x}\right)^x \right]^a$$</p>
+<p>Since $a$ is a constant, we could take it out of the limit:</p>
+<p>$$\lim_{n \to \infty} \left(1+\cfrac{a}{n}\right)^n = \left[\lim_{n \to \infty} \left(1+\frac{1}{x}\right)^x \right]^a$$</p>
+<p>Note that $\lim_{n \to \infty} \left(1+\frac{1}{x}\right)^x$ is one of the way to get $e$. Therefore, we have:</p>
+<p>$$\begin{equation}
+\lim_{n \to \infty} \left(1+\cfrac{a}{n}\right)^n = e^a
+\end{equation}
+$$</p>
+<p>Now we are ready to derive the Poisson PMF:</p>
+<p>$$
+\begin{aligned}
+&amp; \lim_{n \to \infty} \binom{n}{k}\left( \cfrac{\lambda}{n} \right)^k \left(1-\cfrac{\lambda}{n} \right)^{n-k} \\[12.5pt]
+&amp;= \lim_{n \to \infty} \cfrac{n(n-1)\cdots(n-k+1)}{k!} \cdot \cfrac{\lambda ^k}{n^k} \cdot \left(1-\cfrac{\lambda}{n} \right)^n \cdot \left(1-\cfrac{\lambda}{n} \right)^{-\lambda} \\[12.5pt]
+&amp;= \cfrac{\lambda^k}{k!} \lim_{n \to \infty} \cfrac{n(n-1)\cdots(n-k+1)}{n^k} \cdot \left(1-\cfrac{\lambda}{n} \right)^n \cdot \left(1-\cfrac{\lambda}{n} \right)^{-\lambda}
+\end{aligned}
+$$</p>
+<p>Now we have reached stage where we need to calculate the limit of a product. The product consists of three terms. If the limit of each term exists, the limit of the product is essentially the product of the limit of each term. Now let&rsquo;s look at the limit of each of them.</p>
+<p>The first term is $\frac{n(n-1)\cdots(n-k+1)}{n^k}$. Note the numerator has $k$ factors, so we have:</p>
+<p>$$\cfrac{n(n-1)\cdots(n-k+1)}{n^k} = \cfrac{n^k + \beta_1 \cdot n^{k-1} + \beta_2 \cdot n^{k-2} + \cdots + \beta_{k-1} \cdot n + C}{n^k}$$</p>
+<p>When $n \to \infty$, we do not really care about the values of $\beta_i$ and the constant term $C$. $n^k$ grows the fastest, so the limit is 1:</p>
+<p>$$\lim_{n \to \infty}\cfrac{n(n-1)\cdots(n-k+1)}{n^k} = 1$$</p>
+<p>The second term is $\left(1-\frac{\lambda}{n} \right)^n$. Let $a = -\lambda$ in equation $(1)$, we have:</p>
+<p>$$\lim_{n \to \infty} \left(1-\cfrac{\lambda}{n} \right)^n = e^{-\lambda}$$</p>
+<p>The third term is $\left(1-\frac{\lambda}{n} \right)^{-\lambda}$. The limit is relatively easy to get:</p>
+<p>$$\lim_{n \to \infty} \left(1-\cfrac{\lambda}{n} \right)^{-\lambda} = \left(1-0\right)^{-\lambda} = 1$$</p>
+<p>The limits of those three terms do exist, so we have:</p>
+<p>$$\lim_{n \to \infty} \binom{n}{k}\left( \cfrac{\lambda}{n} \right)^k \left(1-\cfrac{\lambda}{n} \right)^{n-k} = \cfrac{\lambda^k}{k!} \cdot e^{-\lambda}$$</p>
+<p>Therefore, the PMF of a Poisson random variable is:</p>
+<p>$$
+p_X(x)=\begin{cases}
+\cfrac{\lambda^k}{k!} \cdot e^{-\lambda} &amp; \textmd{, when } k=0,1,2,3,4,\cdots\\[10pt]
+0 &amp; \textmd{, otherwise}
+\end{cases}
+$$</p>
+<p>Again, let&rsquo;s first make sure it is a valid probabilistic model:</p>
+<p>$$
+\begin{aligned}
+\sum_{k=0}^{\infty}\cfrac{\lambda^k}{k!}\cdot e^{-\lambda} &amp;= \cfrac{\lambda^0}{0!} \cdot e^{-\lambda} + \cfrac{\lambda^1}{1!} \cdot e^{-\lambda} + \cfrac{\lambda^2}{2!} \cdot e^{-\lambda} + \cdots \\[10pt]
+&amp;= \left(\cfrac{\lambda^0}{0!} + \cfrac{\lambda^1}{1!} + \cfrac{\lambda^2}{2!} + \cdots \right) \cdot e^{-\lambda}
+\end{aligned}
+$$</p>
+<p>Remember the <strong>Taylor series</strong> of $e^x$ is $e^x=\frac{x^0}{0!} + \frac{x^1}{1!} + \frac{x^2}{2!} + \cdots$, so we have:</p>
+<p>$$\sum_{k=0}^{\infty}\cfrac{\lambda^k}{k!}\cdot e^{-\lambda} = e^{\lambda} \cdot e^{-\lambda} = 1$$</p>
+<p>We could also calculated that $\mathbb{E}[X]=\lambda$ and $\mathbb{V}\textmd{ar}(X)=\lambda$. The proof can be found in the <a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_11_ERM_Mean_And_Variance_of_Binomial_Poisson.pdf"><strong>Extra Reading Material</strong></a> from this lecture.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="http://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/">The Waiting Time Paradox, or, Why Is My Bus Always Late?</a></li>
+<li><a href="https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/full/10.1111/anae.13261">Deaths by horsekick in the Prussian army – and other ‘Never Events’ in large organisations</a></li>
+</ul>
+</div>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#bernoulli-random-variables">Bernoulli Random Variables</a></li>
+    <li><a href="#binomial-random-variables">Binomial Random Variables</a></li>
+    <li><a href="#poisson-random-variables">Poisson Random Variables</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
