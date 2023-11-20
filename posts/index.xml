@@ -6,7 +6,27 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 06 Nov 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Nov 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 24 Hypothesis Testing Terms</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-24/</link>
+      <pubDate>Mon, 20 Nov 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-24/</guid>
+      <description>In the previous lecture, we talked about the intuition and the basic idea of hypothesis testing. There are still many things need to be formalised. In addition, I&amp;rsquo;m sure many of you had some burning questions. We dealt with them in this lecture.
+Fisher vs. Neyman-Pearson Historically, there are two different types of hypothesis testing. The method developed by Ronald Fisher allows us to compute the probability of observing the data or more extreme under the null hypothesis, which is a default stand where we assume there is no difference, no effect, no association, no relationship etc.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 23 Introduction To Hypothesis Testing</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-23/</link>
+      <pubDate>Mon, 20 Nov 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-23/</guid>
+      <description>We have been using the property of the sampling distributions of the sample mean, sample variance and sample proportion to make interval estimations of the corresponding population parameters. They are very useful, but they are not the whole story of inferential statistics. Otherwise, the course will be much shorter.
+Today, we introduced a very powerful technique: the hypothesis testing. As the name suggested, it allows us to test hypotheses. You see, we rarely know the properties of the population.</description>
+    </item>
+    
     <item>
       <title>Lecture 22 Confidence Interval For The Proportion</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-22/</link>
