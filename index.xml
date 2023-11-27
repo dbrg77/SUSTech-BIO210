@@ -6,7 +6,27 @@
     <description>Recent content on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 26 Error, Power And Sample Size Estimation</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-26/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-26/</guid>
+      <description>With all the examples we have gone through, you can see that we always set the significance level $\alpha$ to be a very small number, with $0.05$ being the most frequently used one.However, it is never 0. The consequence is that there is still a chance we could draw the wrong conclusion when we make a decision based on the p-value. When that occurs, we make errors.
+Whenever we make a decision, there are only two possible outcomes: either we reject $H_0$ or we do not reject $H_0$.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 25 More On Hypothesis Testing</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-25/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-25/</guid>
+      <description>In the previous lectures, we practised the logic flow of hypothesis testing over and over again, so I hope you are now familiar with the concept of hypothesis testing. Basically, we have some data in our hands, and we come up with some hypotheses by incorporating the knowledge about certain population parameters based on the previous studies or experience. For example:
+Hypotheses based on current data The proportion of people who have type B may not be 9%.</description>
+    </item>
+    
     <item>
       <title>Lecture 24 Hypothesis Testing Terms</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-24/</link>
@@ -252,7 +272,7 @@ Attendance Homework Mid-term Final exam $10\%$ $20\%$ $30\%$ $40\%$ Not much stu
       <pubDate>Fri, 10 Feb 2023 16:01:31 +0800</pubDate>
       
       <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content Lesson 1 (11-Sep-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (14-Sep-2023) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (18-Sep-2023) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (25-Sep-2023) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (28-Sep-2023) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV Lesson 6 (09-Oct-2023) Lecture slides Lecture 11 Discrete Probability Distribution Lecture 12 Continuous Probability Distribution Homework assignment Assignment 3 Extra reading material Mean &amp;amp; Variance of Binomial &amp;amp; Poisson Lesson 7 (16-Oct-2023) Lecture slides Lecture 13 Normal Distribution Lecture 14 Population And Sample Homework assignment None Extra reading material Useful Properties of A Normal Random Variable Calculate Probabilities Using Excel Lesson 8 (19-Oct-2023) Lecture slides Lecture 15 Sampling Distribution And The CLT Lecture 16 Sampling Distribution of The Sample Variance Homework assignment None Extra reading material None Lesson 9 (23-Oct-2023) Lecture slides Lecture 17 Maximum Likelihood Estimation Lecture 18 The Error Curve Derived By MLE Homework assignment Assignment 4 Extra reading material MLE For Variance Lesson 10 (30-Oct-2023) Lecture slides Lecture 19 Confidence Interval For The Mean Lecture 20 Confidence Interval For The Variance Homework assignment None Extra reading material Calculating Probabilities Using R The Student&amp;rsquo;s t Distribution Lesson 11 (06-Nov-2023) Lecture slides Lecture 21 Sampling Distribution of Sample Proportion Lecture 22 Confidence Interval For The Proportion Homework assignment None Extra reading material None Lesson 12 (20-Nov-2023) Lecture slides Lecture 23 Introduction To Hypothesis Testing Lecture 24 Hypothesis Testing Terms Homework assignment Assignment 5 Extra reading material None </description>
+      <description>All course content Lesson 1 (11-Sep-2023) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (14-Sep-2023) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (18-Sep-2023) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (25-Sep-2023) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (28-Sep-2023) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV Lesson 6 (09-Oct-2023) Lecture slides Lecture 11 Discrete Probability Distribution Lecture 12 Continuous Probability Distribution Homework assignment Assignment 3 Extra reading material Mean &amp;amp; Variance of Binomial &amp;amp; Poisson Lesson 7 (16-Oct-2023) Lecture slides Lecture 13 Normal Distribution Lecture 14 Population And Sample Homework assignment None Extra reading material Useful Properties of A Normal Random Variable Calculate Probabilities Using Excel Lesson 8 (19-Oct-2023) Lecture slides Lecture 15 Sampling Distribution And The CLT Lecture 16 Sampling Distribution of The Sample Variance Homework assignment None Extra reading material None Lesson 9 (23-Oct-2023) Lecture slides Lecture 17 Maximum Likelihood Estimation Lecture 18 The Error Curve Derived By MLE Homework assignment Assignment 4 Extra reading material MLE For Variance Lesson 10 (30-Oct-2023) Lecture slides Lecture 19 Confidence Interval For The Mean Lecture 20 Confidence Interval For The Variance Homework assignment None Extra reading material Calculating Probabilities Using R The Student&amp;rsquo;s t Distribution Lesson 11 (06-Nov-2023) Lecture slides Lecture 21 Sampling Distribution of Sample Proportion Lecture 22 Confidence Interval For The Proportion Homework assignment None Extra reading material None Lesson 12 (20-Nov-2023) Lecture slides Lecture 23 Introduction To Hypothesis Testing Lecture 24 Hypothesis Testing Terms Homework assignment Assignment 5 Extra reading material None Lesson 13 (27-Nov-2023) Lecture slides Lecture 25 More On Hypothesis Testing Lecture 26 Error Power And Sample Size Estimation Homework assignment None Extra reading material None </description>
     </item>
     
     <item>

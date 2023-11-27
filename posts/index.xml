@@ -6,7 +6,27 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:10 +0800</lastBuildDate><atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 26 Error, Power And Sample Size Estimation</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-26/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:10 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-26/</guid>
+      <description>With all the examples we have gone through, you can see that we always set the significance level $\alpha$ to be a very small number, with $0.05$ being the most frequently used one.However, it is never 0. The consequence is that there is still a chance we could draw the wrong conclusion when we make a decision based on the p-value. When that occurs, we make errors.
+Whenever we make a decision, there are only two possible outcomes: either we reject $H_0$ or we do not reject $H_0$.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 25 More On Hypothesis Testing</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-25/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-25/</guid>
+      <description>In the previous lectures, we practised the logic flow of hypothesis testing over and over again, so I hope you are now familiar with the concept of hypothesis testing. Basically, we have some data in our hands, and we come up with some hypotheses by incorporating the knowledge about certain population parameters based on the previous studies or experience. For example:
+Hypotheses based on current data The proportion of people who have type B may not be 9%.</description>
+    </item>
+    
     <item>
       <title>Lecture 24 Hypothesis Testing Terms</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-24/</link>
