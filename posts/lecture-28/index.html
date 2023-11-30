@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 28 Compare Two Population Means</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-28/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 28 Compare Two Population Means">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 28 Compare Two Population Means">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-28/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-28/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-28/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 28 Compare Two Population Means</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            November 30, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>Similar to the previous lecture where we talked about <strong>the two-sample test</strong> regarding the proportions, we are going to the same notation for the population parameter representing the difference of the population means:</p>
+<p>$$
+\delta = \mu_1 -\mu_2
+$$</p>
+<p>In the same way, our null and alternative hypotheses for a two-sided test are:</p>
+<p>$$
+\boldsymbol{H_0:} \ \;\delta = \mu_1 - \mu_2 = 0 \\
+\boldsymbol{H_1:} \ \; \delta = \mu_1 - \mu_2 \neq 0
+$$</p>
+<p>Now the situation is a bit more complicated in terms of comparing two population means. We need to analyse different scenarios.</p>
+<h2 id="paired-samples">Paired Samples</h2>
+<p>In this scenario, we pair the values we get from the two samples, and it is only meaningful to compare the values within the sample. For example, if we want to see if doing exercises would raise one&rsquo;s body temperature, we could measure the body temperature of the same individuals before and after exercises. In this case it is only meaningful to compare the body temperature of the same person. Or we want to see if there is difference of the income between married couples. In this case it is only meaningful to compare the incomes within the couple, not between couples.</p>
+<p>Under this scenario, we only care about the difference, so what we actually have here is just one-sample data: the difference $\boldsymbol{D}$. We are asking: is the mean of the difference ($\bar{\boldsymbol{D}}$) $0$ or not?</p>
+<p>If the sample size is large enough, the central limit theorem tells us that:</p>
+<p>$$
+\bar{\boldsymbol{D}} \sim \mathcal{N} \left(\delta, \dfrac{\sigma_{\delta}^2}{n} \right)
+$$</p>
+<p>Therefore, we have:</p>
+<p>$$
+\dfrac{\bar{\boldsymbol{D}} -\delta}{\sigma_{\delta}/\sqrt{n}} \sim \boldsymbol{\mathcal{N}} (0,1)
+$$</p>
+<p>When we replace $\sigma_{\delta}$ with the sample standard deviation $s_d$, the standard normal becomes a $\boldsymbol{t}$-distribution. Under the null hypothesis, our test statistic would be:</p>
+<p>$$
+t = \dfrac{\bar{d}}{s_d/\sqrt{n}} \sim \boldsymbol{\mathcal{T}} (n-1)
+$$</p>
+<p>We can use that to calculate the <em>p</em>-value.</p>
+<h2 id="independent-samples">Independent Samples</h2>
+<p>When we have independent samples, we are in a situation similar to what was introduced in the case of comparing two populations proportions. We can analyse the problem using the same technique.</p>
+<p>Let&rsquo;s say, we have two samples: sample 1 with a size $n_1$ comes from population 1 with a mean of $\mu_1$ and a variance of $\sigma_1^2$; sample 2 with a size $n_2$ comes from population 2 with a mean of $\mu_2$ and a variance of $\sigma_2^2$. The sample mean and the sample variance are $\bar{x}_1$ and $s_1^2$, respectively, for sample 1; The sample mean and the sample variance are $\bar{x}_2$ and $s_2^2$, respectively, for sample 2. <strong>Under some assumptions</strong>, we have</p>
+<p>$$
+\bar{\boldsymbol{X}}_1 \sim \boldsymbol{\mathcal{N}} \left( \mu_1, \dfrac{\sigma_1^2}{n_1} \right) \textmd{ and } \bar{\boldsymbol{X}}_2 \sim \boldsymbol{\mathcal{N}} \left( \mu_2, \dfrac{\sigma_2^2}{n_2} \right)
+$$</p>
+<p>Then our estimator for the population parameter $\delta$ is $\boldsymbol{D} = \bar{\boldsymbol{X}}_1 - \bar{\boldsymbol{X}}_2$, and it can be shown (in the same way as the previous lecture) that:</p>
+<p>$$
+\boldsymbol{D} \sim \boldsymbol{\mathcal{N}} \left( \mu_1 - \mu_2, \dfrac{\sigma_1^2}{n_1} + \dfrac{\sigma_2^2}{n_2} \right)
+$$
+Then we have:
+$$
+\dfrac{(\bar{\boldsymbol{X}}_1 - \bar{\boldsymbol{X}}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}} \sim \boldsymbol{\mathcal{N}} ( 0, 1 )
+$$
+Now we do not know $\sigma_1^2$ and $\sigma_2^2$. Intuitively, we should replace them with $s_1^2$ and $s_2^2$, respectively, and they should follow a $\boldsymbol{t}$-distribution with certain degree of freedom. In fact, we can actually do better.</p>
+<h3 id="equal-variance">Equal Variance</h3>
+<p>If we assume $\sigma_1^2 = \sigma_2^2 = \sigma^2$, we have:</p>
+<p>$$
+\dfrac{(\bar{\boldsymbol{X}}_1 - \bar{\boldsymbol{X}}_2) - (\mu_1 - \mu_2)}{\sqrt{\sigma^2 \cdot \left(\frac{1}{n_1} + \frac{1}{n_2}\right)}} \sim \boldsymbol{\mathcal{N}} ( 0, 1 )
+$$</p>
+<p>We can prove that</p>
+<p>$$
+\dfrac{(\bar{\boldsymbol{X}}_1 - \bar{\boldsymbol{X}}_2) - (\mu_1 - \mu_2)}{\sqrt{s_p^2 \cdot \left(\frac{1}{n_1} + \frac{1}{n_2}\right)}} \sim \boldsymbol{\mathcal{T}} ( n_1 +n_2 - 2 )
+$$</p>
+<p>where $s_p^2 = \dfrac{(n_1 - 1)s_1^2 + (n_2 -1)s_2^2}{n_1 + n_2 - 2}$ is called the <strong>pooled estimate for the common variance</strong>, which is basically the weighted average of the two sample variances with the degrees of freedom as the weights.</p>
+<p>Under the null hypothesis, $\mu_1 - \mu_2 =0$, so our test statistic would be:</p>
+<p>$$
+t=\dfrac{\bar{x}_1 - \bar{x}_2}{\sqrt{s_p^2 \cdot \left(\frac{1}{n_1} + \frac{1}{n_2}\right)}} \sim \boldsymbol{\mathcal{T}} ( n_1 +n_2 - 2 )
+$$</p>
+<p>We could use that to calculate the <em>p</em>-value. In this case we are performing a <strong>Student&rsquo;s</strong> $\boldsymbol{t}$<strong>-test</strong>.</p>
+<p>Now perhaps a more important question would be: how can we know if the population variances are equal or not? The short answer is: we don&rsquo;t. However, in reality, many treatments just shift means without changing the dispersion, so it is okay to use Student&rsquo;s $\boldsymbol{t}$-tests. There are tests to check if the variances are equal or not, but I generally don&rsquo;t think that&rsquo;s a good idea. In addition, Student&rsquo;s $\boldsymbol{t}$-tests are robust. Even this equal variance assumption is violated, it still performs well.</p>
+<h3 id="unequal-variance">Unequal Variance</h3>
+<p>In this case, we have no other choices but using the sample variances to replace population variances. Our test statistic is:</p>
+<p>$$
+t=\dfrac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \sim \boldsymbol{\mathcal{T}} (\nu)
+$$</p>
+<p>where $\nu \approx \cfrac{\bar{x}_1-\bar{x}_2}{\sqrt{\cfrac{s_1^2}{n_1}+\cfrac{s_2^2}{n_2}}},, \nu \approx \cfrac{\left( \cfrac{s_1^2}{n_1} + \cfrac{s_2^2}{n_2}\right)^2}{\cfrac{(s_1^2/n_1)^2}{n_1-1} + \cfrac{(s_2^2/n_2)^2}{n_2-1}}$.</p>
+<p>In this case, we are doing a <strong>Welch&rsquo;s</strong> $\boldsymbol{t}$<strong>-test</strong>.</p>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#paired-samples">Paired Samples</a></li>
+    <li><a href="#independent-samples">Independent Samples</a>
+      <ul>
+        <li><a href="#equal-variance">Equal Variance</a></li>
+        <li><a href="#unequal-variance">Unequal Variance</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
