@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SUSTech BIO210 Biostatistics</title>
-    <link>https://dbrg77.github.io/SUSTech-BIO210/</link>
-    <description>Recent content on SUSTech BIO210 Biostatistics</description>
+    <title>Posts on SUSTech BIO210 Biostatistics</title>
+    <link>https://dbrg77.github.io/SUSTech-BIO210/posts/</link>
+    <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Fri, 23 Feb 2024 00:00:10 +0800</lastBuildDate>
-    <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lecture 2 Descriptive Statistics</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-02/</link>
@@ -21,20 +21,6 @@
       <pubDate>Fri, 23 Feb 2024 00:00:00 +0800</pubDate>
       <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-01/</guid>
       <description>In the first lecture of the entire course, we had a brief overview of the course structure and content. Lecture 1 started with some administrative aspects of the course. Then we provided an introduction about what is and is NOT included in the course, what to expect from the course and the difference between BIO210 and MA212.&#xA;Your final grade is a weighted average 1 of the following:&#xA;Attendance Homework Mid-term Final exam $10\%$ $20\%$ $30\%$ $40\%$ Not much stuff in this lecture really, so you could just relax and listen.</description>
-    </item>
-    <item>
-      <title>List of all course content</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/course/</link>
-      <pubDate>Thu, 22 Feb 2024 16:01:31 +0800</pubDate>
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content Lesson 1 (23-Feb-2024) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None </description>
-    </item>
-    <item>
-      <title>Welcome To BIO210 Biostatistics</title>
-      <link>https://dbrg77.github.io/SUSTech-BIO210/about/</link>
-      <pubDate>Fri, 10 Feb 2023 16:01:31 +0800</pubDate>
-      <guid>https://dbrg77.github.io/SUSTech-BIO210/about/</guid>
-      <description>This static website holds all course material from the BIO210 Biostatistics course delivered by the School of Life Sciences at SUSTech, Shenzhen. This is an entry level statistics course for undergraduates who have no prior knowledge about statistics at all. We do assume you are familiar with the math from your high school and the 1st year undergraduate training.&#xA;About This Website You can find all material listed in this Content Index page, typically a few days before or after the actual lesson.</description>
     </item>
   </channel>
 </rss>
