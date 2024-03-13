@@ -6,8 +6,22 @@
     <description>Recent content on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 08 Mar 2024 00:00:10 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2024 00:10:00 +0800</lastBuildDate>
     <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 10 Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/</link>
+      <pubDate>Wed, 13 Mar 2024 00:10:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/</guid>
+      <description>In this lecture, we introduced perhaps the first &amp;ldquo;new&amp;rdquo;1 concept in this course: random variables. It is very important to understand the concepts of random variables and the expectation and variance of a random variable. When coming across something new, always start with something simple to get a rough idea. Therefore, we used some simple and intuitive examples, such as coin tossing, during the lectures.&#xA;Random Variables A random variable is defined as a a real-valued function defined on a sample space $\Omega$.</description>
+    </item>
+    <item>
+      <title>Lecture 9 Counting</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/</link>
+      <pubDate>Wed, 13 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-09/</guid>
+      <description>In Lecture 9, we paused a little bit and did a quick recap about the basic counting principles. The content was basically what you have learnt during your high school math classes but in English. You see that the counting principles we are talking about greatly help us calculate the probability of events consisting outcomes from discrete sample spaces.&#xA;You might ask why we bother to do a recap about counting.</description>
+    </item>
     <item>
       <title>Lecture 8 Independent Events</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-08/</link>
@@ -69,7 +83,7 @@
       <link>https://dbrg77.github.io/SUSTech-BIO210/course/</link>
       <pubDate>Thu, 22 Feb 2024 16:01:31 +0800</pubDate>
       <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content Lesson 1 (23-Feb-2024) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (28-Feb-2024) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (01-Mar-2024) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (08-Mar-2024) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None </description>
+      <description>All course content Lesson 1 (23-Feb-2024) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (28-Feb-2024) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (01-Mar-2024) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (08-Mar-2024) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (13-Mar-2024) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV </description>
     </item>
     <item>
       <title>Welcome To BIO210 Biostatistics</title>
