@@ -6,8 +6,22 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 13 Mar 2024 00:10:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:10 +0800</lastBuildDate>
     <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 12 Continuous Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/</guid>
+      <description>Once we have seen some discrete random variables, we can move on to look at continuous random variables. As the name indicated, the numbers taken by a continuous random variable are continuous. Like we discussed before, in this case the probability of taking any specific number is zero. Therefore, it does NOT make sense to use PMF to describe a continuous random variable. Instead, we use probability density function (PDF), denoted by $f_X(x)$.</description>
+    </item>
+    <item>
+      <title>Lecture 11 Discrete Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/</guid>
+      <description>Now we have introduced the concept of random variables, let&amp;rsquo;s look at some common random variables, starting with the easier cases of discrete random variables. They are common because we can easily relate them to our real-life events. Once we get familiar with them, we can use them to model and solve problems.&#xA;Bernoulli Random Variables Like I said before, when we first come across a new thing, always ALWAYS start with simple examples to get our intuition right.</description>
+    </item>
     <item>
       <title>Lecture 10 Random Variables</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/</link>

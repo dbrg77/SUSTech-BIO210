@@ -6,8 +6,22 @@
     <description>Recent content on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 13 Mar 2024 00:10:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:10 +0800</lastBuildDate>
     <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 12 Continuous Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-12/</guid>
+      <description>Once we have seen some discrete random variables, we can move on to look at continuous random variables. As the name indicated, the numbers taken by a continuous random variable are continuous. Like we discussed before, in this case the probability of taking any specific number is zero. Therefore, it does NOT make sense to use PMF to describe a continuous random variable. Instead, we use probability density function (PDF), denoted by $f_X(x)$.</description>
+    </item>
+    <item>
+      <title>Lecture 11 Discrete Random Variables</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-11/</guid>
+      <description>Now we have introduced the concept of random variables, let&amp;rsquo;s look at some common random variables, starting with the easier cases of discrete random variables. They are common because we can easily relate them to our real-life events. Once we get familiar with them, we can use them to model and solve problems.&#xA;Bernoulli Random Variables Like I said before, when we first come across a new thing, always ALWAYS start with simple examples to get our intuition right.</description>
+    </item>
     <item>
       <title>Lecture 10 Random Variables</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-10/</link>
@@ -83,7 +97,7 @@
       <link>https://dbrg77.github.io/SUSTech-BIO210/course/</link>
       <pubDate>Thu, 22 Feb 2024 16:01:31 +0800</pubDate>
       <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content Lesson 1 (23-Feb-2024) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (28-Feb-2024) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (01-Mar-2024) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (08-Mar-2024) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (13-Mar-2024) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV </description>
+      <description>All course content Lesson 1 (23-Feb-2024) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (28-Feb-2024) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (01-Mar-2024) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (08-Mar-2024) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (13-Mar-2024) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV Lesson 6 (15-Mar-2024) Lecture slides Lecture 11 Discrete Probability Distribution Lecture 12 Continuous Probability Distribution Homework assignment Assignment 3 Extra reading material Mean &amp;amp; Variance of Binomial &amp;amp; Poisson </description>
     </item>
     <item>
       <title>Welcome To BIO210 Biostatistics</title>
