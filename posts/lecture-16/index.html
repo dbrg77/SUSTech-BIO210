@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 16 Sampling Distributions of The Sample Variance</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 16 Sampling Distributions of The Sample Variance">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 16 Sampling Distributions of The Sample Variance">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 16 Sampling Distributions of The Sample Variance</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            March 27, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>The content in this article is a bit dry and difficult, but you only need to pay attention to the logic, not the math details<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Now that we know the distribution of the sample mean $\bar{X}$, the next question comes naturally: what is the <strong>sampling distribution of the sample variance</strong> $S^2$? We do not really have a theorem to tell us about the distribution of the sample variance, so we have to figure it out by ourselves. Similarly, this distribution allows us to calculate the following type of probability:</p>
+<ul>
+<li>We take a random sample ($n=10$) from a population with a known variance, say, 25. We make some calculation and see that the sample variance is, say, 20. Then <strong>what is the probability of observing a sample ($\boldsymbol{n=10}$) with the sample variance equal to 20 or more extreme</strong>?</li>
+</ul>
+<p>Again, soon we will see why we are interested in this type of question and how the answer to it can provide us some knowledge about the population. The sampling distribution of the sample variance is just what we need to calculate the probability.</p>
+<p>At first it seems to be impossible for us to figure out the sampling distribution of the sample variance out of nowhere. However, with some reasonable assumptions it is actually approachable. Let&rsquo;s start with a list of what we have in hand to clarify our task:</p>
+<ol>
+<li>We have a population with an unknown distribution: $X \sim \textmd{some distribution}$</li>
+<li>The population variance is known: $\mathbb{V}\textmd{ar}(X) = \sigma^2$</li>
+<li>We have a random sample with size $n$. Recall from what we leant in <strong>Lecture 15</strong>, a random sample with size $n$ can be treated as $n$ independent and identically distributed (i.i.d.) random variables. That is, we have $n$ independent random variables $X_1, X_2, \cdots, X_{n-1}, X_n$ whose distributions are all the same as $X$, the population.</li>
+<li>The sample variance is calculated as $S^2=\cfrac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2$, where $\bar{X}$ is the sample mean.</li>
+</ol>
+<p>Apparently, $S^2$ is a random variable, just like $\bar{X}$. What we want here is to figure out the distribution of the random variable $S^2$. For a start, let&rsquo;s see how the sample variance is calculated:</p>
+<p>$$S^2 = \cfrac{1}{n-1}\left[ (X_1 - \bar{X})^2 + (X_2 - \bar{X})^2 + \cdots + (X_{n-1} - \bar{X})^2 + (X_n - \bar{X})^2 \right]$$</p>
+<p>At this moment, we could simply ignore the coefficient $n-1$, which is just a constant. The variable part is the sum of $n$ terms with the same structure: $(X_i - \bar{X})^2$. Since the random variables $X_1, X_2, \cdots, X_{n-1}, X_n$ are <strong>i.i.d.</strong>, each term $(X_i - \bar{X})^2$ should have the same type of distribution. Therefore, if we could figure out the distribution of one of the term, say $(X_1 - \bar{X})^2$, we could get the distribution of every $(X_i - \bar{X})^2$. After that, <em><strong>maybe</strong></em> we could figure out the distribution of the sum of them, which is the distribution of $S^2$.</p>
+<h2 id="the-standard-normal-squared">The Standard Normal Squared</h2>
+<p>Now we need to figure out the distribution of one of the term. It is difficult to do this in general. However, we could stick to our principle that we talked about repeatedly: <strong>whenever we start to do something new, <em>always</em>, <em>always</em> start with something simple to get an intuition.</strong> Therefore, let&rsquo;s work out a simplified version of $(X_i - \bar{X})^2$.</p>
+<p>From <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-13/"><strong>Lecture 13</strong></a> and <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-15"><strong>Lecture 15</strong></a>, we know that $\bar{X}$ follows a normal distribution. Since a linear function of a normal random variable is still a normal random variable, $-\bar{X}$, that is, $-1 \times \bar{X}$ is a normal random variable. Since $X_1, X_2, \cdots, X_{n-1}, X_n$ are a random sample from the population, they all have the same distribution as the population ($X$). Therefore, if the population has a normal distribution $X \sim \mathcal{N}(\mu, \sigma^2)$, then each of the $X_i$ is also normally distributed:</p>
+<p>$$X_i \sim \mathcal{N}(\mu, \sigma^2) \textmd{, } i = 1,2,\cdots,n-1,n$$</p>
+<p>Then each of $X_i - \bar{X}$, that is $X_i + (-\bar{X})$, is also a normal random variable, because the sum of two normal random variable are still normal. What we want is $(X_i - \bar{X})^2$. Therefore, it seems we need to figure out the distribution of a normal random variable squared. What is the simplest normal random variable? Right &hellip; it is a standard normal random variable $\mathcal{N}(0,1)$.</p>
+<p>Let&rsquo;s formalise our task so far. We have a standard normal random variable $Z \sim \mathcal{N}(0,1)$ and let the new random variable $U = Z^2$, we need to figure out the PDF of $U$. If you read enough <strong>Extra Reading Material</strong> from previous lectures, you will know that it is difficult to work directly on the PDF. The trick here is to start with the CDF. Then we take the derivative of the CDF to get the PDF. We begin with:</p>
+<p>$$
+\begin{aligned}
+\mathbb{F}_{U}(u) &amp;= \mathbb{P}(U \leqslant u) \\
+&amp;= \mathbb{P}(Z^2 \leqslant u) \\
+&amp;= \mathbb{P}(-\sqrt{u} \leqslant Z \leqslant \sqrt{u})
+\end{aligned}
+$$</p>
+<p>Since $Z$ is a standard normal random variable:</p>
+<p>$$f_Z(z) = \cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{z^2}{2}}$$</p>
+<p>Therefore, we have:</p>
+<p>$$
+\begin{aligned}
+\mathbb{F}_{U}(u) &amp;= \mathbb{P}(-\sqrt{u} \leqslant Z \leqslant \sqrt{u}) \\[7.5pt]
+&amp;= \int_{-\sqrt{u}}^{\sqrt{u}}f_Z(z)\mathrm{d}z \\[10pt]
+&amp;= \int_{-\sqrt{u}}^{\sqrt{u}} \cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{z^2}{2}} \mathrm{d}z \\[10pt]
+&amp;= \cfrac{1}{\sqrt{2\pi}}\int_{-\sqrt{u}}^{\sqrt{u}}e^{-\frac{z^2}{2}} \mathrm{d}z
+\end{aligned}
+$$</p>
+<p>Since $f_Z(z) = \cfrac{1}{\sqrt{2\pi}}\,e^{-\frac{z^2}{2}}$ is an even function, symmetrical around $z=0$, the above formula becomes<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<p>$$\mathbb{F}_{U}(u) = \cfrac{1}{\sqrt{2\pi}} \cdot 2 \int_{0}^{\sqrt{u}}e^{-\frac{z^2}{2}} \mathrm{d}z$$</p>
+<p>Now use the <strong>change-of-variable</strong> technique. Let $z = \sqrt{t} = t^{\frac{1}{2}}$, and hence $\mathrm{d}z = \frac{1}{2}t^{-\frac{1}{2}}\mathrm{d}t$. In addition, $z=0 \Rightarrow t=0$ and $z = \sqrt{u} \Rightarrow t = u$. Therefore, the above equation becomes:</p>
+<p>$$
+\begin{aligned}
+\mathbb{F}_{U}(u) &amp;= \cfrac{1}{\sqrt{2\pi}} \cdot 2 \int_{0}^{\sqrt{u}}e^{-\frac{z^2}{2}} \mathrm{d}z \\[10pt]
+&amp;= \cfrac{2}{\sqrt{2\pi}} \int_{0}^{u}e^{-\frac{t}{2}} \cfrac{1}{2}\,t^{-\frac{1}{2}}\mathrm{d}t \\[10pt]
+&amp;= \cfrac{1}{\sqrt{2\pi}} \int_{0}^{u}t^{-\frac{1}{2}}e^{-\frac{t}{2}}\mathrm{d}t
+\end{aligned}
+$$</p>
+<p>We are getting somewhere. Now to find out the PDF of $U$, we just need to take the derivative of $F_{U}(u)$:</p>
+<p>$$
+\begin{aligned}
+\mathbb{F}_{U}^{\prime}(u) &amp;= \cfrac{\mathrm{d} \left( \cfrac{1}{\sqrt{2\pi}} \int_{0}^{u}t^{-\frac{1}{2}}e^{-\frac{t}{2}}\mathrm{d}t \right) }{\mathrm{d}u} \\[10pt]
+&amp;= \cfrac{1}{\sqrt{2\pi}} \cfrac{\mathrm{d} \int_{0}^{u}t^{-\frac{1}{2}}e^{-\frac{t}{2}}\mathrm{d}t }{\mathrm{d}u}
+\end{aligned}
+$$</p>
+<p>Recall <a href="https://math.libretexts.org/Bookshelves/Calculus/Book%3A_Calculus_(OpenStax)/05%3A_Integration/5.03%3A_The_Fundamental_Theorem_of_Calculus">The Fundamental Theorem of Calculus</a> tells us that:</p>
+<p>$$\cfrac{\mathrm{d}}{\mathrm{d}x} \int_{a}^{x}f(t)\mathrm{d}t = \mathbb{F}^{\prime}(x)=f(x)$$</p>
+<p>So we have:</p>
+<p>$$
+\mathbb{F}_{U}^{\prime}(u) = f_{U}(u) = \cfrac{1}{\sqrt{2\pi}} \,u^{-\frac{1}{2}}e^{-\frac{u}{2}}
+$$</p>
+<h2 id="sum-of-standard-normal-squared">Sum of Standard Normal Squared</h2>
+<p>Now we have figured out the distribution of one standard normal squared ($U$), which is really nice. However, the sample variance contains the sum of many squared normal random variables. We need to keep going to add more. Let&rsquo;s do this in an incremental style, starting with the sum of two standard normal squared.</p>
+<p>Let $Z_1$ and $Z_2$ be two independent standard normal random variables. We further define $U_1 = Z_1^2$ and $U_2 = Z_2^2$. Therefore, based on the PDF of one standard normal squared that we just derived, we have:</p>
+<p>$$f_{U_1}(u_1) = \cfrac{1}{\sqrt{2\pi}} \,u_1^{-\frac{1}{2}}e^{-\frac{u_1}{2}} \textmd{ and } f_{U_2}(u_2) = \cfrac{1}{\sqrt{2\pi}} \,u_2^{-\frac{1}{2}}e^{-\frac{u_2}{2}}$$</p>
+<p>Now let the new random variable $V = Z_1^2 + Z_2^2 = U_1 + U_2$. Our task is to figure out the PDF of $V$.</p>
+<p>Again, if you have read the <a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_13_ERM_Useful_Properties_of_A_Normal_Random_Variable.pdf"><strong>Extra Reading Material</strong></a> from <strong>Lecture 13</strong>, you should know the <strong>convolution formula</strong> as follows:</p>
+<p>$$f_S(s) = \int_{-\infty}^{\infty}f_X(x)f_Y(s-x)\mathrm{d}x$$</p>
+<p>where $X$ and $Y$ are two independent random variables and $S = X + Y$. If we put $U_1$, $U_2$ and $V$ into the convolution formula, we have:</p>
+<p>$$
+\begin{aligned}
+f_V(v) &amp;= \int_{-\infty}^{\infty}f_{U_1}(u_1)f_{U_2}(v-u_1)\mathrm{d}{u_1} \\[7.5pt]
+&amp;= \int_{-\infty}^{\infty} \cfrac{1}{\sqrt{2\pi}} \,u_1^{-\frac{1}{2}}e^{-\frac{u_1}{2}} \cfrac{1}{\sqrt{2\pi}} \,(v-u_1)^{-\frac{1}{2}}e^{-\frac{v-u_1}{2}}\\[10pt]
+&amp;= \cfrac{1}{2\pi} \int_{-\infty}^{\infty} u_1^{-\frac{1}{2}} (v-u_1)^{-\frac{1}{2}}e^{-\frac{v}{2}}\mathrm{d}{u_1} \\[10pt]
+&amp;= \cfrac{e^{-\frac{v}{2}}}{2\pi} \int_{-\infty}^{\infty} u_1^{-\frac{1}{2}} (v-u_1)^{-\frac{1}{2}} \mathrm{d}{u_1}
+\end{aligned}
+$$</p>
+<p>Note that $u_1 = z_1^2$ and $u_2 = z_2^2$. Therefore, both $u_1$ and $u_2$ are non-negative. Since $v=u_1+u_2$, the lower and upper bounds for $u_1$ are $0$ and $v$, respectively. Therefore, the general integration from $-\infty$ to $\infty$ in the above equation becomes:</p>
+<p>$$
+\begin{aligned}
+f_V(v) &amp;= \cfrac{e^{-\frac{v}{2}}}{2\pi} \int_{-\infty}^{\infty} u_1^{-\frac{1}{2}} (v-u_1)^{-\frac{1}{2}} \mathrm{d}{u_1}\\[10pt]
+&amp;= \cfrac{e^{-\frac{v}{2}}}{2\pi} \color{blue} \int_{0}^{v} \cfrac{1}{\sqrt{u_1(v-u_1)}}\, \mathrm{d}{u_1}
+\end{aligned}
+$$</p>
+<p>The $\color{blue} \textmd{blue part}$ is a difficult integral. However, with the help of internet, we can solve it. If you put the $\color{blue} \textmd{blue part}$ into the <a href="https://www.integral-calculator.com"><strong>Integral Calculator</strong></a> like this (note the red rectangles):</p>
+<p><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/integral_calc.png" alt=""></p>
+<p>where you put the $\LaTeX{}$ code <code>\frac{1}{\sqrt{u(v-u)}}</code> into the input box, and at the right-hand side, tell the calculator your variable is $u$ and you are integrating from $0$ to $v$. The calculator will tell you that the $\color{blue} \textmd{blue part}$ is equal to $\pi$<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. Therefore, we have:</p>
+<p>$$
+\begin{aligned}
+f_V(v) &amp;= \cfrac{e^{-\frac{v}{2}}}{2\pi} \color{blue} \int_{0}^{v} u_1^{-\frac{1}{2}} (v-u_1)^{-\frac{1}{2}} \mathrm{d}{u_1}\\[10pt]
+&amp;= \cfrac{e^{-\frac{v}{2}}}{2\pi} \cdot \pi \\[10pt]
+&amp;= \cfrac{1}{2}\,e^{-\frac{v}{2}}
+\end{aligned}
+$$</p>
+<p>Nice! We have derived the PDFs of one standard normal squared and the sum of two independent standard normal squared. Starting from here, we can use those results and keep deriving the sum of three, four and more independent standard normal squared. In general, when $n$ independent standard normal squared get summed up together, the PDF of the sum is:</p>
+<p>$$f_X(x) = \cfrac{1}{\Gamma \left( \frac{n}{2} \right)2^{\frac{n}{2}}}\,x^{\frac{n}{2}-1}e^{-\frac{x}{2}}, \textmd{ where } x \geqslant 0 $$</p>
+<p>The $\Gamma$ symbol denotes the <a href="https://online.stat.psu.edu/stat414/lesson/15/15.5"><strong>gamma function</strong></a>:</p>
+<p>$$\Gamma(\alpha) = \int_{0}^{\infty}t^{\alpha-1}e^{-t}\mathrm{d}t, \textmd{ where } \alpha&gt;0$$</p>
+<p>This distribution is called the $\chi^2$ distribution. The PDF was first derived by the German mathematician <a href="https://en.wikipedia.org/wiki/Friedrich_Robert_Helmert">Friedrich Robert Helmert</a> using <strong>induction</strong>. It was rediscovered by the English statistician <a href="https://en.wikipedia.org/wiki/Karl_Pearson">Karl Pearson</a> who proposed the name $\chi^2$. The $x$-like letter $\chi$ is the Greek letter pronounced <code>chi</code>. You can call it the chi-square or the chi-squared distribution. It only has one parameter: the <strong>degree of freedom</strong><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>, which is the number of independent standard normal squared in the sum in this context.</p>
+<p>For example, in the previous examples, the random variable $U$ follows a $\chi^2$ distribution with a degree of freedom of $1$, because it consists of only one standard normal squared. We write it as $U \sim \chi^2(1)$. The random variable $V$ follows a $\chi^2$ distribution with a degree of freedom of $2$, because it is the sum of two standard normal squared. We write it as $V \sim \chi^2(2)$. Generally, we can see if $Z_1, Z_2, \cdots, Z_{n-1}, Z_n$ are independent standard normal random variables, then:</p>
+<p>$$
+\begin{aligned}
+U_1 \sim \chi^2(1), &amp; \textmd{ where } U_1 = Z_1^2 \\
+U_2 \sim \chi^2(2), &amp; \textmd{ where } U_2 = Z_1^2 + Z_2^2 \\
+&amp; \vdots \\
+U_{n-1} \sim \chi^2(n-1), &amp; \textmd{ where } U_{n-1} = Z_1^2 + Z_2^2 + \cdots + Z_{n-1}^2 \\
+U_n \sim \chi^2(n), &amp; \textmd{ where } U_n = Z_1^2 + Z_2^2 + \cdots + Z_{n-1}^2 + Z_n^2
+\end{aligned}
+$$</p>
+<h2 id="the-sampling-distribution-of-the-sample-variance">The Sampling Distribution of the Sample Variance</h2>
+<p>Finally, we are ready to talk about the <strong>sampling distribution of the sample variance</strong>. Since we know the distribution of the sum of independent standard normal squared, it is relative easy to analyse the sum of independent normal random variables in general.</p>
+<p>If the population follows a normal distribution $X \sim \mathcal{N}(\mu, \sigma^2)$, when we have a sample $X_1, X_2, \cdots, X_{n-1}, X_n$, they are <strong>i.i.d.</strong> random variables with $\mathcal{N}(\mu, \sigma^2)$. We can easily convert them into standard normal:</p>
+<p>$$\cfrac{X_i - \mu}{\sigma} \sim \mathcal{N}(0,1), \textmd{ where } i=1,2,\cdots,n-1,n$$</p>
+<p>Therefore, according to what we just did in the previous section, we know that each of the $\left( \cfrac{X_i - \mu}{\sigma} \right)^2$ follows a $\chi^2$ distribution with degree of freedom of $1$. If we sum them up together, we have:</p>
+<p>$$\sum_{i=1}^{n} \left( \cfrac{X_i - \mu}{\sigma} \right)^2 \sim \chi^2(n)$$</p>
+<p>However, this is not really helpful, because we need the sample mean to calculate the sample variance. One common trick is to introduce the term we need and subtract it at the same time. Therefore, we could manipulate the left-hand side as follows:</p>
+<p>$$
+\begin{aligned}
+\sum_{i=1}^{n} \left( \cfrac{X_i - \mu}{\sigma} \right)^2 &amp;= \sum_{i=1}^{n} \left( \cfrac{X_i - \bar{X} + \bar{X} - \mu}{\sigma} \right)^2 = \sum_{i=1}^{n} \left[ \cfrac{(X_i - \bar{X}) + (\bar{X} - \mu)}{\sigma} \right]^2 \\[12.5pt]
+&amp;= \sum_{i=1}^{n} \left[ \cfrac{(X_i-\bar{X})^2 + (\bar{X} - \mu)^2 + 2(X_i-\bar{X})(\bar{X} - \mu)}{\sigma^2} \right] \\[12.5pt]
+&amp;= \sum_{i=1}^{n} \left( \cfrac{X_i - \bar{X}}{\sigma} \right)^2 + \sum_{i=1}^{n} \left( \cfrac{\bar{X} - \mu}{\sigma} \right)^2 + \cfrac{2(\bar{X}-\mu)}{\sigma^2}\sum_{i=1}^{n}(X_i-\bar{X})
+\end{aligned}
+$$</p>
+<p>Note that $\sum_{i=1}^{n}(X_i-\bar{X}) = \sum_{i=1}^{n}X_i - \sum_{i=1}^{n}\bar{X} = n\bar{X} - n\bar{X}=0$, so the last term of the above equation is $0$. Then we have:</p>
+<p>$$
+\begin{aligned}
+\sum_{i=1}^{n} \left( \cfrac{X_i - \mu}{\sigma} \right)^2 &amp;= \sum_{i=1}^{n} \left( \cfrac{X_i - \bar{X}}{\sigma} \right)^2 + \sum_{i=1}^{n} \left( \cfrac{\bar{X} - \mu}{\sigma} \right)^2 \\[12.5pt]
+&amp;= \sum_{i=1}^{n} \left( \cfrac{X_i - \bar{X}}{\sigma} \right)^2 + \sum_{i=1}^{n} \left( \cfrac{\bar{X} - \mu}{\sigma} \right)^2 \\[12.5pt]
+&amp;= \sum_{i=1}^{n} \left( \cfrac{X_i - \bar{X}}{\sigma} \right)^2 + n \left( \cfrac{\bar{X} - \mu}{\sigma} \right)^2 \\[12.5pt]
+&amp;= \color{blue} \sum_{i=1}^{n} \left( \cfrac{X_i - \bar{X}}{\sigma} \right)^2 + \color{red} \left( \cfrac{\bar{X} - \mu}{\sigma/\sqrt{n}} \right)^2
+\end{aligned}
+$$</p>
+<p>Remember that the above formula follows a $\chi^2(n)$, which is the sum of $n$ independent standard normal squared. Also note that according to the <strong>central limit theorem</strong>, $\bar{X} \sim \mathcal{N}(\mu_{\bar{X}}=\mu, \sigma^2_{\bar{X}}=\sigma^2/n)$. Then we have $\cfrac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim \mathcal{N}(0,1)$. Therefore, by definition, the $\color{red} \textmd{red term}$ follows $\chi^2(1)$, and hence the $\color{blue} \textmd{blue term}$ follows $\chi^2(n-1)$.</p>
+<p>Now we need to manipulate the $\color{blue} \textmd{blue term}$ to see the sample variance there, which is straightforward:</p>
+<p>$$
+\begin{aligned}
+\sum_{i=1}^{n} \left( \cfrac{X_i - \bar{X}}{\sigma} \right)^2 &amp;= \cfrac{1}{\sigma^2} \sum_{i=1}^{n} (X_i - \bar{X})^2 = \cfrac{n-1}{\sigma^2} \cdot \cfrac{1}{n-1}\sum_{i=1}^{n} (X_i - \bar{X})^2 \\[12.5pt]
+&amp;= \cfrac{(n-1)S^2}{\sigma^2}
+\end{aligned}
+$$</p>
+<p>Therefore, we finally figure out:</p>
+<p>$$ \cfrac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1) $$</p>
+<p>You see, we do not really get the distribution for $S^2$ per se. What we get is $\cfrac{(n-1)S^2}{\sigma^2}$. It follows $\chi^2(n-1)$ which has a defined PDF, so we could calculate related probabilities.</p>
+<p>In future lectures, we will see how we can use this distribution for probability calculation and statistical inferences.</p>
+<h2 id="what-if-the-population-is-not-normal">What If The Population Is Not Normal</h2>
+<p>So far, we only solved the simpler case by assuming $X_1,X_2,\cdots,X_{n-1},X_n$ are all normally distributed. They are a sample from a normal population $X \sim \mathcal{N}(\mu, \sigma^2)$. What if the population is not normal?</p>
+<p>Well, it is more difficult to work on that<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, so we are not going to talk about it in this introductory course.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="http://en.wikipedia.org/wiki/Chi-squared_distribution">Chi-squared Distribution</a></li>
+<li><a href="https://p-distribution.com/helmerts-distribution/">Helmert&rsquo;s Distribution</a></li>
+<li><a href="https://online.stat.psu.edu/stat414/lesson/16/16.5">Derive the PDF of $\chi^2(1)$ from normal distribution</a></li>
+<li><a href="https://online.stat.psu.edu/stat414/lesson/15/15.5">The Gamma Function</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)">Degree of Freedom</a></li>
+</ul>
+</div>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The content in this lecture is not required for the exams. It is good to know the derivation of the PDF of <em>Chi</em>-squared distributions. However, what is more important is the intuition about <em>Chi</em>-squared distributions and where they come from.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Strictly speaking, what we should do here is $\int_{-\sqrt{u}}^{\sqrt{u}}e^{-\frac{z^2}{2}} \mathrm{d}z = \int_{-\sqrt{u}}^{0}e^{-\frac{z^2}{2}} \mathrm{d}z + \int_{0}^{\sqrt{u}}e^{-\frac{z^2}{2}} \mathrm{d}z$.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Amazing, isn&rsquo;t it? I did not know how to do the integration here. However, I have friends who do :-) Thank <a href="https://math.emory.edu/~lchen41/"><strong>Dr. Le Chen</strong></a> for helping solve the integral. The integration we need to do is $\int_{0}^{v}\frac{1}{\sqrt{u_1(v-u_1)}}\,\mathrm{d}u_1$. Now we let $u_1=v\sin^2\theta$, then $u_1=0 \Rightarrow \theta=0$ and $u_1=v \Rightarrow \theta=\frac{\pi}{2}$ and also $\mathrm{d}u_1=v\mathrm{d}\sin^2\theta=v2\sin\theta\mathrm{d}\sin\theta = 2v\sin\theta\cos\theta\mathrm{d}\theta$. Now we rewrite the function inside the square root: $u_1(v-u_1) = v\sin^2\theta [v - v\sin^2\theta] = v\sin^2\theta[v(1-\sin^2\theta)] = v^2\sin^2\theta\cos^2\theta$. Then the the integral becomes $\int_{0}^{\frac{\pi}{2}}\cfrac{1}{v\sin\theta\cos\theta}\,2v\sin\theta\cos\theta\mathrm{d}\theta = 2 \cdot \int_{0}^{\frac{\pi}{2}}\mathrm{d}\theta = 2 \cdot \frac{\pi}{2} = \pi$.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Do not worry about the degree of freedom for now. It has a deep meaning in statistics which I do not fully understand. We will explain it in the next lecture and see it repeatedly in the rest part of the course.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Actually, it is not that bad as long as the population is &ldquo;normal&rdquo; enough or symmetrical. Therefore, in many occasions, it is still okay to use the $\chi^2$-distribution for the sample variance.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-standard-normal-squared">The Standard Normal Squared</a></li>
+    <li><a href="#sum-of-standard-normal-squared">Sum of Standard Normal Squared</a></li>
+    <li><a href="#the-sampling-distribution-of-the-sample-variance">The Sampling Distribution of the Sample Variance</a></li>
+    <li><a href="#what-if-the-population-is-not-normal">What If The Population Is Not Normal</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2024 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
