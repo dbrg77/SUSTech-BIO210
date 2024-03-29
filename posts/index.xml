@@ -6,8 +6,22 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 27 Mar 2024 00:00:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Mar 2024 00:00:10 +0800</lastBuildDate>
     <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 18 The Error Curve Derived By MLE</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/</link>
+      <pubDate>Fri, 29 Mar 2024 00:00:10 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/</guid>
+      <description>Ronald Fisher introduced the method of using maximum likelihood estimation to estimate the parameters of a distribution or population. However, it was Carl Friedrich Gauss who first developed the idea of maximum likelihood. Actually, the normal PDF can be derived using the idea of maximum likelihood. We will investigate in this lecture.&#xA;Like mentioned in Lecture 12, the first question everybody has when they first encountered the normal PDF is: where does it come from?</description>
+    </item>
+    <item>
+      <title>Lecture 17 Maximum Likelihood Estimation (MLE)</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-17/</link>
+      <pubDate>Fri, 29 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-17/</guid>
+      <description>Previously we all assumed that we somehow knew the population parameters, such as the mean ($\mu$) and the variance ($\sigma^2$). Starting this lecture, we have finally reached a stage where we do NOT know the population parameters. Instead, we have a representative sample. Using the information from the sample, we &amp;ldquo;make a guess&amp;rdquo;, or estimate the parameters of the population.&#xA;In the simplest case, if we are interested in the population mean $\mu$ or variance $\sigma^2$, we can just provide a number to represent our best &amp;ldquo;guess&amp;rdquo; or estimate to the mean or variance.</description>
+    </item>
     <item>
       <title>Lecture 16 Sampling Distributions of The Sample Variance</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-16/</link>
