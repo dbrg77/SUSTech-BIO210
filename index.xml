@@ -6,8 +6,22 @@
     <description>Recent content on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 29 Mar 2024 00:00:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Apr 2024 00:00:10 +0800</lastBuildDate>
     <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 20 Confidence Interval For The Variance</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-20/</link>
+      <pubDate>Sun, 07 Apr 2024 00:00:10 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-20/</guid>
+      <description>Once we have introduced the confidence intervals for the population mean $\mu$, the next question comes natural: how do we construct confidence intervals for the population variance $\sigma^2$? Since we have previously discussed the sampling distribution of the sample variance, it is kind of straightforward for us to derive the confidence interval for the population variance.&#xA;Interval Estimation For $\boldsymbol{\sigma^2}$ We can just follow the same thought from the previous lecture when we derived the CI for the population mean $\mu$.</description>
+    </item>
+    <item>
+      <title>Lecture 19 Confidence Interval For The Mean</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/</link>
+      <pubDate>Sun, 07 Apr 2024 00:00:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/</guid>
+      <description>In the previous lectures, we talked about using the sample mean ($\bar{X}$ and $\bar{x}$) as the estimator and estimate for the population mean ($\mu$) and using the sample variance ($S^2$ and $s^2$) as the estimator and estimate for the population variance ($\sigma^2$). We also introduced one intuitive way of constructing an estimator: the maximum likelihood estimation (MLE). In those cases, we were just using one specific value, that is, just one number, to estimate the population parameter of interest.</description>
+    </item>
     <item>
       <title>Lecture 18 The Error Curve Derived By MLE</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-18/</link>
@@ -139,7 +153,7 @@
       <link>https://dbrg77.github.io/SUSTech-BIO210/course/</link>
       <pubDate>Thu, 22 Feb 2024 16:01:31 +0800</pubDate>
       <guid>https://dbrg77.github.io/SUSTech-BIO210/course/</guid>
-      <description>All course content Lesson 1 (23-Feb-2024) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (28-Feb-2024) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (01-Mar-2024) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (08-Mar-2024) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (13-Mar-2024) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV Lesson 6 (15-Mar-2024) Lecture slides Lecture 11 Discrete Probability Distribution Lecture 12 Continuous Probability Distribution Homework assignment Assignment 3 Extra reading material Mean &amp;amp; Variance of Binomial &amp;amp; Poisson Lesson 7 (22-Mar-2024) Lecture slides Lecture 13 Normal Distribution Lecture 14 Population And Sample Homework assignment None Extra reading material Useful Properties of A Normal Random Variable Calculate Probabilities Using Excel Lesson 8 (27-Mar-2024) Lecture slides Lecture 15 Sampling Distribution And The CLT Lecture 16 Sampling Distribution of The Sample Variance Homework assignment None Extra reading material None Lesson 9 (29-Mar-2024) Lecture slides Lecture 17 Maximum Likelihood Estimation Lecture 18 The Error Curve Derived By MLE Homework assignment Assignment 4 Extra reading material MLE For Variance </description>
+      <description>All course content Lesson 1 (23-Feb-2024) Lecture slides Lecture 1 Introduction To BIO210 Lecture 2 Data Presentation Homework assignment None Extra reading material None Lesson 2 (28-Feb-2024) Lecture slides Lecture 3 Numerical Measures Lecture 4 Probability Axioms Homework assignment Assignment 1 Extra reading material None Lesson 3 (01-Mar-2024) Lecture slides Lecture 5 Conditional Probability Lecture 6 The Bayes Theorem Homework assignment None Extra reading material The Pedigree Analysis Lesson 4 (08-Mar-2024) Lecture slides Lecture 7 More On The Bayes&amp;rsquo; Theorem Lecture 8 Independent Events Homework assignment Assignment 2 Extra reading material None Lesson 5 (13-Mar-2024) Lecture slides Lecture 9 Counting Lecture 10 Random Variable, PMF, Expectation &amp;amp; Variance Homework assignment None Extra reading material Various Proofs About RV Lesson 6 (15-Mar-2024) Lecture slides Lecture 11 Discrete Probability Distribution Lecture 12 Continuous Probability Distribution Homework assignment Assignment 3 Extra reading material Mean &amp;amp; Variance of Binomial &amp;amp; Poisson Lesson 7 (22-Mar-2024) Lecture slides Lecture 13 Normal Distribution Lecture 14 Population And Sample Homework assignment None Extra reading material Useful Properties of A Normal Random Variable Calculate Probabilities Using Excel Lesson 8 (27-Mar-2024) Lecture slides Lecture 15 Sampling Distribution And The CLT Lecture 16 Sampling Distribution of The Sample Variance Homework assignment None Extra reading material None s Lesson 9 (29-Mar-2024) Lecture slides Lecture 17 Maximum Likelihood Estimation Lecture 18 The Error Curve Derived By MLE Homework assignment Assignment 4 Extra reading material MLE For Variance Lesson 10 (30-Oct-2023) Lecture slides Lecture 19 Confidence Interval For The Mean Lecture 20 Confidence Interval For The Variance Preparing The Mid-term Homework assignment None Extra reading material The Student&amp;rsquo;s t Distribution Calculating Probabilities Using R </description>
     </item>
     <item>
       <title>Welcome To BIO210 Biostatistics</title>

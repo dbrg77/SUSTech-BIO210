@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 19 Confidence Interval For The Mean</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 19 Confidence Interval For The Mean">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 19 Confidence Interval For The Mean">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-19/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 19 Confidence Interval For The Mean</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            April 7, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>In the previous lectures, we talked about using the sample mean ($\bar{X}$ and $\bar{x}$) as the estimator and estimate for the population mean ($\mu$) and using the sample variance ($S^2$ and $s^2$) as the estimator and estimate for the population variance ($\sigma^2$). We also introduced one intuitive way of constructing an estimator: the <strong>maximum likelihood estimation (MLE)</strong>. In those cases, we were just using one specific value, that is, just one number, to estimate the population parameter of interest. It is called a point estimation. We use the sample mean and the sample variance, because they are intuitive and unbiased.</p>
+<p>The point estimation is undoubtedly useful, but the information we get from it is very limited. Once we get the estimation, it is just one number. What is the sample size used for the estimation? How confident are we about the estimation? We cannot get that information from the point estimation.</p>
+<h2 id="interval-estimation-for-the-mean">Interval Estimation For The Mean</h2>
+<p>A more useful way of making an estimation is the <strong>interval estimation</strong>. As the name suggests, it is a range of values. We want to provide a range that may contain the true value of the population parameter that we are interested in. In this lecture, we will introduce the concepts of <strong>confidence level</strong> and <strong>confidence interval</strong>. We will see how to interpret them, and how they are useful for us to make statistical inferences.</p>
+<p>To clarify, our goal is to provide <strong>an interval</strong> with a lower and an upper bounds that might contains the population mean <strong>with certain probability</strong>. This interval is called the <strong>confidence interval</strong> and this probability is called the <strong>confidence level</strong>. Typically, we want a confidence interval $[a,b]$ to contain the population mean $\mu$ with 95% confidence level. The interval $[a,b]$ is a 95% confidence interval for the population mean. Now we need clarify what EXACTLY do we mean by that.</p>
+<h3 id="confidence-interval-for-the-mean-with-known-variance">Confidence Interval For The Mean With Known Variance</h3>
+<p>Finding a 95% confidence interval for a population that we do not know sounds very difficult. This is a new thing to us, so we should start with something simpler. If the population variance $\sigma^2$ is known to us, it would be easier. At first, it seems we do not have a clue how to get an interval that covers the unknown population mean $\mu$. What we can do is to start with something we know. We know that in a standard normal distribution, the probability of a random variable falling into $-1.96$ and $1.96$ is almost 95%<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. That is:</p>
+<p>$$\mathbb{P}(-1.96 \leqslant Z \leqslant 1.96) = 0.95$$</p>
+<p>Whenever we draw a sample from the population, we also have a sample mean $\bar{X}$. What do we know about the sample mean $\bar{X}$ then? We know that <strong>if the population follows a normal distribution</strong> or <strong>if the sample size is large enough ($n&gt;30$)</strong>, the sample mean $\bar{X}$ roughly follows a normal distribution:</p>
+<p>$$\bar{X} \, \dot\sim \, \mathcal{N} \left(\mu_{\bar{X}}=\mu, \sigma_{\bar{X}}^2 = \cfrac{\sigma^2}{n} \right)$$</p>
+<p>Hence, we can convert $\bar{X}$ to a standard normal and get:</p>
+<p>$$
+\begin{aligned}
+\mathbb{P}\left( -1.96 \leqslant \cfrac{\bar{X}-\mu}{\sigma/\sqrt{n}} \leqslant 1.96 \right) &amp;= 0.95\\[15pt]
+\mathbb{P}\left( -1.96 \cfrac{\sigma}{\sqrt{n}} \leqslant \bar{X}-\mu \leqslant 1.96 \cfrac{\sigma}{\sqrt{n}} \right) &amp;= 0.95\\[15pt]
+\mathbb{P}\left( \bar{X}-1.96 \cfrac{\sigma}{\sqrt{n}} \leqslant \mu \leqslant \bar{X}+1.96 \cfrac{\sigma}{\sqrt{n}} \right) &amp;= 0.95
+\end{aligned}
+$$</p>
+<p>Note that the lower and upper bounds have nothing to do with the population mean $\mu$. The value of $\sigma$ is known, and if we draw a sample, the values of $\bar{X}$ and $n$ are also known. Therefore, we have reached our goal, and the interval we are looking for is:</p>
+<p>$$\left[ \bar{X}-1.96 \cfrac{\sigma}{\sqrt{n}}\,, \  \bar{X}+1.96 \cfrac{\sigma}{\sqrt{n}} \right]$$</p>
+<p>That&rsquo;s our 95% confidence interval (<strong>CI</strong>) for the population mean $\mu$. The value of $1.96\frac{\sigma}{\sqrt{n}}$ is called the <strong>margin of error</strong> for the 95% CI.</p>
+<p>Even though we do not know the population mean, we know that <strong>&ldquo;the probability the above interval contains the population mean is 95%&rdquo;</strong>. Okay, the previous sentence in bold needs further explanation to remove confusion. What we have derived is:</p>
+<p>$$\mathbb{P}\left( \bar{X}-1.96 \cfrac{\sigma}{\sqrt{n}} \leqslant \mu \leqslant \bar{X}+1.96 \cfrac{\sigma}{\sqrt{n}} \right) = 0.95 \tag{M}$$</p>
+<p>Again, we can think of probability as relative frequency. Whenever we draw a sample, we can put the values of $\bar{X}$, $n$ and $\sigma$ into the formula to get a 95% CI. Then we draw another sample. The value of $\bar{X}$ will change and we get another 95% CI. If we keep doing this for a large number of times, we will get a large number of different 95% CIs. Among all those 95% CIs, 95% of them will contain the population mean $\mu$. That&rsquo;s exactly what the formula $(\mathrm{M})$ tells us. To help us visualise the interpretation, we can draw the sampling distribution of the sample mean:</p>
+<figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/95CI.png" width="400px"/>
+</figure>
+
+<p>Note that the width on the $x$-axis of the red-shaded area is $2 \times 1.96\sigma_{\bar{X}} = 3.92 \frac{\sigma}{\sqrt{n}}$, which is the same length as the 95% CI. Whenever we draw a sample, we have a sample mean represented by the dot at the bottom. Then we can construct a 95% CI with the length $3.92 \frac{\sigma}{\sqrt{n}}$ (double arrowed line) centred around the sample mean. Due the same length of the 95% CI and the bottom width of the red-shaded area, whenever a sample mean falls inside the red-shaded area, the 95% CI is guaranteed to cover the population mean (the middle dashed line). Whenever a sample mean falls outside the red-shaded area, the 95% CI is guaranteed NOT to cover the population mean. The probability of the sample mean falling into the red-shaded area is basically 95% due to the normal distribution.</p>
+<p>This seems to be some convoluted interpretation of confidence interval at first, but if think about it, it does make sense. The interpretation is not only correct but strictly follows our frequentist definition of probability as well.</p>
+<h3 id="confidence-interval-for-the-mean-with-unknown-variance">Confidence Interval For The Mean With Unknown Variance</h3>
+<p>In general, it is unrealistic for us to know the population variance $\sigma^2$ in practice. How can we construct a 95% confidence interval? Intuitively, we can just replace the population standard deviation $\sigma$ with the sample standard deviation $s=\sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2}$, can we? It is natural for us to do that. Does this work? Here is the simulation from $100,000$ 95% confidence intervals constructed by drawing samples with size $n=8$ from a normal population with a known variance:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">By $\boldsymbol{\bar{x} \pm 1.96 \cfrac{\sigma}{\sqrt{n}}}$</th>
+<th style="text-align:center">By $\boldsymbol{\bar{x} \pm 1.96 \cfrac{s}{\sqrt{n}}}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">% of intervals covering $\mu$</td>
+<td style="text-align:center">$95.24\%$</td>
+<td style="text-align:center">$90.55\%$</td>
+</tr>
+</tbody>
+</table>
+<p>By definition, we should expect about 95% of those 95% CIs containing the population mean $\mu$, and $\bar{x} \pm 1.96 \cfrac{\sigma}{\sqrt{n}}$ does. However, only ~90% of the 95% CIs by $\bar{x} \pm 1.96 \cfrac{s}{\sqrt{n}}$ contain $\mu$, indicating we have introduced some errors when we replace $\sigma$ with $s$.</p>
+<p>The reason we can construct 95% CIs as previously described is based on the property that $\cfrac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim \mathcal{N}(0,1)$. However, when we replace $\sigma$ with $s$, the random variable $\cfrac{\bar{X}-\mu}{S/\sqrt{n}}$ does not follow a standard normal distribution. Here is the histogram of from $100,000$ simulations compared with a standard normal curve:</p>
+<figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/t_simulation.png" width="500px"/>
+</figure>
+
+<p>As you can see, the distribution of $\cfrac{\bar{X}-\mu}{S/\sqrt{n}}$ (grey histogram) is a bit lower than the standard normal around $0$ and higher at the tail regions.</p>
+<h2 id="students-t-distribution">Student&rsquo;s $t$-Distribution</h2>
+<p>In order to construct 95% CIs for the population mean without knowing the population variance, we need to figure out the distribution of $\cfrac{\bar{X}-\mu}{S/\sqrt{n}}$ if it exists.</p>
+<p>How are we going to figure out the distribution of $\cfrac{\bar{X}-\mu}{S/\sqrt{n}}$? It looks difficult, but what we can do is to manipulate the expression to something we are familiar with. It may not solve the problem, but at least we might get some hints. For example, we know $\bar{X}$ is a normal random variable under certain conditions. We do not know the distribution of $S$, but we do know that the distribution of $S^2$ is related to the $\chi^2$ distribution. Therefore, we manipulate the numerator an denominator to that direction:</p>
+<p>$$
+\begin{aligned}
+\cfrac{\bar{X}-\mu}{S/\sqrt{n}} &amp;= \cfrac{\sqrt{n}(\bar{X}-\mu)}{S} = \cfrac{\sqrt{n}(\bar{X}-\mu)}{\sqrt{S^2}} = \cfrac{\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}}{\sqrt{S^2}/\sigma} = \cfrac{\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}}{\sqrt{\frac{S^2}{\sigma^2}}} \\[15pt]
+&amp;= \cfrac{\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}}{\sqrt{\frac{(n-1)S^2}{\sigma^2} \cdot \frac{1}{n-1}}}
+\end{aligned}
+$$</p>
+<p>Now both the numerator and the denominator have something we are familiar with. The numerator $\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}$ is basically a standard normal random variable. The term $\frac{(n-1)S^2}{\sigma^2}$ in the denominator is a $\chi^2(n-1)$ random variable. From here, we can actually figure out the PDF of $\cfrac{\bar{X}-\mu}{S/\sqrt{n}}$, and we call this $\boldsymbol{t}$<strong>-distribution</strong>.</p>
+<p>We are not going to do the derivation during the lecture, but I put it into the <a href="https://dbrg77.github.io/SUSTech-BIO210/extra_reading/Lecture_19_ERM_Student_t_Distributions.pdf"><strong>Extra Reading Material</strong></a> after the class. The $\boldsymbol{t}$<strong>-distribution</strong> was discovered by the English statistician <a href="https://en.wikipedia.org/wiki/William_Sealy_Gosset">William Gosset</a>, who worked for <strong>Guinness Brewery</strong> when he figured out the distribution of $\cfrac{\bar{X}-\mu}{S/\sqrt{n}}$ and published under the pseudonym <strong>Student</strong>. Hence the name $t$-distribution.</p>
+<p>The random variable $T$ is defined as:</p>
+<p>$$T = \cfrac{Z}{\sqrt{U/\nu}}$$</p>
+<p>where $Z$ is a standard normal random variable, $U$ is a $\chi^2$ random variable with a degree of freedom (<strong>DOF</strong>) $\nu$ (the Greek letter <code>nu</code>), and $Z$ and $U$ are independent. In this case, the random variable $T$ follows a $\boldsymbol{t}$-distribution with a degree of freedom of $\nu$ that comes from the $\chi^2$ random variable $U$. We write it as:</p>
+<p>$$T \sim \boldsymbol{\mathcal{T}}(\nu)$$</p>
+<p>Now we know that:</p>
+<p>$$\cfrac{\bar{X}-\mu}{S/\sqrt{n}} \sim \boldsymbol{\mathcal{T}}(n-1)$$</p>
+<p>Therefore, instead of using the normal distribution, we should use $\boldsymbol{t}$-distribution with a degree of freedom $n-1$ for the construction of 95% CIs for the population mean with an unknown variance.</p>
+<h3 id="properties-of-the-boldsymbolt-distributions">Properties of The $\boldsymbol{t}$-Distributions</h3>
+<p>As you can see, the $\boldsymbol{t}$-distribution only has one parameter, that is, the degree of freedom $\nu$. From the <strong>Extra Reading Material</strong>, we know that the PDF of a $\boldsymbol{t}$-distribution is:</p>
+<p>$$f_{T}(t) = \cfrac{\Gamma \left(\frac{\nu+1}{2}\right)}{\sqrt{\pi\nu}\,\Gamma \left(\frac{\nu}{2}\right)} \left( 1+\cfrac{t^2}{\nu} \right)^{-\frac{\nu+1}{2}} $$</p>
+<p>where $\nu$ is the degree of freedom. That is a very scary PDF. Luckily, we do not really need to memorise it, but you do need to practice calculating related probabilities using <code>R</code> or <code>Excel</code>.</p>
+<p>As you have already seen the simulation, the shape of a $\boldsymbol{t}$-distribution is very similar to a standard normal distribution. It is symmetrical around $0$, just a bit lower than the standard normal near $0$ and higher at the tail regions. With increasing $\nu$, the $\boldsymbol{t}$-distribution becomes more and more like the standard normal and eventually will become the standard normal when $\nu \to \infty$:</p>
+<figure><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/t_distr.png" width="400px"/>
+</figure>
+
+<h3 id="use-boldsymbolt-distributions-to-construct-95-cis-for-boldsymbolmu">Use $\boldsymbol{t}$-Distributions To Construct 95% CIs For $\boldsymbol{\mu}$</h3>
+<p>Let&rsquo;s just introduce some new notations to make things easier to discuss. Visually, this is the notation:</p>
+<p><img src="https://dbrg77.github.io/SUSTech-BIO210/images/post_figures/z_t_scores.png" alt=""></p>
+<p>In the standard normal distribution, we use $Z_{\alpha}$ to represent the value such that the probability of falling into the region greater than $Z_{\alpha}$ (upper tail region) is $\alpha$. That is:</p>
+<p>$$\mathbb{P}(X \geqslant Z_{\alpha}) = \alpha \textmd{, where } X \sim \mathcal{N}(0,1)$$</p>
+<p>Since the standard normal is symmetrical with respect to $0$, it is straightforward for us to see $Z_{\alpha} = -Z_{1-\alpha}$. For example, $Z_{0.025} = -Z_{0.975} \approx 1.96$.</p>
+<p>Therefore, the 95% CI for the mean $\mu$ when we know $\sigma$ can be written as $\left[ \bar{X} - Z_{0.025} \frac{\sigma}{\sqrt{n}},  \bar{X} + Z_{0.025} \frac{\sigma}{\sqrt{n}} \right]$.</p>
+<p>Similarly, we use $t_{\alpha,\nu}$ to denote the value in a $\boldsymbol{t}$-distribution with a degree of freedom $\nu$ such that the probability of falling to the region in greater than $t_{\alpha,\nu}$ (upper tail region) is $\alpha$:</p>
+<p>$$\mathbb{P}(X \geqslant t_{\alpha,\nu}) = \alpha \textmd{, where } X \sim \boldsymbol{t}_\nu$$</p>
+<p>Hence the 95% CI for the mean $\mu$ when we do not know $\sigma$ can be written as $\left[ \bar{X} - t_{0.025,n-1} \frac{s}{\sqrt{n}},  \bar{X} + t_{0.025,n-1} \frac{s}{\sqrt{n}} \right]$, where $s$ is the sample standard deviation and $n$ is the sample size. Actually, to construct a confidence interval with a confidence level of $(1-\alpha) \times 100\%$, we do:</p>
+<p>$$\left[ \bar{X} - t_{\frac{\alpha}{2},n-1} \cfrac{S}{\sqrt{n}}, \bar{X} + t_{\frac{\alpha}{2},n-1} \cfrac{S}{\sqrt{n}} \right]$$</p>
+<p>We are going to use those notations a lot even for other distributions such as $\chi^2$ and the future $\boldsymbol{F}$-distributions. The principle is exactly the same.</p>
+<h2 id="one-sided-confidence-interval">One-sided Confidence Interval</h2>
+<p>What we have been doing in the lecture is to construct a <strong>two-sided</strong> CI. That is, we compute both the lower and upper bounds. It is also useful to construct <strong>one-sided</strong> CIs. As the name suggest, we want an interval like $[a, \infty)$ or $(-\infty, b]$. This is left for you to finish in your homework.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="http://en.wikipedia.org/wiki/William_Sealy_Gosset">William Gosset</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Student's_t-distribution">The Student&rsquo;s $\boldsymbol{t}$-distribution</a></li>
+<li><a href="https://www.randomservices.org/random/special/Student.html">The PDF of $\boldsymbol{t}$-distribution</a></li>
+</ul>
+</div>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The lower and upper bounds do not have to be $-1.96$ and $1.96$. For example, $\mathbb{P}(-2 \leqslant Z \leqslant 1.92) = 0.95$. However, we typically look for symmetrical intervals.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#interval-estimation-for-the-mean">Interval Estimation For The Mean</a>
+      <ul>
+        <li><a href="#confidence-interval-for-the-mean-with-known-variance">Confidence Interval For The Mean With Known Variance</a></li>
+        <li><a href="#confidence-interval-for-the-mean-with-unknown-variance">Confidence Interval For The Mean With Unknown Variance</a></li>
+      </ul>
+    </li>
+    <li><a href="#students-t-distribution">Student&rsquo;s $t$-Distribution</a>
+      <ul>
+        <li><a href="#properties-of-the-boldsymbolt-distributions">Properties of The $\boldsymbol{t}$-Distributions</a></li>
+        <li><a href="#use-boldsymbolt-distributions-to-construct-95-cis-for-boldsymbolmu">Use $\boldsymbol{t}$-Distributions To Construct 95% CIs For $\boldsymbol{\mu}$</a></li>
+      </ul>
+    </li>
+    <li><a href="#one-sided-confidence-interval">One-sided Confidence Interval</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2024 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
