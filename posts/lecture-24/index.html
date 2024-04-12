@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dbrg77.github.io/SUSTech-BIO210/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dbrg77.github.io/SUSTech-BIO210/favicon-16x16.png">
+    <link rel="manifest" href="https://dbrg77.github.io/SUSTech-BIO210/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Lecture 24 Hypothesis Testing Terms</title>
+    <meta name="description" content="by School of Life Sciences at SUSTech">
+    <meta name="keywords" content='blog, gokarna, hugo, data science, biology, genomics'>
+
+    <meta property="og:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-24/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lecture 24 Hypothesis Testing Terms">
+    <meta property="og:description" content="by School of Life Sciences at SUSTech">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lecture 24 Hypothesis Testing Terms">
+    <meta name="twitter:description" content="by School of Life Sciences at SUSTech">
+    <meta property="twitter:domain" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-24/">
+    <meta property="twitter:url" content="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-24/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-24/" />
+
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://dbrg77.github.io/SUSTech-BIO210/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://dbrg77.github.io/SUSTech-BIO210/css/dark.css">
+
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/svg-injector.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/feather-icons.min.js"></script>
+    <script src="https://dbrg77.github.io/SUSTech-BIO210/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://dbrg77.github.io/SUSTech-BIO210/">
+                <img src="https://dbrg77.github.io/SUSTech-BIO210//images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://dbrg77.github.io/SUSTech-BIO210/">SUSTech BIO210 Biostatistics</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/posts/"><span data-feather='book-open'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/course/"><span data-feather='list'></span> Content Index </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://dbrg77.github.io/SUSTech-BIO210/about/"><span data-feather='file-text'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/dbrg77/SUSTech-BIO210"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Lecture 24 Hypothesis Testing Terms</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            April 12, 2024
+        </p>
+
+        <ul class="post-tags">
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>In the previous lecture, we talked about the intuition and the basic idea of hypothesis testing. There are still many things need to be formalised. In addition, I&rsquo;m sure many of you had some burning questions. We dealt with them in this lecture.</p>
+<h2 id="fisher-vs-neyman-pearson">Fisher vs. Neyman-Pearson</h2>
+<p>Historically, there are two different types of hypothesis testing. The method developed by Ronald Fisher allows us to compute the probability of observing the data or more extreme under the <strong>null hypothesis</strong>, which is a default stand where we assume there is <em><strong>no</strong></em> difference, <em><strong>no</strong></em> effect, <em><strong>no</strong></em> association, <em><strong>no</strong></em> relationship <em>etc.</em>. Based on the probability, we make decisions about whether to reject the null hypothesis or not. The Neyman-Pearson framework proposed by Jersey Neyman and Egon Pearson formulates a null hypothesis and an <strong>alternative hypothesis</strong> of an <strong>effect size</strong>. In addition, the control of the error rates in the long run was considered.</p>
+<p>We are not going to dig into the differences of the Fisher vs Neyman-Pearson styles of hypothesis testing. What people usually use nowadays is more like a combination of those two, which we call <strong>Null Hypothesis Significance Testing (NHST)</strong>.</p>
+<h2 id="null-hypothesis-significance-testing-nhst">Null Hypothesis Significance Testing (NHST)</h2>
+<p>The examples and practice we did in the previous lecture were essentially Null Hypothesis Significance Testing (NHST), which plays a central role in many areas of science. As you can see, we were able to make some conclusions about our original belief (the null hypothesis) based on the probability of observing the sample data or more extreme.</p>
+<h3 id="formulate-hypotheses">Formulate Hypotheses</h3>
+<p>In NHST, we still come up with a set of two hypotheses:</p>
+<p>$$
+\begin{cases}
+H_0: &amp; \textmd{ the null hypothesis}\\
+H_1 \textmd{ or } H_a: &amp; \textmd{ the alternative hypothesis}
+\end{cases}
+$$</p>
+<p>The NHST helps us establish a discrepancy between $H_0$ and $H_1$. Like said before, the null hypothesis $H_0$ is always the default setting where it states there is <em><strong>no</strong></em> difference, <em><strong>no</strong></em> effect, <em><strong>no</strong></em> association, <em><strong>no</strong></em> relationship <em>etc.</em>. The alternative is usually the statement we want to investigate. Very often, they are <strong>mutually exclusive</strong> and <strong>collectively exhaustive</strong><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Using the examples from the previous lecture, we designed experiments and collected some data. Based on the data, we have some hypotheses in our mind ($H_1$), and we want to test them. Now we assume the opposite is true ($H_0$) to formulate a set of hypotheses:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$\boldsymbol{H_0}$</th>
+<th style="text-align:center">$\boldsymbol{H_1}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\mu = 37$</td>
+<td style="text-align:center">$\mu \neq 37$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mu_A \leqslant \mu_B$</td>
+<td style="text-align:center">$\mu_A &gt; \mu_B$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculate-the-p-value">Calculate The <em>p</em>-value</h3>
+<p>After formulating the hypotheses, <strong>we assume</strong> $\boldsymbol{H_0}$ <strong>is true</strong>. Then we use what we learnt from the previous sections to calculate <strong>the probability of observing the data or more extreme</strong>, namely the <strong><em>p</em>-value</strong>. We make the claim based on the <em>p</em>-value. As you can see, the <em>p</em>-value is:</p>
+<p>$$\mathbb{P}(\textmd{observing \textbf{the data} we have or more extreme }|\ H_0 \textmd{ is true})$$</p>
+<p>What does the above probability mean? It is straightforward to see that the <em>p</em>-value is basically a conditional probability. The probability is about <strong>the data</strong> which I put in bold fonts. It is <strong>NOT</strong> the probability of $H_0$ being correct. You will be surprised to see how often people interpret the meaning of p-values in the wrong way.</p>
+<h2 id="why-testing-the-null">Why Testing The Null</h2>
+<p>One burning question is: why testing the null hypothesis? Why not directly testing the alternative hypothesis? There are at least three reasons:</p>
+<ol>
+<li>To avoid confirmation bias</li>
+<li>It is practically easier to disapprove something</li>
+<li>One feature of the scientific method is that things can be falsified</li>
+</ol>
+<p>You can relate the hypothesis testing to proof by contradiction in math.</p>
+
+
+<div class="admonition tip">
+    <div class="title">References</div>
+    <div class="content"><ul>
+<li><a href="http://en.wikipedia.org/wiki/Statistical_hypothesis_testing">Statistical Hypothesis Testing</a></li>
+<li><a href="https://f1000research.com/articles/4-621/v5">Null hypothesis significance testing: a guide to commonly misunderstood concepts and recommendations for good practice</a></li>
+</ul>
+</div>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Well, strictly speaking, they do not have to be collectively exhaustive. This point will be elaborated in <strong>Lecture 25</strong>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+        </p>
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#fisher-vs-neyman-pearson">Fisher vs. Neyman-Pearson</a></li>
+    <li><a href="#null-hypothesis-significance-testing-nhst">Null Hypothesis Significance Testing (NHST)</a>
+      <ul>
+        <li><a href="#formulate-hypotheses">Formulate Hypotheses</a></li>
+        <li><a href="#calculate-the-p-value">Calculate The <em>p</em>-value</a></li>
+      </ul>
+    </li>
+    <li><a href="#why-testing-the-null">Why Testing The Null</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2024 SUSTech BIO210 Biostatistics</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
