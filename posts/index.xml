@@ -6,8 +6,22 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 08 May 2024 00:00:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2024 00:00:10 +0800</lastBuildDate>
     <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 30 The Behaviour of The p-value</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-30/</link>
+      <pubDate>Fri, 10 May 2024 00:00:10 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-30/</guid>
+      <description>There is not much to say in this post, because Lecture 30 is more like a practical session where we demonstrate how p-values behave if we perform a lot of hypothesis testing. We will do some live coding during the lecture.&#xA;References Examples of misinterpretation of p-values </description>
+    </item>
+    <item>
+      <title>Lecture 29 Compare Two Population Variances</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-29/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-29/</guid>
+      <description>In this lecture, we will introduce one method for comparing two population variances. In this case, we have two samples, independently drawn from two populations. Based on the sample variances, we want to investigate if the population variances are equal or not. Like said before, we cannot assess this problem directly. Instead, we approach this problem in an indirect way using the p-value. That is, if wa assume that there is no difference between the two variances from the two populations, what would be the probability of observing the data we have or more extreme?</description>
+    </item>
     <item>
       <title>Lecture 28 Compare Two Population Means</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-28/</link>
