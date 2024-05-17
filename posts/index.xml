@@ -6,8 +6,22 @@
     <description>Recent content in Posts on SUSTech BIO210 Biostatistics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 10 May 2024 00:00:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2024 00:10:00 +0800</lastBuildDate>
     <atom:link href="https://dbrg77.github.io/SUSTech-BIO210/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 32 ANOVA &amp; Post hoc Multiple Comparisons</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-32/</link>
+      <pubDate>Fri, 17 May 2024 00:10:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-32/</guid>
+      <description>Once we get familiar with the idea of ANOVA and see why we use it to compare means from more than 2 populations, there are still some technical details that we need to go through.&#xA;Probably the most obvious and important question is: what should I do if I reject the null hypothesis using ANOVA? We do post hoc tests in certain ways to control the experimental error rate.&#xA;We will elaborate more during the lecture.</description>
+    </item>
+    <item>
+      <title>Lecture 31 Analysis of Variance (ANOVA)</title>
+      <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-31/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0800</pubDate>
+      <guid>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-31/</guid>
+      <description>In our real life, there are many situations where we need to compare the means from many groups ($\geqslant 3$), representing many different populations. How do we do this? Intuitively, we just perform t-tests for every pair of them. This is actually not a bad idea when the number of groups ($k$) is small. However, when $k$ becomes large, we have to perform many tests. If you remember the content from the previous lecture, you should understand that this actually increases our chances of making type I errors.</description>
+    </item>
     <item>
       <title>Lecture 30 The Behaviour of The p-value</title>
       <link>https://dbrg77.github.io/SUSTech-BIO210/posts/lecture-30/</link>
